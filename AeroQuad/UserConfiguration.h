@@ -99,7 +99,7 @@
 //#define POWERED_BY_VIN         // NEED BattMonitor defined. Uncomment this if your v2.x is powered directly by the vin/gnd of the arduino
 //
 // Advanced configuration. Please refer to wiki for instructions
-#define BattCustomConfig DEFINE_BATTERY(3, 0, 14.67, 0.86, BM_NOPIN, 0, 0)
+//#define BattCustomConfig DEFINE_BATTERY( 3,0,15,0,2,50,0)
 
 //
 // *******************************************************************************************************************************
@@ -135,10 +135,10 @@
 //#define WirelessTelemetry  // Enables Wireless telemetry on Serial3  // Wireless telemetry enable
 
 //#define MavLink
-#define MAV_SYSTEM_ID 100
-#define MAV_COMPONENT_ID MAV_COMP_ID_IMU
+//#define MAV_SYSTEM_ID 100
+//#define MAV_COMPONENT_ID MAV_COMP_ID_IMU
 
-#define GraupnerHoTTTelemetry  // Enables telemetry for Graupner HoTT devices, connect RX3 and TX3 (on Mega platforms) or RX0 and TX0 (on 328p platforms) via a diode (e.g. 1N4004) to the telemetry port of your receiver
+#define GraupnerHoTTTelemetry
 
 //
 // *******************************************************************************************************************************
@@ -173,6 +173,8 @@
 //#define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
 //#define USUnits                   // Enable for US units (feet,miles,mph)
 
+//#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
+
 //
 // *******************************************************************************************************************************
 // Support menu on serial enabled LCD display (16x2 characters).  You can change serial port if needed
@@ -180,7 +182,7 @@
 // *************************************************************.******************************************************************
 //#define SERIAL_LCD Serial3
 
-//#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
+
 
 /****************************************************************************
  ****************************************************************************

@@ -51,7 +51,7 @@
 // Special motor config additionnal variable
 #if defined quadXHT_FPVConfig
  #define quadXConfig
- #define FRONT_YAW_CORRECTION 0.82
+ #define FRONT_YAW_CORRECTION 0.83
  #define REAR_YAW_CORRECTION 1.13
 #endif
 
@@ -421,8 +421,8 @@
     digitalWrite(LED_Red, LOW);
     pinMode(LED_Yellow, OUTPUT);
     digitalWrite(LED_Yellow, LOW);
-    pinMode(BuzzerPin, OUTPUT);
-    digitalWrite(BuzzerPin, LOW);
+	pinMode(BuzzerPin, OUTPUT);
+	digitalWrite(BuzzerPin, LOW);
 
     // pins set to INPUT for camera stabilization so won't interfere with new camera class
     pinMode(33, INPUT); // disable SERVO 1, jumper D12 for roll
@@ -1134,11 +1134,6 @@
 #endif
 
 
-#ifdef GraupnerHoTTTelemetry
-  #include <HoTT.h>
-  #include <HoTT_Telemetry.h>
-#endif
-
 //********************************************************
 //******** FLIGHT CONFIGURATION DECLARATION **************
 //********************************************************
@@ -1216,14 +1211,16 @@
   #else
     #define SERIAL_PORT Serial
   #endif
-#endif 
+#endif  
 
 #ifdef SlowTelemetry
   #include <AQ_RSCode.h>
 #endif
 
-
-
+#ifdef GraupnerHoTTTelemetry
+  #include <HoTT.h>
+  #include <HoTT_Telemetry.h>
+#endif
 
 
 // Include this last as it contains objects from above declarations
@@ -1232,7 +1229,7 @@
 #include "FlightCommandProcessor.h"
 #include "HeadingHoldProcessor.h"
 #include "DataStorage.h"
-#include "SerialCom.h"
+
 #if defined (UseGPS) || defined (BattMonitor)
   #include "LedStatusProcessor.h"
 #endif  
@@ -1243,6 +1240,8 @@
   #include "../mavlink/include/mavlink/v0.9/common/mavlink.h"   
   // MavLink 1.0 DKP - need to get here.
   //#include "../mavlink/include/mavlink/v1.0/common/mavlink.h" 
+#else
+  #include "SerialCom.h"
 #endif
 
 
@@ -1257,9 +1256,7 @@ void setup() {
   pinMode(LED_Green, OUTPUT);
   digitalWrite(LED_Green, LOW);
 
-  #ifdef MavLink
-    sendSerialBoot();
-  #endif
+  initCommunication();
 
   // Read user values from EEPROM
   readEEPROM(); // defined in DataStorage.h
@@ -1364,11 +1361,15 @@ void setup() {
      initSlowTelemetry();
   #endif
 
-  #if defined (GraupnerHoTTTelemetry)
-    hottv4Init();
+  #if defined GraupnerHoTTTelemetry
+	 hottv4Init();
   #endif
 
   setupFourthOrder();
+  
+//  PID[ZAXIS_PID_IDX].type = 1;
+//  PID[ATTITUDE_XAXIS_PID_IDX].type = 1;
+//  PID[ATTITUDE_YAXIS_PID_IDX].type = 1;
   
   previousTime = micros();
   digitalWrite(LED_Green, HIGH);
@@ -1437,17 +1438,12 @@ void loop () {
     // Combines external pilot commands and measured sensor data to generate motor commands
     processFlightControl();
     
-    #if defined BinaryWrite && !defined MavLink
+    #if defined BinaryWrite
         if (fastTransfer == ON) {
           // write out fastTelemetry to Configurator or openLog
           fastTelemetry();
         }
     #endif      
-    #ifdef MavLink
-        //sendSerialHudData();
-        //sendSerialAttitude(); // Defined in MavLink.pde
-        //sendSerialGpsPostion();
-    #endif
 
     #ifdef SlowTelemetry
       updateSlowTelemetry100Hz();
@@ -1486,16 +1482,11 @@ void loop () {
       #if defined(CameraControl)
         moveCamera(kinematicsAngle[YAXIS],kinematicsAngle[XAXIS],kinematicsAngle[ZAXIS]);
       #endif
-      
-      #ifdef MavLink
-        readSerialCommand();
-        sendSerialTelemetry();
+
+	  #if defined GraupnerHoTTTelemetry
+        hottV4Hook(Serial3.read());
       #endif
-      
-      #if defined (GraupnerHoTTTelemetry)
-	    hottV4Hook(Serial3.read());
-	  #endif
-	  }
+    }
 
     // ================================================================
     // 10Hz task loop
@@ -1545,7 +1536,6 @@ void loop () {
       #ifdef SlowTelemetry
         updateSlowTelemetry10Hz();
       #endif
-
     }
     
     previousTime = currentTime;
