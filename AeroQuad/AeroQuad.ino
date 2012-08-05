@@ -1067,12 +1067,12 @@
   #include <Receiver_STM32.h>  
 #endif
 
-#if defined (ShowRSSI)
-  #define UseRSSIFaileSafe
+#if defined (UseAnalogRSSIReader) 
+  #include <AnalogRSSIReader.h>
+#elif defined (UseEzUHFRSSIReader)
+  #include <EzUHFRSSIReader.h>
 #endif
-#if defined (UseRSSIFaileSafe) 
-  #include <RSSIReader.h>
-#endif 
+
 
 
 //********************************************************
@@ -1223,6 +1223,8 @@
 #endif
 
 
+
+
 // Include this last as it contains objects from above declarations
 #include "AltitudeControlProcessor.h"
 #include "FlightControlProcessor.h"
@@ -1236,10 +1238,6 @@
 
 #if defined MavLink
   #include "MavLink.h"
-  // MavLink 0.9 
-  #include "../mavlink/include/mavlink/v0.9/common/mavlink.h"   
-  // MavLink 1.0 DKP - need to get here.
-  //#include "../mavlink/include/mavlink/v1.0/common/mavlink.h" 
 #else
   #include "SerialCom.h"
 #endif
@@ -1361,8 +1359,12 @@ void setup() {
      initSlowTelemetry();
   #endif
 
-  #if defined GraupnerHoTTTelemetry
-	 hottv4Init();
+  #ifdef MavLink
+	 initCommunication();
+  #endif
+
+  #if defined (GraupnerHoTTTelemetry)
+     hottv4Init();
   #endif
 
   setupFourthOrder();
@@ -1444,7 +1446,7 @@ void loop () {
           fastTelemetry();
         }
     #endif      
-
+    
     #ifdef SlowTelemetry
       updateSlowTelemetry100Hz();
     #endif
@@ -1464,7 +1466,7 @@ void loop () {
         evaluateBaroAltitude();
       #endif
       
-      #if defined (UseRSSIFaileSafe) 
+      #if defined (UseAnalogRSSIReader) || defined (UseEzUHFRSSIReader)
         readRSSI();
       #endif
 
@@ -1481,9 +1483,9 @@ void loop () {
       
       #if defined(CameraControl)
         moveCamera(kinematicsAngle[YAXIS],kinematicsAngle[XAXIS],kinematicsAngle[ZAXIS]);
-      #endif
+      #endif 
 
-	  #if defined GraupnerHoTTTelemetry
+      #if defined (GraupnerHoTTTelemetry)
         hottV4Hook(Serial3.read());
       #endif
     }
@@ -1513,8 +1515,8 @@ void loop () {
       #endif
 
       // Listen for configuration commands and reports telemetry
-      readSerialCommand(); // defined in SerialCom.pde
-      sendSerialTelemetry(); // defined in SerialCom.pde
+		readSerialCommand();
+		sendSerialTelemetry();
     }
     else if ((currentTime - lowPriorityTenHZpreviousTime2) > 100000) {
       
@@ -1538,6 +1540,15 @@ void loop () {
       #endif
     }
     
+    #ifdef MavLink
+     if (frameCounter % TASK_1HZ == 0) {  //  1 Hz tasks
+
+        G_Dt = (currentTime - oneHZpreviousTime) / 1000000.0;
+        oneHZpreviousTime = currentTime;
+        
+        sendSerialHeartbeat();   
+     }
+    #endif
     previousTime = currentTime;
   }
   

@@ -477,7 +477,9 @@ static void hottV4SendVarioTelemetry() {
   telemetry_data[12] = telemetry_data[14] = telemetry_data[16] = (varioSound >> 8) & 0xFF;
 
   if(altitudeHoldState == ON) {
-	  telemetry_data[38] = '.';
+	  if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) telemetry_data[38] = '+';
+	  else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) telemetry_data[38] = '-';
+	  else telemetry_data[38] = '=';
 	  }
   else if (altitudeHoldState == ALTPANIC) {
 	  telemetry_data[38] = '!';
