@@ -27,6 +27,8 @@ static uint8_t minutes = 0;
 static uint16_t milliseconds = 0;
 static signed int maxAltitude = 500;
 static signed int minAltitude = 500;
+volatile unsigned int CountMilliseconds = 0;
+unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
 
 /* ##################################################################### *
  *                HoTTv4 Common Serial                                   *
@@ -129,33 +131,24 @@ static void hottV4UpdateDirection(uint8_t *data) {
 	#endif
 	}
 
-/**
- * Triggers a notification signal
- * Actually notification is of type HoTTv4Notification, but Wiring lacks in usage
- * of enums, structs, etc. due to their prototyping s*****.
- */
-static void hottV4TriggerNotification(uint8_t *data, uint8_t notification) {
-  data[2] = notification;
-  
-  if (notification == HoTTv4NotificationUndervoltage) {
+
+static void HoTTInvertDisplay(uint8_t *data) {
     data[4] = 0x80; // Inverts MikroKopter Telemetry Display for Voltage
-  }
 }
 
 /**
  * Updates battery voltage telemetry data with given value.
  * Resolution is in 0,1V, e.g. 0x7E == 12,6V.
- * If value is below HOTTV4_VOLTAGE_WARNING, telemetry alarm is triggered
+ * If value is below batteryWarning, telemetry alarm is triggered
  */
 static short hottv4UpdateBattery(uint8_t *data) {
 	short voltage = batteryData[0].voltage/10;
 
-    // Activate low voltage alarm
-  if (batteryWarning || batteryAlarm) {
-    hottV4TriggerNotification(data, HoTTv4NotificationUndervoltage);
-  }
+	if (batteryWarning || batteryAlarm) {
+		HoTTInvertDisplay(data);
+	}
 
-  return voltage;
+	return voltage;
 }
 
 static short hottv4UpdateCurrent() {
@@ -209,6 +202,44 @@ static unsigned int hottv4UpdateAltVario() {
 	return varioSound;
 }
 
+unsigned int SetDelay (unsigned int t) {
+	return(CountMilliseconds + t + 1);
+}
+
+char CheckDelay(unsigned int t)	{
+	return(((t - CountMilliseconds) & 0x8000) >> 9);
+}
+
+static unsigned char HoTTWarning()
+	{
+	unsigned char status = 0;
+	static char old_status = 0;
+	static int repeat;
+
+	// Activate low voltage alarm
+	if (batteryWarning || batteryAlarm) {
+		status = HoTTv4NotificationUndervoltage;
+	}
+	
+	if(!status) {
+		status = SpeakHoTT; 
+	}
+
+	if(old_status == status) {
+		if(!CheckDelay(repeat)) return 0;
+		repeat = SetDelay(5000);
+	}
+	else repeat = SetDelay(2000);
+
+	if(status) 	{
+		if(status == SpeakHoTT) SpeakHoTT = 0;
+	}   
+
+	old_status = status;
+
+	return status;
+	}
+
 
 /**
  * Updates current flight time by counting the seconds from the moment
@@ -220,9 +251,11 @@ static void hottv4UpdateFlightTime(uint8_t *data) {
   uint16_t timeDiff = millis() - previousEAMUpdate;
   previousEAMUpdate += timeDiff;
   
+  CountMilliseconds += timeDiff;
+
   if (motorArmed) {
     milliseconds += timeDiff;
-    
+	
     if (milliseconds >= 60000) {
       milliseconds -= 60000;
       minutes += 1;
@@ -427,6 +460,9 @@ static void hottV4SendGPSTelemetry() {
   #if defined(HOTTV4DIR) 
     hottV4UpdateDirection(telemetry_data);
   #endif
+
+  // Triggers voice alarm if necessary
+  telemetry_data[2] = HoTTWarning();
   
   // Write out telemetry data as GPS Module to serial           
   hottV4SendBinary(telemetry_data);
