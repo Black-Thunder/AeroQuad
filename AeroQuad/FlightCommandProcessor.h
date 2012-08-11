@@ -183,7 +183,7 @@ void readPilotCommands() {
     }
   
   
-    if (receiverCommand[AUX2] >= 1700 && isHomeBaseInitialized()) {  // Enter in execute mission state, if none, go back home, override the position hold
+    if (receiverCommand[AUX2] >= 1700) {  // Enter in execute mission state, if none, go back home, override the position hold
     
       if (isInitNavigationNeeded) {
         
@@ -198,7 +198,7 @@ void readPilotCommands() {
 
       navigationState = ON;
     }
-    else if (receiverCommand[AUX2] > 1400 && receiverCommand[AUX2] < 1700 && isHomeBaseInitialized()) {  // Enter in position hold state
+    else if (receiverCommand[AUX2] > 1400 && receiverCommand[AUX2] < 1700) {  // Enter in position hold state
       
       if (isStorePositionNeeded) {
         

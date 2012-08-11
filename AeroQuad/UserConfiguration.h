@@ -41,7 +41,6 @@
 //#define AeroQuadMega_v1     // Arduino Mega with AeroQuad Shield v1.7 and below
 #define AeroQuadMega_v2     // Arduino Mega with AeroQuad Shield v2.0
 //#define AeroQuadMega_v21    // Arduino Mega with AeroQuad Shield v2.1
-//#define AutonavShield       // Really good board from the guy here: http://aeroquad.com/showthread.php?4106-New-Shield-available-Mega-AutoNav-Shield&highlight=autonav
 //#define AeroQuadMega_Wii    // Arduino Mega with Wii Sensors and AeroQuad Shield v2.x
 //#define ArduCopter          // ArduPilot Mega (APM) with Oilpan Sensor Board
 //#define AeroQuadMega_CHR6DM // Clean Arduino Mega with CHR6DM as IMU/heading ref.
@@ -92,25 +91,25 @@
 // For more information on how to activate theese features with your transmitter
 // Please refer to http://aeroquad.com/showwiki.php?title=Using+the+transmitters+sticks+and+switches+to+operate+your+AeroQuad
 // *******************************************************************************************************************************
-#define HeadingMagHold				// Enables Magnetometer, gets automatically selected if CHR6DM is defined
-#define AltitudeHoldBaro			// Enables Barometer
+#define HeadingMagHold		// Enables Magnetometer, gets automatically selected if CHR6DM is defined
+#define AltitudeHoldBaro		// Enables Barometer
 //#define AltitudeHoldRangeFinder	// Enables Altitude Hold with range finder, not displayed on the configurator (yet)
-//#define AutoLanding				// Enables auto landing on channel AUX3 of the remote, NEEDS AltitudeHoldBaro AND AltitudeHoldRangeFinder to be defined
+//#define AutoLanding			// Enables auto landing on channel AUX3 of the remote, NEEDS AltitudeHoldBaro AND AltitudeHoldRangeFinder to be defined
 
-#define UseGPS						// Enables GPS, tries to auto-detect the GPS, may have some detection trouble making the connection to the configurator not working
-#define UseGPSNavigator				// EXPERIMENTAL NEEDS UseGPS TO BE DEFINED, enables GPS Position Hold, auto return to home if no mission or execute mission
+#define UseGPS			// Enables GPS, tries to auto-detect the GPS, may have some detection trouble making the connection to the configurator not working
+#define UseGPSNavigator		// EXPERIMENTAL NEEDS UseGPS TO BE DEFINED, enables GPS Position Hold, auto return to home if no mission or execute mission
 
 //
 // *******************************************************************************************************************************
 // Battery Monitor Options
 // For more information on how to setup the Battery Monitor please refer to http://aeroquad.com/showwiki.php?title=Battery+Monitor
 // *******************************************************************************************************************************
-#define BattMonitor				  // Enables Battery monitor
+#define BattMonitor		  // Enables Battery monitor
 //#define BattMonitorAutoDescent  // NEED BattMonitor defined. If you want the craft to auto descent when the battery reaches the alarm voltage
 //#define POWERED_BY_VIN          // NEED BattMonitor defined. Uncomment this if your v2.x shield is powered directly by the Vin/Gnd of the arduino
 //
 // Advanced configuration. Please refer to the wiki for instructions.
-//#define BattCustomConfig DEFINE_BATTERY(3,0,15,0,2,50,0)
+#define BattCustomConfig DEFINE_BATTERY(3, 0, 14.67, 0.86, BM_NOPIN, 0, 0) 
 
 //
 // *******************************************************************************************************************************
@@ -124,7 +123,7 @@
 #define ReceiverHWPPM		// Use a PPM receiver with HW timer (less jitter on channel values than PPM), needs a HW modification (see wiki)
 
 // You need to select one of these channel order definitions for PPM receiver
-#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_1		//For Graupner/Spektrum (DEFAULT)
+#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_1	//For Graupner/Spektrum (DEFAULT)
 //#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_2	//For Robe/Hitec/Futaba
 //#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_3	//For some Hitec/Sanwa/Others
 
@@ -138,7 +137,6 @@
 //#define LASTCHANNEL 6
 #define LASTCHANNEL 8
 
-#define GraupnerHoTTTelemetry
 
 //
 // *******************************************************************************************************************************
@@ -147,9 +145,11 @@
 // *******************************************************************************************************************************
 //#define WirelessTelemetry	// Enables Wireless telemetry on Serial3  // Wireless telemetry enable
 
-//#define MavLink				// Enables the MavLink protocol
+//#define MavLink		// Enables the MavLink protocol
 //#define MAV_SYSTEM_ID 100	// Needs to be enabled when using MavLink, used to identify each of your copters using MavLink
-							// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
+				// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
+
+#define GraupnerHoTTTelemetry
 
 //
 // *******************************************************************************************************************************

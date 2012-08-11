@@ -50,7 +50,7 @@
 #define HOTTV4_VARIO_MODULE 0x89 // Vario Sensor Module ID
 
 #if !defined (HOTTV4_TX_DELAY) 
-#define HOTTV4_TX_DELAY 600
+#define HOTTV4_TX_DELAY 700 //600
 #endif
 
 /** ###### VARIO Text ###### */
@@ -112,29 +112,5 @@ typedef enum {
 	HoTTv4NotificationStarting             = 0x34,
 	HoTTv4NotificationReceiver             = 0x35,
 } HoTTv4Notification;
-
-// Function declarations
-static void hottV4EnableReceiverMode();
-static void hottV4EnableTransmitterMode();
-static void hottV4SerialWrite(uint8_t data);
-static void hottV4LoopUntilRegistersReady();
-static void hottV4SendBinary(uint8_t *data);
-static void hottV4UpdateDirection(uint8_t *data);
-static void hottV4TriggerNotification(uint8_t *data, uint8_t notification);
-static short hottv4UpdateBattery(uint8_t *data);
-static short hottv4UpdateCurrent();
-static long hottv4UpdateCapacity();
-static int32_t hottv4UpdateAlt();
-static unsigned int hottv4UpdateAltVario();
-static void hottv4UpdateFlightTime(uint8_t *data);
-void hottv4Init();
-void hottv4Setup();
-static void hottV4SendEAMTelemetry();
-static void updatePosition(uint8_t *data, uint32_t value, uint8_t index);
-static void hottV4SendGPSTelemetry();
-static void hottV4SendVarioTelemetry();
-static uint8_t hottV4SendChar(char c, uint8_t inverted);
-uint8_t canSendTelemetry();
-uint8_t hottV4Hook(uint8_t serialData);
 
 #endif

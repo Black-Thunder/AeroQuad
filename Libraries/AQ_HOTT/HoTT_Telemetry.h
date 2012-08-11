@@ -22,6 +22,7 @@
 #define _AEROQUAD_HOTT_TELEMETRY_H_
 
 #include "HoTT.h"
+#include <stdio.h>
 
 static uint8_t minutes = 0;
 static uint16_t milliseconds = 0;
@@ -38,40 +39,16 @@ unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
  * Enables RX and disables TX
  */
 static void hottV4EnableReceiverMode() {
-  #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) 
-    UCSR3B &= ~_BV(TXEN3);
-    UCSR3B |= _BV(RXEN3);
-  #else
-    UCSR0B &= ~_BV(TXEN0);
-    UCSR0B |= _BV(RXEN0);
-  #endif
-}
-
-/**
- * Enabels TX and disables RX
- */
-static void hottV4EnableTransmitterMode() {
-  #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)  
-    UCSR3B &= ~_BV(RXEN3);
-    UCSR3B |= _BV(TXEN3);
-  #else
-    UCSR0B &= ~_BV(RXEN0);
-    UCSR0B |= _BV(TXEN0); 
-  #endif
+   while(Serial3.available()) {
+	Serial3.read();
+   }
 }
 
 /**
  * Writes out given data to data register.
  */
 static void hottV4SerialWrite(uint8_t data) {
-  #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-    loop_until_bit_is_set(UCSR3A, UDRE3);
-    UDR3 = data;
-  #else
-    loop_until_bit_is_set(UCSR0A, UDRE0);
-    UDR0 = data;
-  #endif
-  
+  Serial3.write(data);
   delayMicroseconds(HOTTV4_TX_DELAY);
 }
 
@@ -81,14 +58,6 @@ static void hottV4SerialWrite(uint8_t data) {
  */
 static void hottV4LoopUntilRegistersReady() {
   delayMicroseconds(HOTTV4_TX_DELAY); 
-  
-  #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-    loop_until_bit_is_set(UCSR3A, UDRE3);
-    loop_until_bit_is_set(UCSR3A, TXC3);
-  #else
-    loop_until_bit_is_set(UCSR0A, UDRE0);
-    loop_until_bit_is_set(UCSR0A, TXC0);
-  #endif
 }
 
 /**
@@ -97,9 +66,6 @@ static void hottV4LoopUntilRegistersReady() {
  */ 
 static void hottV4SendBinary(uint8_t *data) {
   uint16_t crc = 0;
-  
-  /* Enables TX / Disables RX */
-  hottV4EnableTransmitterMode();
    
   for (uint8_t index = 0; index < 44; index++) {  
     crc = crc + data[index]; 
@@ -123,13 +89,11 @@ static void hottV4SendBinary(uint8_t *data) {
 /**
  * Updates current direction related on compass information.
  */
+#if defined(HOTTV4DIR) 
 static void hottV4UpdateDirection(uint8_t *data) {
-	#if defined(HeadingMagHold) || defined(AeroQuadMega_CHR6DM) || defined(APM_OP_CHR6DM)
 		data[6] = ((int)(trueNorthHeading / M_PI * 180.0) + 360) % 360;
-	#else
-		data[6] = 0;
-	#endif
 	}
+#endif
 
 
 static void HoTTInvertDisplay(uint8_t *data) {
@@ -141,6 +105,7 @@ static void HoTTInvertDisplay(uint8_t *data) {
  * Resolution is in 0,1V, e.g. 0x7E == 12,6V.
  * If value is below batteryWarning, telemetry alarm is triggered
  */
+#if defined(HOTTV4BATT)
 static short hottv4UpdateBattery(uint8_t *data) {
 	short voltage = batteryData[0].voltage/10;
 
@@ -160,6 +125,7 @@ static long hottv4UpdateCapacity() {
 	if (batteryData[0].cPin != BM_NOPIN) return batteryData[0].usedCapacity/1000;
 	return 0;
 }
+#endif
 
 /**
  * Current relative altitude based on baro or ultrasonic values. 
@@ -168,14 +134,15 @@ static long hottv4UpdateCapacity() {
  * @param data Pointer to telemetry data frame
  * @param lowByteIndex Index for the low byte that represents the altitude in telemetry data frame
  */
+#if defined(HOTTV4ALTITUDE)
 static int32_t hottv4UpdateAlt() {
   int32_t alt = 0;
   
-#if defined AltitudeHoldBaro
+#if defined(AltitudeHoldBaro)
   alt = (int)getBaroAltitude() + 500;
 #endif 
 
-#if defined AltitudeHoldRangeFinder
+#if defined(AltitudeHoldRangeFinder)
   if (isOnRangerRange(rangeFinderRange[ALTITUDE_RANGE_FINDER_INDEX])) {
 	alt = (int)rangeFinderRange[ALTITUDE_RANGE_FINDER_INDEX] + 500;
   }
@@ -191,16 +158,15 @@ static int32_t hottv4UpdateAlt() {
 static unsigned int hottv4UpdateAltVario() {
 	unsigned int varioSound = 30000;
 
-#if defined AltitudeHoldBaro || defined AltitudeHoldRangeFinder
 	if(altitudeHoldState == ON)
 	{
 		if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound = 30100;
 		else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound = 29900;
 	}
-#endif
 
 	return varioSound;
 }
+#endif
 
 unsigned int SetDelay (unsigned int t) {
 	return(CountMilliseconds + t + 1);
@@ -213,19 +179,21 @@ char CheckDelay(unsigned int t)	{
 static unsigned char HoTTWarning()
 	{
 	unsigned char status = 0;
-	static char old_status = 0;
+	static char oldStatus = 0;
 	static int repeat;
 
+#if defined(HOTTV4BATT)
 	// Activate low voltage alarm
 	if (batteryWarning || batteryAlarm) {
 		status = HoTTv4NotificationUndervoltage;
 	}
+#endif
 	
 	if(!status) {
 		status = SpeakHoTT; 
 	}
 
-	if(old_status == status) {
+	if(oldStatus == status) {
 		if(!CheckDelay(repeat)) return 0;
 		repeat = SetDelay(5000);
 	}
@@ -235,15 +203,15 @@ static unsigned char HoTTWarning()
 		if(status == SpeakHoTT) SpeakHoTT = 0;
 	}   
 
-	old_status = status;
+	oldStatus = status;
 
 	return status;
 	}
 
 
 /**
- * Updates current flight time by counting the seconds from the moment
- * the copter was armed.
+ * Updates current flight time (with motors armed) by counting the seconds 
+ * from the moment power was applied.
  */
 static void hottv4UpdateFlightTime(uint8_t *data) {
   static uint32_t previousEAMUpdate = 0;
@@ -278,10 +246,10 @@ void hottv4Init() {
      * without signal is to weak to be recognized
      */
     DDRJ &= ~(1 << 0);
-    PORTJ |= (1 << 0);
-  
-    Serial3.begin(19200);
+    PORTJ |= (1 << 0);     
   #endif
+
+  Serial3.begin(19200);
 }
 
 /* ##################################################################### *
@@ -319,7 +287,7 @@ static void hottV4SendEAMTelemetry() {
               0x00 /* Checksum */
             };
   
-  #if defined HOTTV4BATT
+  #if defined(HOTTV4BATT)
     short voltage = hottv4UpdateBattery(telemetry_data);
 	telemetry_data[20] = telemetry_data[22] = telemetry_data[30] = voltage;
 	telemetry_data[21] = telemetry_data[23] = telemetry_data[31] = (voltage >> 8) & 0xFF;
@@ -333,7 +301,7 @@ static void hottV4SendEAMTelemetry() {
 	telemetry_data[33] = (capacity >> 8) & 0xFF;
   #endif
   
-  #if defined HOTTV4ALTITUDE
+  #if defined(HOTTV4ALTITUDE)
     int32_t altitude = hottv4UpdateAlt();
 	telemetry_data[26] = altitude;
 	telemetry_data[27] = (altitude >> 8) & 0xFF;
@@ -357,6 +325,7 @@ static void hottV4SendEAMTelemetry() {
  * Converts unsigned long representation of GPS coordinate back to
  * N Deg MM.SSSS representation and puts it into GPS data frame.
  */
+#if defined(UseGPS)
 static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index] = (value < 0); 
 
@@ -372,6 +341,7 @@ static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index+3] = sec; 
   data[index+4] = sec >> 8;
 }
+#endif
 
 /**
  * Main method to send GPS telemetry data
@@ -446,7 +416,7 @@ static void hottV4SendGPSTelemetry() {
     }
 #endif
           
-#if defined HOTTV4ALTITUDE
+#if defined(HOTTV4ALTITUDE)
 	int32_t altitude = hottv4UpdateAlt();
 	telemetry_data[21] = altitude;
 	telemetry_data[22] = (altitude >> 8) & 0xFF;
@@ -500,7 +470,7 @@ static void hottV4SendVarioTelemetry() {
               0x00  /* Checksum */
             };
 
-#if defined HOTTV4ALTITUDE
+#if defined(HOTTV4ALTITUDE)
   int32_t altitude = hottv4UpdateAlt();
   telemetry_data[5] = altitude;
   telemetry_data[6] = (altitude >> 8) & 0xFF;
@@ -548,40 +518,21 @@ static void hottV4SendVarioTelemetry() {
  * ##################################################################### */
 
 /**
- * Check if enough time has been elapsed since last telemetry update to
- * prevent too much interference with motor control.
- */
-uint8_t canSendTelemetry() {
-  static uint16_t lastTimeUpdated = 0;
-  
-  if ((millis() - lastTimeUpdated) > HOTTV4_UPDATE_INTERVAL) {
-    lastTimeUpdated = millis();
-    
-    return 1;
-  } else {
-    return 0;
-  }
-}
-
-/**
  * Main entry point for HoTTv4 telemetry
  */
 uint8_t hottV4Hook(uint8_t serialData) {
   switch (serialData) {
-    case HOTTV4_GPS_MODULE:
-      if (canSendTelemetry()) {
+    case HOTTV4_GPS_MODULE: {
         hottV4SendGPSTelemetry();
       }
       break;
     
-    case HOTTV4_ELECTRICAL_AIR_MODULE:
-      if (canSendTelemetry()) {
+    case HOTTV4_ELECTRICAL_AIR_MODULE: {
         hottV4SendEAMTelemetry();
       }
       break;
          
-    case HOTTV4_VARIO_MODULE:
-      if (canSendTelemetry()) {
+    case HOTTV4_VARIO_MODULE: {
         hottV4SendVarioTelemetry();
       }
       break;
