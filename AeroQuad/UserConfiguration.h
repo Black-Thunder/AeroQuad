@@ -109,7 +109,7 @@
 //#define POWERED_BY_VIN          // NEED BattMonitor defined. Uncomment this if your v2.x shield is powered directly by the Vin/Gnd of the arduino
 //
 // Advanced configuration. Please refer to the wiki for instructions.
-#define BattCustomConfig DEFINE_BATTERY(3, 0, 14.67, 0.86, BM_NOPIN, 0, 0) 
+//#define BattCustomConfig DEFINE_BATTERY(3,BATT_ANALOG_INPUT,25.3,0,A6,66,0)
 
 //
 // *******************************************************************************************************************************
@@ -149,7 +149,7 @@
 //#define MAV_SYSTEM_ID 100	// Needs to be enabled when using MavLink, used to identify each of your copters using MavLink
 				// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
 
-#define GraupnerHoTTTelemetry
+//#define GraupnerHoTTTelemetry
 
 //
 // *******************************************************************************************************************************

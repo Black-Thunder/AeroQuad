@@ -21,17 +21,21 @@
 #ifndef _AEROQUAD_HOTT_H_
 #define _AEROQUAD_HOTT_H_
 
+#include <HardwareSerial.h>
+
+//#define HOTTV4_DEBUG
+
 #define HOTTV4_UPDATE_INTERVAL 2000
 
-#if defined BattMonitor
+#if defined(BattMonitor)
 #define HOTTV4BATT
 #endif
 
-#if defined AltitudeHoldBaro || defined AltitudeHoldRangeFinder
+#if defined(AltitudeHoldBaro) || defined(AltitudeHoldRangeFinder)
 #define HOTTV4ALTITUDE
 #endif
 
-#if defined HeadingMagHold
+#if defined(HeadingMagHold) || defined(AeroQuadMega_CHR6DM) || defined(APM_OP_CHR6DM)
 #define HOTTV4DIR
 #endif
 
@@ -50,7 +54,7 @@
 #define HOTTV4_VARIO_MODULE 0x89 // Vario Sensor Module ID
 
 #if !defined (HOTTV4_TX_DELAY) 
-#define HOTTV4_TX_DELAY 700 //600
+#define HOTTV4_TX_DELAY 600
 #endif
 
 /** ###### VARIO Text ###### */

@@ -93,6 +93,8 @@ tSerial &Serial = SERIAL_VAR;
 
 // Battery Monitor declaration
 #ifdef BattMonitor
+	#define BuzzerPin Port2Pin('A', 0)
+
 	#define BATT_AREF			3.3		// V
 
 	#ifdef BOARD_freeflight
@@ -154,6 +156,8 @@ void initPlatform() {
 
 #ifdef BattMonitor
 	pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
+	pinMode(BuzzerPin, OUTPUT);
+	digitalWrite(BuzzerPin, LOW);
 #endif
 
 #ifdef BOARD_aeroquad32

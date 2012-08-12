@@ -421,7 +421,7 @@
     digitalWrite(LED_Red, LOW);
     pinMode(LED_Yellow, OUTPUT);
     digitalWrite(LED_Yellow, LOW);
-	pinMode(BuzzerPin, OUTPUT);
+	pinMode(BuzzerPin, LOW);
 	digitalWrite(BuzzerPin, LOW);
 
     // pins set to INPUT for camera stabilization so won't interfere with new camera class
@@ -1126,10 +1126,6 @@
   #include <AQ_RSCode.h>
 #endif
 
-#ifdef GraupnerHoTTTelemetry
-  #include <HoTT.h>
-  #include <HoTT_Telemetry.h>
-#endif
 
 // Include this last as it contains objects from above declarations
 #include "AltitudeControlProcessor.h"
@@ -1146,6 +1142,11 @@
   #include "MavLink.h"
 #else
   #include "SerialCom.h"
+#endif
+
+#ifdef GraupnerHoTTTelemetry
+  #include <HoTT.h>
+  #include <HoTT_Telemetry.h>
 #endif
 
 
@@ -1248,10 +1249,6 @@ void setup() {
      initSlowTelemetry();
   #endif
 
-  #if defined (GraupnerHoTTTelemetry)
-     hottv4Init();
-  #endif
-
   setupFourthOrder();
   
   // Initialize sensors
@@ -1270,6 +1267,10 @@ void setup() {
     initializeMagnetometer();
     initializeHeadingFusion();
   #endif
+
+#ifdef GraupnerHoTTTelemetry
+	hottv4Init(&Serial3);
+#endif
 
 
   
@@ -1448,20 +1449,13 @@ void loop () {
     previousTime = currentTime;
   }
   
+  #if defined (GraupnerHoTTTelemetry)
+	hottHandler();
+  #endif
+
   if (frameCounter >= 100) {
       frameCounter = 0;
   }
-
-
-  #if defined (GraupnerHoTTTelemetry)
-  if(Serial3.available()) {
-    while(Serial3.available() > 1) {
-      Serial3.read();
-    }
-	delay(2);
-    hottV4Hook(Serial3.read());
-  }
-  #endif
 }
 
 

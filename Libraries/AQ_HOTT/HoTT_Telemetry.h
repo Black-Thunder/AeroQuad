@@ -24,6 +24,8 @@
 #include "HoTT.h"
 #include <stdio.h>
 
+HardwareSerial *hottV4Serial;
+
 static uint8_t minutes = 0;
 static uint16_t milliseconds = 0;
 static signed int maxAltitude = 500;
@@ -35,77 +37,84 @@ unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
  *                HoTTv4 Common Serial                                   *
  * ##################################################################### */
 
-/**
- * Enables RX and disables TX
- */
-static void hottV4EnableReceiverMode() {
-   while(Serial3.available()) {
-	Serial3.read();
-   }
-}
 
 /**
  * Writes out given data to data register.
  */
 static void hottV4SerialWrite(uint8_t data) {
-  Serial3.write(data);
-  delayMicroseconds(HOTTV4_TX_DELAY);
+  hottV4Serial->write(data);
 }
 
 /**
- * Wait until Data Register is empty and
- * TX register is empty.
+ * Clears input buffer
  */
-static void hottV4LoopUntilRegistersReady() {
-  delayMicroseconds(HOTTV4_TX_DELAY); 
+void hottV4SerialClearInput() {
+	while(hottV4Serial->available() > 0) {
+		hottV4Serial->read();
+	}
 }
 
 /**
- * Write out given telemetry data to serial interface.
- * Given CRC is ignored and calculated on the fly.
- */ 
+ * Reads last byte from input buffer
+ */
+int hottV4SerialRead() {
+	while(hottV4Serial->available() > 1) {
+		hottV4Serial->read();
+	}
+    if(hottV4Serial->available()) {
+    	return hottV4Serial->read();
+    } else {
+    	return 0xff;
+    }
+}
+
+
+
+#define hottV4TelemetryBufferSize 45
+static uint8_t  hottV4TelemetryBuffer[hottV4TelemetryBufferSize];
+static byte  hottV4TelemetryBufferIndex;
+
+/**
+ * Buffer telemetry data
+ */
 static void hottV4SendBinary(uint8_t *data) {
   uint16_t crc = 0;
-   
-  for (uint8_t index = 0; index < 44; index++) {  
-    crc = crc + data[index]; 
-    hottV4SerialWrite(data[index]);    
-   }
-   
-  uint8_t crcVal = crc & 0xFF;
-  hottV4SerialWrite(crcVal);
 
-  /* Wait until Data Register and TX Register is empty */
-  hottV4LoopUntilRegistersReady();
-  
-  /* Enables RX / Disables TX */
-  hottV4EnableReceiverMode();
-} 
+  for (uint8_t index = 0; index < hottV4TelemetryBufferSize-1; index++) {
+    crc = crc + data[index];
+    hottV4TelemetryBuffer[index] = data[index];
+   }
+
+  uint8_t crcVal = crc & 0xFF;
+  hottV4TelemetryBuffer[hottV4TelemetryBufferSize-1] = crcVal;
+
+  hottV4TelemetryBufferIndex = 0;
+}
+
 
 /* ##################################################################### *
  *                HoTTv4 Module specific Update functions                *
  * ##################################################################### */
 
+#if defined(HOTTV4DIR)
 /**
  * Updates current direction related on compass information.
  */
-#if defined(HOTTV4DIR) 
-static void hottV4UpdateDirection(uint8_t *data) {
-		data[6] = ((int)(trueNorthHeading / M_PI * 180.0) + 360) % 360;
+static int hottV4UpdateDirection() {
+	return ((int)(trueNorthHeading / M_PI * 180.0) + 360) % 360;
 	}
 #endif
-
 
 static void HoTTInvertDisplay(uint8_t *data) {
     data[4] = 0x80; // Inverts MikroKopter Telemetry Display for Voltage
 }
 
+#if defined(HOTTV4BATT)
 /**
  * Updates battery voltage telemetry data with given value.
  * Resolution is in 0,1V, e.g. 0x7E == 12,6V.
  * If value is below batteryWarning, telemetry alarm is triggered
  */
-#if defined(HOTTV4BATT)
 static short hottv4UpdateBattery(uint8_t *data) {
 	short voltage = batteryData[0].voltage/10;
 
@@ -127,6 +136,8 @@ static long hottv4UpdateCapacity() {
 }
 #endif
 
+
+#if defined(AltitudeHoldBaro) || defined(AltitudeHoldRangeFinder)
 /**
  * Current relative altitude based on baro or ultrasonic values. 
  * Result is displayed in meter.
@@ -134,7 +145,6 @@ static long hottv4UpdateCapacity() {
  * @param data Pointer to telemetry data frame
  * @param lowByteIndex Index for the low byte that represents the altitude in telemetry data frame
  */
-#if defined(HOTTV4ALTITUDE)
 static int32_t hottv4UpdateAlt() {
   int32_t alt = 0;
   
@@ -238,18 +248,17 @@ static void hottv4UpdateFlightTime(uint8_t *data) {
 /**
  * Call to initialize HOTTV4
  */
-void hottv4Init() {
-  hottV4EnableReceiverMode();
+void hottv4Init(HardwareSerial *serial) {
+  hottV4Serial = serial;
     
   #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
     /* Enable PullUps on RX3
      * without signal is to weak to be recognized
      */
     DDRJ &= ~(1 << 0);
-    PORTJ |= (1 << 0);     
+    PORTJ |= (1 << 0);
   #endif
-
-  Serial3.begin(19200);
+  hottV4Serial->begin(19200);
 }
 
 /* ##################################################################### *
@@ -321,11 +330,11 @@ static void hottV4SendEAMTelemetry() {
  *                HoTTv4 GPS Module                                      *
  * ##################################################################### */
 
+#if defined(UseGPS)
 /**
  * Converts unsigned long representation of GPS coordinate back to
  * N Deg MM.SSSS representation and puts it into GPS data frame.
  */
-#if defined(UseGPS)
 static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index] = (value < 0); 
 
@@ -394,23 +403,23 @@ static void hottV4SendGPSTelemetry() {
       /** GPS Speed in km/h */
       telemetry_data[7] = getGpsSpeed()*36/1000;
 
-      /** Distance and direction to home */
+      /** Distance to home */
 	  if(isHomeBaseInitialized()) {
 		  computeDistanceAndBearing(currentPosition, missionPositionToReach);
 		  telemetry_data[19] = (int)getDistanceMeter();
 		  telemetry_data[20] = (int)getDistanceMeter() >> 8;
 		  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG)) * 50;
-	 }
+		  }
 
 	  if (navigationState == ON) { 
-		    telemetry_data[39] = HoTTGPSComingHome; // Displays a 'W' for Waypoint
-	  }
+		  telemetry_data[39] = HoTTGPSComingHome; // Displays a 'W' for Waypoint
+		  }
 	  else if(positionHoldState == ON) {
-			telemetry_data[39] = HoTTGPSPositionHold; //Displays a 'P' for Position Hold
-	  }
+		  telemetry_data[39] = HoTTGPSPositionHold; //Displays a 'P' for Position Hold
+		  }
 	  else {
 		  telemetry_data[39] = HoTTGPSFree; //Displays a '/' for GPS Mode off 
-	  }
+		  }
     }
 #endif
           
@@ -425,9 +434,9 @@ static void hottV4SendGPSTelemetry() {
 #endif
 
 
-  #if defined(HOTTV4DIR) 
-    hottV4UpdateDirection(telemetry_data);
-  #endif
+#if defined(HOTTV4DIR) 
+    telemetry_data[6] = hottV4UpdateDirection();
+#endif
 
   // Triggers voice alarm if necessary
   telemetry_data[2] = HoTTWarning();
@@ -518,28 +527,87 @@ static void hottV4SendVarioTelemetry() {
 /**
  * Main entry point for HoTTv4 telemetry
  */
-uint8_t hottV4Hook(uint8_t serialData) {
+bool hottV4Hook(uint8_t serialData) {
+#ifdef HOTTV4_DEBUG
+  Serial.print("Hott cmd ");
+  Serial.print((int)serialData);
+  Serial.print(" time ");
+  Serial.println(micros());
+#endif
+
   switch (serialData) {
-    case HOTTV4_GPS_MODULE: {
-        hottV4SendGPSTelemetry();
-      }
+    case HOTTV4_GPS_MODULE:
+    case '1':
+      hottV4SendGPSTelemetry();
+      return true;
       break;
     
-    case HOTTV4_ELECTRICAL_AIR_MODULE: {
-        hottV4SendEAMTelemetry();
-      }
+    case HOTTV4_ELECTRICAL_AIR_MODULE:
+    case '2':
+      hottV4SendEAMTelemetry();
+      return true;
       break;
          
-    case HOTTV4_VARIO_MODULE: {
-        hottV4SendVarioTelemetry();
-      }
+    case HOTTV4_VARIO_MODULE:
+    case '3':
+      hottV4SendVarioTelemetry();
+      return true;
       break;
-
-    default:
-      return serialData;
   }
 
-  return 0;
+  return false;
 }
 
+enum HottStateMachine {
+	eHottReadCmd,
+	eHottSendStartDelay,
+	eHottSendByte,
+	eHottCleanUp
+} ;
+
+
+HottStateMachine hottState = eHottReadCmd;
+uint32 hottTime;
+void hottHandler()
+{
+	switch(hottState) {
+	case eHottReadCmd:
+		{
+		  byte cmd = hottV4SerialRead();
+	      if(cmd != 0xff && hottV4Hook(cmd)) {
+  	        hottTime = micros();
+  	        hottState = eHottSendStartDelay;
+	      }
+		}
+		break;
+
+	case eHottSendStartDelay:
+		if(micros() - hottTime > 2000) {
+		    hottTime = micros();
+		    hottState = eHottSendByte;
+		}
+		break;
+
+	case eHottSendByte:
+		if(micros() - hottTime > 1000) {
+			hottV4SerialWrite(hottV4TelemetryBuffer[hottV4TelemetryBufferIndex++]);
+			hottV4SerialClearInput();
+
+			hottTime = micros();
+		    if(hottV4TelemetryBufferIndex >= hottV4TelemetryBufferSize) {
+		    	hottState = eHottCleanUp;
+		    }
+		}
+		break;
+
+	case eHottCleanUp:
+		hottV4SerialClearInput();
+
+		if(micros() - hottTime > 5000) {
+		    hottTime = micros();
+		    hottState = eHottReadCmd;
+		}
+		break;
+	}
+}
 #endif 
