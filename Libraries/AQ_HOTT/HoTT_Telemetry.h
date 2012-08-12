@@ -394,25 +394,23 @@ static void hottV4SendGPSTelemetry() {
       /** GPS Speed in km/h */
       telemetry_data[7] = getGpsSpeed()*36/1000;
 
-      /** Distance to home */
+      /** Distance and direction to home */
+	  if(isHomeBaseInitialized()) {
+		  computeDistanceAndBearing(currentPosition, missionPositionToReach);
+		  telemetry_data[19] = (int)getDistanceMeter();
+		  telemetry_data[20] = (int)getDistanceMeter() >> 8;
+		  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG)) * 50;
+	 }
+
 	  if (navigationState == ON) { 
-		    computeDistanceAndBearing(currentPosition, missionPositionToReach);
-			telemetry_data[19] = (int)getDistanceMeter();
-			telemetry_data[20] = (int)getDistanceMeter() >> 8;
-			telemetry_data[39] = HoTTGPSComingHome; // Displays a 'W' for Waypoint
+		    telemetry_data[39] = HoTTGPSComingHome; // Displays a 'W' for Waypoint
 	  }
 	  else if(positionHoldState == ON) {
-			telemetry_data[19] = 0;
-			telemetry_data[20] = 0;
 			telemetry_data[39] = HoTTGPSPositionHold; //Displays a 'P' for Position Hold
 	  }
 	  else {
-		  telemetry_data[19] = 0;
-		  telemetry_data[20] = 0;
 		  telemetry_data[39] = HoTTGPSFree; //Displays a '/' for GPS Mode off 
 	  }
-
-	  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG)) * 50;
     }
 #endif
           
