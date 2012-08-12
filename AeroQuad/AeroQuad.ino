@@ -421,7 +421,7 @@
     digitalWrite(LED_Red, LOW);
     pinMode(LED_Yellow, OUTPUT);
     digitalWrite(LED_Yellow, LOW);
-	pinMode(BuzzerPin, LOW);
+	pinMode(BuzzerPin, OUTPUT);
 	digitalWrite(BuzzerPin, LOW);
 
     // pins set to INPUT for camera stabilization so won't interfere with new camera class

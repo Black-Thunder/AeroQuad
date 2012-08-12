@@ -109,7 +109,7 @@
 //#define POWERED_BY_VIN          // NEED BattMonitor defined. Uncomment this if your v2.x shield is powered directly by the Vin/Gnd of the arduino
 //
 // Advanced configuration. Please refer to the wiki for instructions.
-//#define BattCustomConfig DEFINE_BATTERY(3,BATT_ANALOG_INPUT,25.3,0,A6,66,0)
+#define BattCustomConfig DEFINE_BATTERY(3, 0, 14.67, 0.86, BM_NOPIN, 0, 0) 
 
 //
 // *******************************************************************************************************************************
