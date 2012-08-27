@@ -53,15 +53,15 @@ void processLedStatus() {
 	if(motorArmed) {
 		if (batteryAlarm) {
 			digitalWrite(BuzzerPin, (flashingLedState & 2));
-			} else if (batteryWarning) {
-				digitalWrite(BuzzerPin, (flashingLedState & 6));
-			} else {
-				digitalWrite(BuzzerPin, LOW);
-				}
+		} else if (batteryWarning) {
+			digitalWrite(BuzzerPin, (flashingLedState & 6));
+		} else {
+			digitalWrite(BuzzerPin, LOW);
 		}
+	}
 	else {
 		digitalWrite(BuzzerPin, LOW);
-		}
+	}
 #endif  
 
   //

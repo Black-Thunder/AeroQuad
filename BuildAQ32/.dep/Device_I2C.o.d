@@ -1,6 +1,6 @@
 objSTM32/dummy/../Libraries/AQ_I2C/Device_I2C.o: \
- C:/MinGW/msys/1.0/home/ang/Libraries/AQ_I2C/Device_I2C.cpp \
- C:/MinGW/msys/1.0/home/ang/Libraries/AQ_I2C/Device_I2C.h \
+ C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C/Device_I2C.cpp \
+ C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C/Device_I2C.h \
  ../AeroQuad32/MapleCompatibility/Arduino.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/include/stdint.h \
@@ -64,7 +64,7 @@ objSTM32/dummy/../Libraries/AQ_I2C/Device_I2C.o: \
  ../Libmaple/libmaple/libraries/Wire/Wire.h \
  ../Libmaple/libmaple/wirish/wirish.h
 
-C:/MinGW/msys/1.0/home/ang/Libraries/AQ_I2C/Device_I2C.h:
+C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C/Device_I2C.h:
 
 ../AeroQuad32/MapleCompatibility/Arduino.h:
 

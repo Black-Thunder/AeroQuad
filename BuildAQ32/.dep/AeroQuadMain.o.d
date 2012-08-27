@@ -1,5 +1,5 @@
 objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/AeroQuadMain.cpp \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/AeroQuadMain.cpp \
  ../AeroQuad32/SerialMapping.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/include/stdint.h \
@@ -60,20 +60,20 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libmaple/libmaple/wirish/HardwareTimer.h \
  ../Libmaple/libmaple/wirish/usb_serial.h \
  ../Libmaple/libmaple/wirish/Print.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AeroQuad.ino \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/UserConfiguration.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AeroQuad.ino \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/UserConfiguration.h \
  ../AeroQuad32/MapleCompatibility/EEPROM.h \
  ../Libmaple/libmaple/wirish/wirish.h \
  ../AeroQuad32/MapleCompatibility/flash_stm32.h \
  ../Libmaple/libmaple/libraries/Wire/Wire.h \
  ../Libraries/AQ_Defines/GlobalDefined.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AeroQuad.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AeroQuad.h \
  ../AeroQuad32/MapleCompatibility/Arduino.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
  ../AeroQuad32/MapleCompatibility/pins_arduino.h \
  ../Libraries/AQ_Gps/GpsDataType.h ../Libraries/AQ_Math/AQMath.h \
  ../Libraries/AQ_Receiver/Receiver.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/PID.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/PID.h \
  ../Libraries/AQ_Math/FourtOrderFilter.h \
  ../Libraries/AQ_BatteryMonitor/BatteryMonitorTypes.h \
  ../AeroQuad32/AeroQuad_STM32.h ../Libraries/AQ_I2C/Device_I2C.h \
@@ -100,15 +100,15 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libraries/AQ_BatteryMonitor/BatteryMonitor.h \
  ../Libraries/AQ_FlightControlProcessor/FlightControlQuadX.h \
  ../Libraries/AQ_FlightControlProcessor/FlightControlVariable.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/FlightControlProcessor.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/FlightCommandProcessor.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/DataStorage.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/LedStatusProcessor.h \
- C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/SerialCom.h \
- ../Libraries/AQ_HoTT/HoTT.h ../Libraries/AQ_HoTT/HoTT_Telemetry.h \
- ../Libraries/AQ_HoTT/HoTT.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/FlightControlProcessor.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/FlightCommandProcessor.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/DataStorage.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/LedStatusProcessor.h \
+ C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/SerialCom.h \
+ ../Libraries/AQ_HOTT/HoTT.h ../Libraries/AQ_HOTT/HoTT_Telemetry.h \
+ ../Libraries/AQ_HOTT/HoTT.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/include/stdio.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/include/stdarg.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/include/sys/types.h \
@@ -239,9 +239,9 @@ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\.
 
 ../Libmaple/libmaple/wirish/Print.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AeroQuad.ino:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AeroQuad.ino:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/UserConfiguration.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/UserConfiguration.h:
 
 ../AeroQuad32/MapleCompatibility/EEPROM.h:
 
@@ -253,7 +253,7 @@ C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/UserConfiguration.h:
 
 ../Libraries/AQ_Defines/GlobalDefined.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AeroQuad.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AeroQuad.h:
 
 ../AeroQuad32/MapleCompatibility/Arduino.h:
 
@@ -267,7 +267,7 @@ C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AeroQuad.h:
 
 ../Libraries/AQ_Receiver/Receiver.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/PID.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/PID.h:
 
 ../Libraries/AQ_Math/FourtOrderFilter.h:
 
@@ -325,25 +325,25 @@ C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/PID.h:
 
 ../Libraries/AQ_FlightControlProcessor/FlightControlVariable.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/FlightControlProcessor.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/FlightControlProcessor.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/FlightCommandProcessor.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/FlightCommandProcessor.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/DataStorage.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/DataStorage.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/LedStatusProcessor.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/LedStatusProcessor.h:
 
-C:/MinGW/msys/1.0/home/ang/AeroQuad32/../AeroQuad/SerialCom.h:
+C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/../AeroQuad/SerialCom.h:
 
-../Libraries/AQ_HoTT/HoTT.h:
+../Libraries/AQ_HOTT/HoTT.h:
 
-../Libraries/AQ_HoTT/HoTT_Telemetry.h:
+../Libraries/AQ_HOTT/HoTT_Telemetry.h:
 
-../Libraries/AQ_HoTT/HoTT.h:
+../Libraries/AQ_HOTT/HoTT.h:
 
 c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/include/stdio.h:
 

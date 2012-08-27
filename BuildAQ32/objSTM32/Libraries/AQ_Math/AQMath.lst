@@ -23,33 +23,33 @@
   23              		.thumb_func
   25              	_Z12filterSmoothfff:
   26              	.LFB113:
-  27              		.file 1 "C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math/AQMath.cpp"
-   1:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** /*
-   2:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   AeroQuad v3.0.1 - February 2012
-   3:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   www.AeroQuad.com
-   4:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   Copyright (c) 2012 Ted Carancho.  All rights reserved.
-   5:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   An Open Source Arduino based multicopter.
-   6:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****  
-   7:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   This program is free software: you can redistribute it and/or modify 
-   8:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   it under the terms of the GNU General Public License as published by 
-   9:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   the Free Software Foundation, either version 3 of the License, or 
-  10:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   (at your option) any later version. 
-  11:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  12:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   This program is distributed in the hope that it will be useful, 
-  13:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   but WITHOUT ANY WARRANTY; without even the implied warranty of 
-  14:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
-  15:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   GNU General Public License for more details. 
-  16:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  17:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   You should have received a copy of the GNU General Public License 
-  18:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   along with this program. If not, see <http://www.gnu.org/licenses/>. 
-  19:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** */
-  20:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  21:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** #include "AQMath.h"
-  22:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  23:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  24:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Low pass filter, kept as regular C function for speed
-  25:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float filterSmooth(float currentData, float previousData, float smoothFactor) 
-  26:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  27              		.file 1 "C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.cpp"
+   1:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** /*
+   2:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   AeroQuad v3.0.1 - February 2012
+   3:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   www.AeroQuad.com
+   4:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   Copyright (c) 2012 Ted Carancho.  All rights reserved.
+   5:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   An Open Source Arduino based multicopter.
+   6:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****  
+   7:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   This program is free software: you can redistribute it and/or modify 
+   8:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   it under the terms of the GNU General Public License as published by 
+   9:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   the Free Software Foundation, either version 3 of the License, or 
+  10:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   (at your option) any later version. 
+  11:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  12:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   This program is distributed in the hope that it will be useful, 
+  13:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+  14:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+  15:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   GNU General Public License for more details. 
+  16:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  17:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   You should have received a copy of the GNU General Public License 
+  18:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   along with this program. If not, see <http://www.gnu.org/licenses/>. 
+  19:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** */
+  20:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  21:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** #include "AQMath.h"
+  22:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  23:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  24:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Low pass filter, kept as regular C function for speed
+  25:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float filterSmooth(float currentData, float previousData, float smoothFactor) 
+  26:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
   28              		.loc 1 26 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
@@ -58,28 +58,28 @@
   33              	.LVL0:
   34              		.loc 1 26 0
   35 0000 07EE102A 		fmsr	s14, r2
-  27:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if (smoothFactor != 1.0) //only apply time compensated filter if smoothFactor is applied
+  27:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if (smoothFactor != 1.0) //only apply time compensated filter if smoothFactor is applied
   36              		.loc 1 27 0
   37 0004 F7EE006A 		fconsts	s13, #112
   38 0008 B4EE667A 		fcmps	s14, s13
   39 000c F1EE10FA 		fmstat
-  26:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  26:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
   40              		.loc 1 26 0
   41 0010 07EE900A 		fmsr	s15, r0
   42 0014 06EE101A 		fmsr	s12, r1
   43              		.loc 1 27 0
   44 0018 07D0     		beq	.L2
-  28:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  29:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     return (previousData * (1.0 - smoothFactor) + (currentData * smoothFactor)); 
+  28:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  29:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     return (previousData * (1.0 - smoothFactor) + (currentData * smoothFactor)); 
   45              		.loc 1 29 0
   46 001a 76EEC76A 		fsubs	s13, s13, s14
   47 001e 66EE266A 		fmuls	s13, s12, s13
   48 0022 47EE876A 		fmacs	s13, s15, s14
   49 0026 F0EE667A 		fcpys	s15, s13
   50              	.L2:
-  30:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  31:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return currentData; //if smoothFactor == 1.0, do not calculate, just bypass!
-  32:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+  30:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  31:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return currentData; //if smoothFactor == 1.0, do not calculate, just bypass!
+  32:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
   51              		.loc 1 32 0
   52 002a 17EE900A 		fmrs	r0, s15
   53              	.LVL1:
@@ -93,9 +93,9 @@
   62              		.thumb_func
   64              	_Z20filterSmoothWithTimeffff:
   65              	.LFB114:
-  33:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  34:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float filterSmoothWithTime(float currentData, float previousData, float smoothFactor, float dT_scal
-  35:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {  //time scale factor
+  33:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  34:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float filterSmoothWithTime(float currentData, float previousData, float smoothFactor, float dT_scal
+  35:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {  //time scale factor
   66              		.loc 1 35 0
   67              		.cfi_startproc
   68              		@ args = 0, pretend = 0, frame = 0
@@ -104,20 +104,20 @@
   71              	.LVL2:
   72              		.loc 1 35 0
   73 0000 07EE102A 		fmsr	s14, r2
-  36:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if (smoothFactor != 1.0) //only apply time compensated filter if smoothFactor is applied
+  36:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if (smoothFactor != 1.0) //only apply time compensated filter if smoothFactor is applied
   74              		.loc 1 36 0
   75 0004 F7EE006A 		fconsts	s13, #112
   76 0008 B4EE667A 		fcmps	s14, s13
   77 000c F1EE10FA 		fmstat
-  35:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {  //time scale factor
+  35:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {  //time scale factor
   78              		.loc 1 35 0
   79 0010 07EE900A 		fmsr	s15, r0
   80 0014 06EE101A 		fmsr	s12, r1
   81 0018 05EE903A 		fmsr	s11, r3
   82              		.loc 1 36 0
   83 001c 09D0     		beq	.L4
-  37:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  38:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     return (previousData * (1.0 - (smoothFactor * dT_scaledAroundOne)) + (currentData * (smoothFact
+  37:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  38:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     return (previousData * (1.0 - (smoothFactor * dT_scaledAroundOne)) + (currentData * (smoothFact
   84              		.loc 1 38 0
   85 001e 27EE257A 		fmuls	s14, s14, s11
   86 0022 76EEC76A 		fsubs	s13, s13, s14
@@ -125,9 +125,9 @@
   88 002a 47EE876A 		fmacs	s13, s15, s14
   89 002e F0EE667A 		fcpys	s15, s13
   90              	.L4:
-  39:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  40:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return currentData; //if smoothFactor == 1.0, do not calculate, just bypass!
-  41:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+  39:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  40:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return currentData; //if smoothFactor == 1.0, do not calculate, just bypass!
+  41:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
   91              		.loc 1 41 0
   92 0032 17EE900A 		fmrs	r0, s15
   93              	.LVL3:
@@ -141,14 +141,14 @@
  102              		.thumb_func
  104              	_ZN12MedianFilterC2Ev:
  105              	.LFB116:
-  42:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  43:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // ***********************************************************************
-  44:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // *********************** Median Filter Class ***************************
-  45:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // ***********************************************************************
-  46:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Median filter currently not used, but kept if needed for the future
-  47:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // To declare use: MedianFilter filterSomething;
-  48:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  49:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** MedianFilter::MedianFilter() {}
+  42:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  43:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // ***********************************************************************
+  44:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // *********************** Median Filter Class ***************************
+  45:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // ***********************************************************************
+  46:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Median filter currently not used, but kept if needed for the future
+  47:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // To declare use: MedianFilter filterSomething;
+  48:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  49:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** MedianFilter::MedianFilter() {}
  106              		.loc 1 49 0
  107              		.cfi_startproc
  108              		@ args = 0, pretend = 0, frame = 0
@@ -166,9 +166,9 @@
  121              		.thumb_func
  123              	_ZN12MedianFilter10initializeEv:
  124              	.LFB118:
-  50:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  51:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void MedianFilter::initialize() 
-  52:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  50:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  51:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void MedianFilter::initialize() 
+  52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  125              		.loc 1 52 0
  126              		.cfi_startproc
  127              		@ args = 0, pretend = 0, frame = 0
@@ -182,28 +182,28 @@
  135              	.L8:
  136              	.LBB2:
  137              	.LBB3:
-  53:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
-  54:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  55:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     data[index] = 0;
+  53:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
+  54:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  55:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     data[index] = 0;
  138              		.loc 1 55 0 discriminator 2
  139 0004 0021     		movs	r1, #0
  140 0006 42F8041B 		str	r1, [r2], #4	@ float
-  53:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
+  53:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
  141              		.loc 1 53 0 discriminator 2
  142 000a 013B     		subs	r3, r3, #1
-  56:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     sortData[index] = 0;
+  56:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     sortData[index] = 0;
  143              		.loc 1 56 0 discriminator 2
  144 000c 1166     		str	r1, [r2, #96]	@ float
-  53:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
+  53:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int index = 0; index < DATASIZE; index++) 
  145              		.loc 1 53 0 discriminator 2
  146 000e F9D1     		bne	.L8
  147              	.LBE3:
-  57:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  58:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   dataIndex = 0;
+  57:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  58:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   dataIndex = 0;
  148              		.loc 1 58 0
  149 0010 C0F8C830 		str	r3, [r0, #200]
  150              	.LBE2:
-  59:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+  59:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  151              		.loc 1 59 0
  152 0014 7047     		bx	lr
  153              		.cfi_endproc
@@ -215,60 +215,60 @@
  160              		.thumb_func
  162              	_ZN12MedianFilter6filterEf:
  163              	.LFB119:
-  60:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   
-  61:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
-  62:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  60:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
+  61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
+  62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  164              		.loc 1 62 0
  165              		.cfi_startproc
  166              		@ args = 0, pretend = 0, frame = 0
  167              		@ frame_needed = 0, uses_anonymous_args = 0
  168              	.LVL7:
  169              	.LBB4:
-  63:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   int temp, j; // used to sort array
-  64:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  65:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   // Insert new data into raw data array round robin style
-  66:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   data[dataIndex] = newData;
+  63:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   int temp, j; // used to sort array
+  64:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  65:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   // Insert new data into raw data array round robin style
+  66:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   data[dataIndex] = newData;
  170              		.loc 1 66 0
  171 0000 D0F8C830 		ldr	r3, [r0, #200]
  172 0004 00EB8302 		add	r2, r0, r3, lsl #2
-  67:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if (dataIndex < (DATASIZE-1)) 
+  67:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if (dataIndex < (DATASIZE-1)) 
  173              		.loc 1 67 0
  174 0008 172B     		cmp	r3, #23
  175              	.LBE4:
-  62:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  176              		.loc 1 62 0
  177 000a 10B5     		push	{r4, lr}
  178              	.LCFI0:
  179              		.cfi_def_cfa_offset 8
  180              		.cfi_offset 14, -4
  181              		.cfi_offset 4, -8
-  62:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  182              		.loc 1 62 0
  183 000c 0446     		mov	r4, r0
  184              	.LBB6:
-  66:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   data[dataIndex] = newData;
+  66:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   data[dataIndex] = newData;
  185              		.loc 1 66 0
  186 000e 1160     		str	r1, [r2, #0]	@ float
  187              		.loc 1 67 0
  188 0010 01DC     		bgt	.L11
-  68:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  69:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     dataIndex++;
+  68:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  69:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     dataIndex++;
  189              		.loc 1 69 0
  190 0012 0133     		adds	r3, r3, #1
  191 0014 00E0     		b	.L19
  192              	.L11:
-  70:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  71:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   else 
-  72:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  73:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     dataIndex = 0;    
+  70:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  71:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   else 
+  72:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  73:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     dataIndex = 0;    
  193              		.loc 1 73 0
  194 0016 0023     		movs	r3, #0
  195              	.L19:
  196 0018 C0F8C830 		str	r3, [r0, #200]
-  74:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  75:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  76:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   // Copy raw data to sort data array
-  77:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   memcpy(sortData, data, sizeof(data));
+  74:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  75:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  76:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   // Copy raw data to sort data array
+  77:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   memcpy(sortData, data, sizeof(data));
  197              		.loc 1 77 0
  198 001c 2146     		mov	r1, r4
  199              	.LVL8:
@@ -279,35 +279,35 @@
  204 0024 FFF7FEFF 		bl	memcpy
  205              	.LVL11:
  206              	.LBE6:
-  61:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
+  61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
  207              		.loc 1 61 0
  208 0028 0223     		movs	r3, #2
  209              	.LVL12:
  210              	.L16:
  211              	.LBB7:
  212              	.LBB5:
-  78:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  79:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   // Insertion Sort
-  80:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
-  81:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
-  82:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     temp = sortData[i];
+  78:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  79:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   // Insertion Sort
+  80:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
+  81:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+  82:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     temp = sortData[i];
  213              		.loc 1 82 0
  214 002a 0430     		adds	r0, r0, #4
  215 002c D0ED006A 		flds	s13, [r0, #0]
-  61:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
+  61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
  216              		.loc 1 61 0
  217 0030 04EB8301 		add	r1, r4, r3, lsl #2
  218              		.loc 1 82 0
  219 0034 FDEEE66A 		ftosizs	s13, s13
  220              	.LVL13:
-  61:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
+  61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
  221              		.loc 1 61 0
  222 0038 9A1E     		subs	r2, r3, #2
  223              	.LVL14:
  224 003a 6431     		adds	r1, r1, #100
  225              	.L15:
-  83:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     j = i-1;
-  84:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     while(temp<sortData[j] && j>=0) 
+  83:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     j = i-1;
+  84:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     while(temp<sortData[j] && j>=0) 
  226              		.loc 1 84 0 discriminator 1
  227 003c F8EEE67A 		fsitos	s15, s13
  228 0040 11ED027A 		flds	s14, [r1, #-8]
@@ -317,34 +317,34 @@
  232              		.loc 1 84 0 is_stmt 0 discriminator 2
  233 004e B2F1FF3F 		cmp	r2, #-1
  234 0052 03D0     		beq	.L13
-  85:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	{
-  86:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	  sortData[j+1] = sortData[j];
+  85:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	{
+  86:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	  sortData[j+1] = sortData[j];
  235              		.loc 1 86 0 is_stmt 1 discriminator 5
  236 0054 21ED017A 		fstmdbs	r1!, {s14}
-  87:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	  j = j-1;
+  87:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	  j = j-1;
  237              		.loc 1 87 0 discriminator 5
  238 0058 013A     		subs	r2, r2, #1
  239              	.LVL15:
  240 005a EFE7     		b	.L15
  241              	.L13:
-  88:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     }
-  89:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     sortData[j+1] = temp;
+  88:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     }
+  89:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     sortData[j+1] = temp;
  242              		.loc 1 89 0
  243 005c 0133     		adds	r3, r3, #1
  244 005e 04EB8201 		add	r1, r4, r2, lsl #2
-  80:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
+  80:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
  245              		.loc 1 80 0
  246 0062 1A2B     		cmp	r3, #26
  247              		.loc 1 89 0
  248 0064 C1ED1A7A 		fsts	s15, [r1, #104]
-  80:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
+  80:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i=1; i<=(DATASIZE-1); i++) 
  249              		.loc 1 80 0
  250 0068 DFD1     		bne	.L16
  251              	.LBE5:
  252              	.LBE7:
-  90:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
-  91:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return data[(DATASIZE)>>1]; // return data value in middle of sorted array
-  92:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** } 
+  90:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+  91:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return data[(DATASIZE)>>1]; // return data value in middle of sorted array
+  92:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** } 
  253              		.loc 1 92 0
  254 006a 206B     		ldr	r0, [r4, #48]	@ float
  255 006c 10BD     		pop	{r4, pc}
@@ -357,16 +357,16 @@
  263              		.thumb_func
  265              	_Z16vectorDotProductiPfS_:
  266              	.LFB120:
-  93:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
-  94:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
-  95:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Vector Dot Product
-  96:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Return the Dot product of vectors a and b with length m
-  97:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
-  98:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorDotProduct(m, a, b)
-  99:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 100:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 101:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float vectorDotProduct(int length, float vector1[], float vector2[])
- 102:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+  93:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+  94:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+  95:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Vector Dot Product
+  96:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Return the Dot product of vectors a and b with length m
+  97:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+  98:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorDotProduct(m, a, b)
+  99:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 100:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 101:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float vectorDotProduct(int length, float vector1[], float vector2[])
+ 102:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  267              		.loc 1 102 0
  268              		.cfi_startproc
  269              		@ args = 0, pretend = 0, frame = 0
@@ -375,41 +375,41 @@
  272              	.LVL16:
  273              	.LBB8:
  274              	.LBB9:
- 103:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float dotProduct = 0;
- 104:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   //int   i;
- 105:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 106:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 103:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float dotProduct = 0;
+ 104:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   //int   i;
+ 105:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 106:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  275              		.loc 1 106 0
  276 0000 0023     		movs	r3, #0
- 103:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float dotProduct = 0;
+ 103:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float dotProduct = 0;
  277              		.loc 1 103 0
  278 0002 DFED077A 		flds	s15, .L23
  279              		.loc 1 106 0
  280 0006 06E0     		b	.L21
  281              	.LVL17:
  282              	.L22:
- 107:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 108:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   dotProduct += vector1[i] * vector2[i];
+ 107:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 108:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   dotProduct += vector1[i] * vector2[i];
  283              		.loc 1 108 0 discriminator 2
  284 0008 F1EC016A 		fldmias	r1!, {s13}
  285 000c B2EC017A 		fldmias	r2!, {s14}
  286 0010 46EE877A 		fmacs	s15, s13, s14
  287              	.LVL18:
- 106:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 106:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  288              		.loc 1 106 0 discriminator 2
  289 0014 0133     		adds	r3, r3, #1
  290              	.LVL19:
  291              	.L21:
- 106:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 106:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  292              		.loc 1 106 0 is_stmt 0 discriminator 1
  293 0016 8342     		cmp	r3, r0
  294 0018 F6DB     		blt	.L22
  295              	.LBE9:
  296              	.LBE8:
- 109:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 110:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 111:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return dotProduct;
- 112:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 109:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 110:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 111:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return dotProduct;
+ 112:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  297              		.loc 1 112 0 is_stmt 1
  298 001a 17EE900A 		fmrs	r0, s15
  299              	.LVL20:
@@ -427,24 +427,24 @@
  312              		.thumb_func
  314              	_Z18vectorCrossProductPfS_S_:
  315              	.LFB121:
- 113:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 114:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 115:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Vector Cross Product
- 116:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Compute the cross product of vectors a and b with length 3
- 117:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector C
- 118:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 119:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorDotProduct(c, a, b)
- 120:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 121:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 122:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void vectorCrossProduct(float vectorC[3], float vectorA[3], float vectorB[3])
- 123:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 113:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 114:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 115:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Vector Cross Product
+ 116:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute the cross product of vectors a and b with length 3
+ 117:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector C
+ 118:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 119:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorDotProduct(c, a, b)
+ 120:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 121:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 122:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void vectorCrossProduct(float vectorC[3], float vectorA[3], float vectorB[3])
+ 123:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  316              		.loc 1 123 0
  317              		.cfi_startproc
  318              		@ args = 0, pretend = 0, frame = 0
  319              		@ frame_needed = 0, uses_anonymous_args = 0
  320              		@ link register save eliminated.
  321              	.LVL21:
- 124:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   vectorC[0] = (vectorA[1] * vectorB[2]) - (vectorA[2] * vectorB[1]);
+ 124:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   vectorC[0] = (vectorA[1] * vectorB[2]) - (vectorA[2] * vectorB[1]);
  322              		.loc 1 124 0
  323 0000 D1ED023A 		flds	s7, [r1, #8]
  324 0004 92ED012A 		flds	s4, [r2, #4]
@@ -453,7 +453,7 @@
  327 0010 23EE822A 		fmuls	s4, s7, s4
  328 0014 12EE832A 		fmscs	s4, s5, s6
  329 0018 80ED002A 		fsts	s4, [r0, #0]
- 125:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   vectorC[1] = (vectorA[2] * vectorB[0]) - (vectorA[0] * vectorB[2]);
+ 125:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   vectorC[1] = (vectorA[2] * vectorB[0]) - (vectorA[0] * vectorB[2]);
  330              		.loc 1 125 0
  331 001c D1ED001A 		flds	s3, [r1, #0]
  332 0020 92ED020A 		flds	s0, [r2, #8]
@@ -462,7 +462,7 @@
  335 002c 21EE800A 		fmuls	s0, s3, s0
  336 0030 10EE810A 		fmscs	s0, s1, s2
  337 0034 80ED010A 		fsts	s0, [r0, #4]
- 126:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   vectorC[2] = (vectorA[0] * vectorB[1]) - (vectorA[1] * vectorB[0]);
+ 126:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   vectorC[2] = (vectorA[0] * vectorB[1]) - (vectorA[1] * vectorB[0]);
  338              		.loc 1 126 0
  339 0038 91ED016A 		flds	s12, [r1, #4]
  340 003c D2ED007A 		flds	s15, [r2, #0]
@@ -471,7 +471,7 @@
  343 0048 66EE277A 		fmuls	s15, s12, s15
  344 004c 56EE877A 		fmscs	s15, s13, s14
  345 0050 C0ED027A 		fsts	s15, [r0, #8]
- 127:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 127:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  346              		.loc 1 127 0
  347 0054 7047     		bx	lr
  348              		.cfi_endproc
@@ -483,17 +483,17 @@
  355              		.thumb_func
  357              	_Z11vectorScaleiPfS_f:
  358              	.LFB122:
- 128:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 129:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 130:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Multiply a vector by a scalar
- 131:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Mulitply vector a with length m by a scalar
- 132:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector b
- 133:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 134:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorScale(m, b, a, scalar)
- 135:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 136:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 137:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void vectorScale(int length, float scaledVector[], float inputVector[], float scalar)
- 138:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 128:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 129:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 130:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Multiply a vector by a scalar
+ 131:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Mulitply vector a with length m by a scalar
+ 132:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector b
+ 133:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 134:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorScale(m, b, a, scalar)
+ 135:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 136:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 137:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void vectorScale(int length, float scaledVector[], float inputVector[], float scalar)
+ 138:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  359              		.loc 1 138 0
  360              		.cfi_startproc
  361              		@ args = 0, pretend = 0, frame = 0
@@ -503,19 +503,19 @@
  365              		.loc 1 138 0
  366 0000 07EE903A 		fmsr	s15, r3
  367              	.LBB10:
- 139:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 139:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  368              		.loc 1 139 0
  369 0004 0023     		movs	r3, #0
  370              	.LVL23:
  371 0006 06E0     		b	.L27
  372              	.LVL24:
  373              	.L28:
- 140:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 141:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****    scaledVector[i] = inputVector[i] * scalar;
+ 140:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 141:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****    scaledVector[i] = inputVector[i] * scalar;
  374              		.loc 1 141 0 discriminator 2
  375 0008 B2EC017A 		fldmias	r2!, {s14}
  376 000c 27EE277A 		fmuls	s14, s14, s15
- 139:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 139:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  377              		.loc 1 139 0 discriminator 2
  378 0010 0133     		adds	r3, r3, #1
  379              	.LVL25:
@@ -523,13 +523,13 @@
  381 0012 A1EC017A 		fstmias	r1!, {s14}
  382              	.LVL26:
  383              	.L27:
- 139:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
+ 139:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < length; i++)
  384              		.loc 1 139 0 discriminator 1
  385 0016 8342     		cmp	r3, r0
  386 0018 F6DB     		blt	.L28
  387              	.LBE10:
- 142:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 143:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 142:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 143:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  388              		.loc 1 143 0
  389 001a 7047     		bx	lr
  390              		.cfi_endproc
@@ -541,17 +541,17 @@
  397              		.thumb_func
  399              	_Z9vectorAddiPfS_S_:
  400              	.LFB123:
- 144:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 145:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 146:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Compute sum of 2 vectors
- 147:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Add vector a to vector b, both of length m
- 148:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector c
- 149:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 150:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorAdd(m, c, b, a)
- 151:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 152:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 153:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void vectorAdd(int length, float vectorC[], float vectorA[], float vectorB[])
- 154:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 144:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 145:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 146:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute sum of 2 vectors
+ 147:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Add vector a to vector b, both of length m
+ 148:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector c
+ 149:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 150:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorAdd(m, c, b, a)
+ 151:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 152:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 153:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void vectorAdd(int length, float vectorC[], float vectorA[], float vectorB[])
+ 154:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  401              		.loc 1 154 0
  402              		.cfi_startproc
  403              		@ args = 0, pretend = 0, frame = 0
@@ -563,19 +563,19 @@
  409              		.cfi_offset 14, -4
  410              		.cfi_offset 4, -8
  411              	.LBB11:
- 155:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 155:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  412              		.loc 1 155 0
  413 0002 0024     		movs	r4, #0
  414 0004 08E0     		b	.L30
  415              	.LVL28:
  416              	.L31:
- 156:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 157:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****      vectorC[i] = vectorA[i] + vectorB[i];
+ 156:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 157:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****      vectorC[i] = vectorA[i] + vectorB[i];
  417              		.loc 1 157 0 discriminator 2
  418 0006 B2EC017A 		fldmias	r2!, {s14}
  419 000a B3EC010A 		fldmias	r3!, {s0}
  420 000e 77EE007A 		fadds	s15, s14, s0
- 155:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 155:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  421              		.loc 1 155 0 discriminator 2
  422 0012 0134     		adds	r4, r4, #1
  423              	.LVL29:
@@ -583,13 +583,13 @@
  425 0014 E1EC017A 		fstmias	r1!, {s15}
  426              	.LVL30:
  427              	.L30:
- 155:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 155:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  428              		.loc 1 155 0 discriminator 1
  429 0018 8442     		cmp	r4, r0
  430 001a F4DB     		blt	.L31
  431              	.LBE11:
- 158:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 159:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 158:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 159:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  432              		.loc 1 159 0
  433 001c 10BD     		pop	{r4, pc}
  434              		.cfi_endproc
@@ -601,17 +601,17 @@
  441              		.thumb_func
  443              	_Z14vectorSubtractiPfS_S_:
  444              	.LFB124:
- 160:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 161:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 162:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Compute difference of 2 vectors
- 163:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Subtract vector a from vector b, both of length m
- 164:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector c
- 165:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 166:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorSubtract(m, c, b, a)
- 167:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 168:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 169:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void vectorSubtract(int length, float vectorC[], float vectorA[], float vectorB[])
- 170:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 160:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 161:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 162:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute difference of 2 vectors
+ 163:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Subtract vector a from vector b, both of length m
+ 164:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Place result in vector c
+ 165:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 166:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: vectorSubtract(m, c, b, a)
+ 167:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 168:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 169:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void vectorSubtract(int length, float vectorC[], float vectorA[], float vectorB[])
+ 170:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  445              		.loc 1 170 0
  446              		.cfi_startproc
  447              		@ args = 0, pretend = 0, frame = 0
@@ -623,19 +623,19 @@
  453              		.cfi_offset 14, -4
  454              		.cfi_offset 4, -8
  455              	.LBB12:
- 171:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 171:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  456              		.loc 1 171 0
  457 0002 0024     		movs	r4, #0
  458 0004 08E0     		b	.L33
  459              	.LVL32:
  460              	.L34:
- 172:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 173:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****      vectorC[i] = vectorA[i] - vectorB[i];
+ 172:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 173:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****      vectorC[i] = vectorA[i] - vectorB[i];
  461              		.loc 1 173 0 discriminator 2
  462 0006 B2EC017A 		fldmias	r2!, {s14}
  463 000a B3EC010A 		fldmias	r3!, {s0}
  464 000e 77EE407A 		fsubs	s15, s14, s0
- 171:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 171:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  465              		.loc 1 171 0 discriminator 2
  466 0012 0134     		adds	r4, r4, #1
  467              	.LVL33:
@@ -643,13 +643,13 @@
  469 0014 E1EC017A 		fstmias	r1!, {s15}
  470              	.LVL34:
  471              	.L33:
- 171:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
+ 171:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for(int i = 0; i < length; i++)
  472              		.loc 1 171 0 discriminator 1
  473 0018 8442     		cmp	r4, r0
  474 001a F4DB     		blt	.L34
  475              	.LBE12:
- 174:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 175:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 174:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 175:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  476              		.loc 1 175 0
  477 001c 10BD     		pop	{r4, pc}
  478              		.cfi_endproc
@@ -661,17 +661,17 @@
  485              		.thumb_func
  487              	_Z14matrixMultiplyiiiPfS_S_:
  488              	.LFB125:
- 176:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 177:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 178:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Multiply
- 179:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Multiply matrix A times matrix B, matrix A dimension m x n, matrix B dimension n x p
- 180:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x p
- 181:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 182:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixMultiply(m, n, p, C, A, B)
- 183:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 184:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 185:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
- 186:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 176:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 177:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 178:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Multiply
+ 179:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Multiply matrix A times matrix B, matrix A dimension m x n, matrix B dimension n x p
+ 180:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x p
+ 181:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 182:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixMultiply(m, n, p, C, A, B)
+ 183:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 184:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 185:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
+ 186:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  489              		.loc 1 186 0
  490              		.cfi_startproc
  491              		@ args = 8, pretend = 0, frame = 8
@@ -695,7 +695,7 @@
  509              		.loc 1 186 0
  510 0004 8346     		mov	fp, r0
  511              	.LBB13:
- 187:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
+ 187:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
  512              		.loc 1 187 0
  513 0006 1D46     		mov	r5, r3
  514 0008 5043     		muls	r0, r2, r0
@@ -704,21 +704,21 @@
  517 000c 03E0     		b	.L36
  518              	.LVL37:
  519              	.L37:
- 188:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 189:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = 0.0;
+ 188:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 189:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = 0.0;
  520              		.loc 1 189 0 discriminator 2
  521 000e 0026     		movs	r6, #0
  522 0010 45F8046B 		str	r6, [r5], #4	@ float
- 187:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
+ 187:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
  523              		.loc 1 187 0 discriminator 2
  524 0014 0134     		adds	r4, r4, #1
  525              	.LVL38:
  526              	.L36:
- 187:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
+ 187:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows * bCols; i++)
  527              		.loc 1 187 0 is_stmt 0 discriminator 1
  528 0016 8442     		cmp	r4, r0
  529 0018 F9DB     		blt	.L37
- 185:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
+ 185:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
  530              		.loc 1 185 0 is_stmt 1
  531 001a 8800     		lsls	r0, r1, #2
  532 001c 4FEA8208 		lsl	r8, r2, #2
@@ -734,25 +734,25 @@
  542              	.LVL40:
  543              	.L39:
  544              	.LBB16:
- 185:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
+ 185:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
  545              		.loc 1 185 0 is_stmt 0 discriminator 2
  546 002a 05EB8009 		add	r9, r5, r0, lsl #2
- 190:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 191:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 192:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
- 193:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 194:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
- 195:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     {
- 196:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
- 197:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       {
- 198:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****        matrixC[i * bCols + k] += matrixA[i * aCols_bRows + j] * matrixB[j * bCols + k];
+ 190:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 191:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 192:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
+ 193:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 194:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
+ 195:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     {
+ 196:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
+ 197:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       {
+ 198:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****        matrixC[i * bCols + k] += matrixA[i * aCols_bRows + j] * matrixB[j * bCols + k];
  547              		.loc 1 198 0 is_stmt 1 discriminator 2
  548 002e 0434     		adds	r4, r4, #4
  549 0030 D7ED007A 		flds	s15, [r7, #0]
  550 0034 D9ED006A 		flds	s13, [r9, #0]
  551 0038 94ED007A 		flds	s14, [r4, #0]
  552 003c 46EE877A 		fmacs	s15, s13, s14
- 196:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
+ 196:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
  553              		.loc 1 196 0 discriminator 2
  554 0040 0133     		adds	r3, r3, #1
  555              	.LVL41:
@@ -762,7 +762,7 @@
  559              	.LVL42:
  560              	.L43:
  561              	.LBE16:
- 194:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
+ 194:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
  562              		.loc 1 194 0
  563 0048 A246     		mov	sl, r4
  564 004a 6746     		mov	r7, ip
@@ -772,26 +772,26 @@
  568              	.LVL43:
  569              	.L40:
  570              	.LBB17:
- 196:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
+ 196:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       for(int k = 0;  k < bCols; k++)
  571              		.loc 1 196 0 discriminator 1
  572 0052 9342     		cmp	r3, r2
  573 0054 E9DB     		blt	.L39
  574 0056 0099     		ldr	r1, [sp, #0]
  575 0058 5446     		mov	r4, sl
  576              	.LBE17:
- 194:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
+ 194:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
  577              		.loc 1 194 0
  578 005a 0130     		adds	r0, r0, #1
  579              	.LVL44:
  580 005c 4644     		add	r6, r6, r8
  581              	.LVL45:
  582              	.L42:
- 194:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
+ 194:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for(int j = 0; j < aCols_bRows; j++)
  583              		.loc 1 194 0 is_stmt 0 discriminator 1
  584 005e 8842     		cmp	r0, r1
  585 0060 F2DB     		blt	.L43
  586              	.LBE15:
- 192:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
+ 192:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
  587              		.loc 1 192 0 is_stmt 1
  588 0062 019B     		ldr	r3, [sp, #4]
  589 0064 0134     		adds	r4, r4, #1
@@ -800,11 +800,11 @@
  592 0068 ED18     		adds	r5, r5, r3
  593              	.LVL47:
  594              	.L38:
- 192:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
+ 192:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < aRows; i++)
  595              		.loc 1 192 0 is_stmt 0 discriminator 1
  596 006a 5C45     		cmp	r4, fp
  597 006c 03DA     		bge	.L35
- 185:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
+ 185:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixMultiply(int aRows, int aCols_bRows, int bCols, float matrixC[], float matrixA[], float 
  598              		.loc 1 185 0 is_stmt 1
  599 006e 0D9E     		ldr	r6, [sp, #52]
  600              	.LBB18:
@@ -814,10 +814,10 @@
  604 0074 F3E7     		b	.L42
  605              	.L35:
  606              	.LBE14:
- 199:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       }
- 200:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     }
- 201:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 202:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 199:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       }
+ 200:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     }
+ 201:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 202:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  607              		.loc 1 202 0
  608 0076 BDE8FE8F 		pop	{r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
  609              		.cfi_endproc
@@ -829,17 +829,17 @@
  616              		.thumb_func
  618              	_Z9matrixAddiiPfS_S_:
  619              	.LFB126:
- 203:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 204:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 205:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Addition
- 206:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Add matrix A to matrix B, dimensions m x n
- 207:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
- 208:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 209:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixAdd(m, n, C, A, B)
- 210:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 211:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 212:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixAdd(int rows, int cols, float matrixC[], float matrixA[], float matrixB[])
- 213:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 203:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 204:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 205:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Addition
+ 206:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Add matrix A to matrix B, dimensions m x n
+ 207:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
+ 208:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 209:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixAdd(m, n, C, A, B)
+ 210:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 211:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 212:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixAdd(int rows, int cols, float matrixC[], float matrixA[], float matrixB[])
+ 213:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  620              		.loc 1 213 0
  621              		.cfi_startproc
  622              		@ args = 4, pretend = 0, frame = 0
@@ -851,7 +851,7 @@
  628              		.cfi_offset 14, -4
  629              		.cfi_offset 4, -8
  630              	.LBB19:
- 214:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 214:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  631              		.loc 1 214 0
  632 0002 4143     		muls	r1, r0, r1
  633              	.LVL49:
@@ -861,13 +861,13 @@
  637 0008 08E0     		b	.L45
  638              	.LVL51:
  639              	.L46:
- 215:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 216:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = matrixA[i] + matrixB[i];
+ 215:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 216:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = matrixA[i] + matrixB[i];
  640              		.loc 1 216 0 discriminator 2
  641 000a B3EC017A 		fldmias	r3!, {s14}
  642 000e B0EC010A 		fldmias	r0!, {s0}
  643 0012 77EE007A 		fadds	s15, s14, s0
- 214:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 214:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  644              		.loc 1 214 0 discriminator 2
  645 0016 0134     		adds	r4, r4, #1
  646              	.LVL52:
@@ -875,13 +875,13 @@
  648 0018 E2EC017A 		fstmias	r2!, {s15}
  649              	.LVL53:
  650              	.L45:
- 214:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 214:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  651              		.loc 1 214 0 discriminator 1
  652 001c 8C42     		cmp	r4, r1
  653 001e F4DB     		blt	.L46
  654              	.LBE19:
- 217:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 218:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 217:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 218:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  655              		.loc 1 218 0
  656 0020 10BD     		pop	{r4, pc}
  657              		.cfi_endproc
@@ -893,17 +893,17 @@
  664              		.thumb_func
  666              	_Z14matrixSubtractiiPfS_S_:
  667              	.LFB127:
- 219:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 220:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 221:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Subtraction
- 222:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Subtract matrix A from matrix B, dimensions m x n
- 223:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
- 224:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 225:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixSubtract(m, n, C, A, B)
- 226:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 227:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 228:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixSubtract(int rows, int cols, float matrixC[], float matrixA[], float matrixB[])
- 229:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 219:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 220:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 221:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Subtraction
+ 222:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Subtract matrix A from matrix B, dimensions m x n
+ 223:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
+ 224:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 225:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixSubtract(m, n, C, A, B)
+ 226:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 227:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 228:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixSubtract(int rows, int cols, float matrixC[], float matrixA[], float matrixB[])
+ 229:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  668              		.loc 1 229 0
  669              		.cfi_startproc
  670              		@ args = 4, pretend = 0, frame = 0
@@ -915,7 +915,7 @@
  676              		.cfi_offset 14, -4
  677              		.cfi_offset 4, -8
  678              	.LBB20:
- 230:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 230:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  679              		.loc 1 230 0
  680 0002 4143     		muls	r1, r0, r1
  681              	.LVL55:
@@ -925,13 +925,13 @@
  685 0008 08E0     		b	.L48
  686              	.LVL57:
  687              	.L49:
- 231:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 232:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = matrixA[i] - matrixB[i];
+ 231:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 232:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = matrixA[i] - matrixB[i];
  688              		.loc 1 232 0 discriminator 2
  689 000a B3EC017A 		fldmias	r3!, {s14}
  690 000e B0EC010A 		fldmias	r0!, {s0}
  691 0012 77EE407A 		fsubs	s15, s14, s0
- 230:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 230:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  692              		.loc 1 230 0 discriminator 2
  693 0016 0134     		adds	r4, r4, #1
  694              	.LVL58:
@@ -939,13 +939,13 @@
  696 0018 E2EC017A 		fstmias	r2!, {s15}
  697              	.LVL59:
  698              	.L48:
- 230:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 230:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  699              		.loc 1 230 0 discriminator 1
  700 001c 8C42     		cmp	r4, r1
  701 001e F4DB     		blt	.L49
  702              	.LBE20:
- 233:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 234:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 233:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 234:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  703              		.loc 1 234 0
  704 0020 10BD     		pop	{r4, pc}
  705              		.cfi_endproc
@@ -957,18 +957,18 @@
  712              		.thumb_func
  714              	_Z11matrixScaleiiPffS_:
  715              	.LFB128:
- 235:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 236:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 237:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 238:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Scaling
- 239:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Scale matrix A, dimensions m x n, by a scaler, S
- 240:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
- 241:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 242:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixScale(m, n, C, S, B)
- 243:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 244:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 245:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixScale(int rows, int cols, float matrixC[], float scaler, float matrixA[])
- 246:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 235:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 236:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 237:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 238:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Scaling
+ 239:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Scale matrix A, dimensions m x n, by a scaler, S
+ 240:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension m x n
+ 241:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 242:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: matrixScale(m, n, C, S, B)
+ 243:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 244:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 245:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixScale(int rows, int cols, float matrixC[], float scaler, float matrixA[])
+ 246:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  716              		.loc 1 246 0
  717              		.cfi_startproc
  718              		@ args = 4, pretend = 0, frame = 0
@@ -978,7 +978,7 @@
  722              		.loc 1 246 0
  723 0000 07EE903A 		fmsr	s15, r3
  724              	.LBB21:
- 247:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 247:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  725              		.loc 1 247 0
  726 0004 4143     		muls	r1, r0, r1
  727              	.LVL61:
@@ -989,12 +989,12 @@
  732 000a 06E0     		b	.L51
  733              	.LVL64:
  734              	.L52:
- 248:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 249:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = scaler * matrixA[i];
+ 248:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 249:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     matrixC[i] = scaler * matrixA[i];
  735              		.loc 1 249 0 discriminator 2
  736 000c B3EC017A 		fldmias	r3!, {s14}
  737 0010 27EE877A 		fmuls	s14, s15, s14
- 247:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 247:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  738              		.loc 1 247 0 discriminator 2
  739 0014 0130     		adds	r0, r0, #1
  740              	.LVL65:
@@ -1002,13 +1002,13 @@
  742 0016 A2EC017A 		fstmias	r2!, {s14}
  743              	.LVL66:
  744              	.L51:
- 247:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
+ 247:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   for (int i = 0; i < rows * cols; i++)
  745              		.loc 1 247 0 discriminator 1
  746 001a 8842     		cmp	r0, r1
  747 001c F6DB     		blt	.L52
  748              	.LBE21:
- 250:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 251:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 250:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 251:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  749              		.loc 1 251 0
  750 001e 7047     		bx	lr
  751              		.cfi_endproc
@@ -1020,60 +1020,60 @@
  758              		.thumb_func
  760              	_Z18matrixTranspose3x3PfS_:
  761              	.LFB129:
- 252:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 253:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 254:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Transpose
- 255:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Compute 3 x 3 Transpose of A
- 256:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension 3 x 3
- 257:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 258:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: Transpose3x3(C, A)
- 259:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 260:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 261:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixTranspose3x3(float matrixC[9], float matrixA[9])
- 262:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 252:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 253:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 254:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Transpose
+ 255:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute 3 x 3 Transpose of A
+ 256:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension 3 x 3
+ 257:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 258:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: Transpose3x3(C, A)
+ 259:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 260:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 261:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixTranspose3x3(float matrixC[9], float matrixA[9])
+ 262:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  762              		.loc 1 262 0
  763              		.cfi_startproc
  764              		@ args = 0, pretend = 0, frame = 0
  765              		@ frame_needed = 0, uses_anonymous_args = 0
  766              		@ link register save eliminated.
  767              	.LVL67:
- 263:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[0] = matrixA[0];
+ 263:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[0] = matrixA[0];
  768              		.loc 1 263 0
  769 0000 D1F800C0 		ldr	ip, [r1, #0]	@ float
  770 0004 C0F800C0 		str	ip, [r0, #0]	@ float
- 264:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[1] = matrixA[3];
+ 264:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[1] = matrixA[3];
  771              		.loc 1 264 0
  772 0008 CA68     		ldr	r2, [r1, #12]	@ float
  773 000a 4260     		str	r2, [r0, #4]	@ float
- 265:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[2] = matrixA[6];
+ 265:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[2] = matrixA[6];
  774              		.loc 1 265 0
  775 000c 8B69     		ldr	r3, [r1, #24]	@ float
  776 000e 8360     		str	r3, [r0, #8]	@ float
- 266:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[3] = matrixA[1];
+ 266:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[3] = matrixA[1];
  777              		.loc 1 266 0
  778 0010 D1F804C0 		ldr	ip, [r1, #4]	@ float
  779 0014 C0F80CC0 		str	ip, [r0, #12]	@ float
- 267:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[4] = matrixA[4];
+ 267:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[4] = matrixA[4];
  780              		.loc 1 267 0
  781 0018 0A69     		ldr	r2, [r1, #16]	@ float
  782 001a 0261     		str	r2, [r0, #16]	@ float
- 268:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[5] = matrixA[7];
+ 268:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[5] = matrixA[7];
  783              		.loc 1 268 0
  784 001c CB69     		ldr	r3, [r1, #28]	@ float
  785 001e 4361     		str	r3, [r0, #20]	@ float
- 269:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[6] = matrixA[2];
+ 269:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[6] = matrixA[2];
  786              		.loc 1 269 0
  787 0020 D1F808C0 		ldr	ip, [r1, #8]	@ float
  788 0024 C0F818C0 		str	ip, [r0, #24]	@ float
- 270:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[7] = matrixA[5];
+ 270:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[7] = matrixA[5];
  789              		.loc 1 270 0
  790 0028 4A69     		ldr	r2, [r1, #20]	@ float
  791 002a C261     		str	r2, [r0, #28]	@ float
- 271:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixC[8] = matrixA[8];
+ 271:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixC[8] = matrixA[8];
  792              		.loc 1 271 0
  793 002c 0B6A     		ldr	r3, [r1, #32]	@ float
  794 002e 0362     		str	r3, [r0, #32]	@ float
- 272:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 272:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  795              		.loc 1 272 0
  796 0030 7047     		bx	lr
  797              		.cfi_endproc
@@ -1085,40 +1085,40 @@
  804              		.thumb_func
  806              	_Z16matrixInverse3x3PfS_:
  807              	.LFB130:
- 273:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 274:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 275:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Inverse
- 276:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Compute 3 x 3 Inverse of A
- 277:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension 3 x 3
- 278:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //
- 279:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** //  Call as: Inverse3x3(C, A)
- 280:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
- 281:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 282:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** void matrixInverse3x3(float matrixC[9], float matrixA[9])
- 283:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 273:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 274:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 275:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Inverse
+ 276:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute 3 x 3 Inverse of A
+ 277:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Result placed in matrix C, dimension 3 x 3
+ 278:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //
+ 279:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Call as: Inverse3x3(C, A)
+ 280:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
+ 281:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 282:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void matrixInverse3x3(float matrixC[9], float matrixA[9])
+ 283:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  808              		.loc 1 283 0
  809              		.cfi_startproc
  810              		@ args = 0, pretend = 0, frame = 112
  811              		@ frame_needed = 0, uses_anonymous_args = 0
  812              	.LVL68:
  813              	.LBB22:
- 284:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 285:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float det;
- 286:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float transposeA[9];
- 287:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float minors[9];
- 288:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float transposeMinors[9];
- 289:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 290:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
+ 284:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 285:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float det;
+ 286:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float transposeA[9];
+ 287:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float minors[9];
+ 288:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float transposeMinors[9];
+ 289:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 290:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
  814              		.loc 1 290 0
  815 0000 D1ED070A 		flds	s1, [r1, #28]
- 291:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         matrixA[1] * (matrixA[3] * matrixA[8] - matrixA[5] * matrixA[6]) +
+ 291:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         matrixA[1] * (matrixA[3] * matrixA[8] - matrixA[5] * matrixA[6]) +
  816              		.loc 1 291 0
  817 0004 91ED065A 		flds	s10, [r1, #24]
- 290:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
+ 290:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
  818              		.loc 1 290 0
  819 0008 91ED051A 		flds	s2, [r1, #20]
  820              	.LBE22:
- 283:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 283:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  821              		.loc 1 283 0
  822 000c 30B5     		push	{r4, r5, lr}
  823              	.LCFI6:
@@ -1127,15 +1127,15 @@
  826              		.cfi_offset 5, -8
  827              		.cfi_offset 4, -12
  828              	.LBB23:
- 290:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
+ 290:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
  829              		.loc 1 290 0
  830 000e 91ED083A 		flds	s6, [r1, #32]
  831              		.loc 1 291 0
  832 0012 91ED030A 		flds	s0, [r1, #12]
- 290:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
+ 290:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   det = matrixA[0] * (matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7]) -
  833              		.loc 1 290 0
  834 0016 91ED046A 		flds	s12, [r1, #16]
- 292:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         matrixA[2] * (matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6]);
+ 292:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         matrixA[2] * (matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6]);
  835              		.loc 1 292 0
  836 001a 21EE204A 		fmuls	s8, s2, s1
  837 001e 21EE051A 		fmuls	s2, s2, s10
@@ -1143,7 +1143,7 @@
  839 0026 16EE034A 		fmscs	s8, s12, s6
  840 002a D1ED014A 		flds	s9, [r1, #4]
  841              	.LBE23:
- 283:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 283:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  842              		.loc 1 283 0
  843 002e 2DED028B 		fstmfdd	sp!, {d8}
  844              	.LCFI7:
@@ -1157,7 +1157,7 @@
  852 003e 21EE248A 		fmuls	s16, s2, s9
  853 0042 14EE258A 		fmscs	s16, s8, s11
  854              	.LBE24:
- 283:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 283:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  855              		.loc 1 283 0
  856 0046 9FB0     		sub	sp, sp, #124
  857              	.LCFI8:
@@ -1166,139 +1166,139 @@
  860              		.loc 1 292 0
  861 0048 D1ED026A 		flds	s13, [r1, #8]
  862              	.LBE25:
- 283:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 283:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  863              		.loc 1 283 0
  864 004c 0C46     		mov	r4, r1
  865 004e 0546     		mov	r5, r0
  866              	.LBB26:
- 293:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 294:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixTranspose3x3(transposeA, matrixA);
+ 293:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 294:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixTranspose3x3(transposeA, matrixA);
  867              		.loc 1 294 0
  868 0050 03A8     		add	r0, sp, #12
  869              	.LVL69:
- 292:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         matrixA[2] * (matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6]);
+ 292:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         matrixA[2] * (matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6]);
  870              		.loc 1 292 0
  871 0052 07EEA68A 		fmacs	s16, s15, s13
  872              	.LVL70:
  873              		.loc 1 294 0
  874 0056 FFF7FEFF 		bl	_Z18matrixTranspose3x3PfS_
  875              	.LVL71:
- 295:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 296:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
+ 295:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 296:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
  876              		.loc 1 296 0
  877 005a D4ED040A 		flds	s1, [r4, #16]
  878 005e D4ED083A 		flds	s7, [r4, #32]
- 297:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
- 298:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
- 299:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
+ 297:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
+ 298:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
+ 299:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
  879              		.loc 1 299 0
  880 0062 D4ED025A 		flds	s11, [r4, #8]
- 297:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
+ 297:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
  881              		.loc 1 297 0
  882 0066 D4ED036A 		flds	s13, [r4, #12]
  883 006a 94ED061A 		flds	s2, [r4, #24]
  884              		.loc 1 299 0
  885 006e 94ED016A 		flds	s12, [r4, #4]
- 300:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
+ 300:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
  886              		.loc 1 300 0
  887 0072 94ED000A 		flds	s0, [r4, #0]
- 296:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
+ 296:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
  888              		.loc 1 296 0
  889 0076 94ED055A 		flds	s10, [r4, #20]
  890 007a 94ED074A 		flds	s8, [r4, #28]
- 297:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
+ 297:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
  891              		.loc 1 297 0
  892 007e 66EEA32A 		fmuls	s5, s13, s7
- 301:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
- 302:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[6] = matrixA[1] * matrixA[5] - matrixA[2] * matrixA[4];
+ 301:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
+ 302:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[6] = matrixA[1] * matrixA[5] - matrixA[2] * matrixA[4];
  893              		.loc 1 302 0
  894 0082 65EEA04A 		fmuls	s9, s11, s1
- 297:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
+ 297:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
  895              		.loc 1 297 0
  896 0086 55EE012A 		fmscs	s5, s10, s2
  897              		.loc 1 302 0
  898 008a 56EE054A 		fmscs	s9, s12, s10
- 296:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
+ 296:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
  899              		.loc 1 296 0
  900 008e 25EE047A 		fmuls	s14, s10, s8
- 298:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
+ 298:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
  901              		.loc 1 298 0
  902 0092 20EE812A 		fmuls	s4, s1, s2
- 299:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
+ 299:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
  903              		.loc 1 299 0
  904 0096 66EE231A 		fmuls	s3, s12, s7
- 303:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[7] = matrixA[2] * matrixA[3] - matrixA[0] * matrixA[5];
+ 303:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[7] = matrixA[2] * matrixA[3] - matrixA[0] * matrixA[5];
  905              		.loc 1 303 0
  906 009a 20EE055A 		fmuls	s10, s0, s10
- 298:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
+ 298:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
  907              		.loc 1 298 0
  908 009e 16EE842A 		fmscs	s4, s13, s8
- 299:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
+ 299:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
  909              		.loc 1 299 0
  910 00a2 55EE841A 		fmscs	s3, s11, s8
  911              		.loc 1 303 0
  912 00a6 15EEA65A 		fmscs	s10, s11, s13
- 300:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
+ 300:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
  913              		.loc 1 300 0
  914 00aa 25EE813A 		fmuls	s6, s11, s2
- 301:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
+ 301:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
  915              		.loc 1 301 0
  916 00ae 20EE044A 		fmuls	s8, s0, s8
- 304:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[8] = matrixA[0] * matrixA[4] - matrixA[1] * matrixA[3];
+ 304:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[8] = matrixA[0] * matrixA[4] - matrixA[1] * matrixA[3];
  917              		.loc 1 304 0
  918 00b2 66EE266A 		fmuls	s13, s12, s13
- 296:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
+ 296:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
  919              		.loc 1 296 0
  920 00b6 10EEA37A 		fmscs	s14, s1, s7
- 300:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
+ 300:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
  921              		.loc 1 300 0
  922 00ba 10EE233A 		fmscs	s6, s0, s7
- 301:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
+ 301:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
  923              		.loc 1 301 0
  924 00be 16EE014A 		fmscs	s8, s12, s2
  925              		.loc 1 304 0
  926 00c2 50EE206A 		fmscs	s13, s0, s1
- 305:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 306:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixTranspose3x3(transposeMinors, minors);
+ 305:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 306:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixTranspose3x3(transposeMinors, minors);
  927              		.loc 1 306 0
  928 00c6 15AC     		add	r4, sp, #84
  929              	.LVL72:
  930 00c8 2046     		mov	r0, r4
  931 00ca 0CA9     		add	r1, sp, #48
- 296:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
+ 296:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[0] = matrixA[4] * matrixA[8] - matrixA[5] * matrixA[7];
  932              		.loc 1 296 0
  933 00cc 8DED0C7A 		fsts	s14, [sp, #48]
- 297:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
+ 297:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[1] = matrixA[5] * matrixA[6] - matrixA[3] * matrixA[8];
  934              		.loc 1 297 0
  935 00d0 CDED0D2A 		fsts	s5, [sp, #52]
- 298:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
+ 298:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[2] = matrixA[3] * matrixA[7] - matrixA[4] * matrixA[6];
  936              		.loc 1 298 0
  937 00d4 8DED0E2A 		fsts	s4, [sp, #56]
- 299:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
+ 299:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[3] = matrixA[2] * matrixA[7] - matrixA[1] * matrixA[8];
  938              		.loc 1 299 0
  939 00d8 CDED0F1A 		fsts	s3, [sp, #60]
- 300:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
+ 300:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[4] = matrixA[0] * matrixA[8] - matrixA[2] * matrixA[6];
  940              		.loc 1 300 0
  941 00dc 8DED103A 		fsts	s6, [sp, #64]
- 301:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
+ 301:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[5] = matrixA[1] * matrixA[6] - matrixA[0] * matrixA[7];
  942              		.loc 1 301 0
  943 00e0 8DED114A 		fsts	s8, [sp, #68]
- 302:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[6] = matrixA[1] * matrixA[5] - matrixA[2] * matrixA[4];
+ 302:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[6] = matrixA[1] * matrixA[5] - matrixA[2] * matrixA[4];
  944              		.loc 1 302 0
  945 00e4 CDED124A 		fsts	s9, [sp, #72]
- 303:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[7] = matrixA[2] * matrixA[3] - matrixA[0] * matrixA[5];
+ 303:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[7] = matrixA[2] * matrixA[3] - matrixA[0] * matrixA[5];
  946              		.loc 1 303 0
  947 00e8 8DED135A 		fsts	s10, [sp, #76]
- 304:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   minors[8] = matrixA[0] * matrixA[4] - matrixA[1] * matrixA[3];
+ 304:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   minors[8] = matrixA[0] * matrixA[4] - matrixA[1] * matrixA[3];
  948              		.loc 1 304 0
  949 00ec CDED146A 		fsts	s13, [sp, #80]
  950              		.loc 1 306 0
  951 00f0 FFF7FEFF 		bl	_Z18matrixTranspose3x3PfS_
  952              	.LVL73:
- 307:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 308:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   det = 1/det;
- 309:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 310:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   matrixScale(3,3, matrixC, det, transposeMinors);
+ 307:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 308:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   det = 1/det;
+ 309:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 310:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   matrixScale(3,3, matrixC, det, transposeMinors);
  953              		.loc 1 310 0
  954 00f4 F7EE007A 		fconsts	s15, #112
  955 00f8 87EE887A 		fdivs	s14, s15, s16
@@ -1309,7 +1309,7 @@
  960 0104 17EE103A 		fmrs	r3, s14
  961 0108 FFF7FEFF 		bl	_Z11matrixScaleiiPffS_
  962              	.LBE26:
- 311:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 311:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  963              		.loc 1 311 0
  964 010c 1FB0     		add	sp, sp, #124
  965 010e BDEC028B 		fldmfdd	sp!, {d8}
@@ -1323,11 +1323,11 @@
  974              		.thumb_func
  976              	_Z7arctan2ff:
  977              	.LFB131:
- 312:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 313:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 314:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Alternate method to calculate arctangent from: http://www.dspguru.com/comp.dsp/tricks/alg/fxdata
- 315:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float arctan2(float y, float x) 
- 316:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 312:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 313:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 314:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Alternate method to calculate arctangent from: http://www.dspguru.com/comp.dsp/tricks/alg/fxdata
+ 315:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float arctan2(float y, float x) 
+ 316:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  978              		.loc 1 316 0
  979              		.cfi_startproc
  980              		@ args = 0, pretend = 0, frame = 0
@@ -1338,17 +1338,17 @@
  985 0000 06EE100A 		fmsr	s12, r0
  986 0004 07EE901A 		fmsr	s15, r1
  987              	.LBB27:
- 317:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float coeff_1 = PI/4;
- 318:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float coeff_2 = 3*coeff_1;
- 319:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float abs_y = fabs(y)+1e-10;      // kludge to prevent 0/0 condition
+ 317:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float coeff_1 = PI/4;
+ 318:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float coeff_2 = 3*coeff_1;
+ 319:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float abs_y = fabs(y)+1e-10;      // kludge to prevent 0/0 condition
  988              		.loc 1 319 0
  989 0008 9FED147A 		flds	s14, .L64
  990 000c F0EEC66A 		fabss	s13, s12
  991 0010 76EE876A 		fadds	s13, s13, s14
  992              	.LVL75:
- 320:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float r, angle;
- 321:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****    
- 322:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if (x >= 0) 
+ 320:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float r, angle;
+ 321:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****    
+ 322:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if (x >= 0) 
  993              		.loc 1 322 0
  994 0014 F5EEC07A 		fcmpezs	s15
  995 0018 F1EE10FA 		fmstat
@@ -1356,12 +1356,12 @@
  997 0020 9FED0F7A 		flds	s14, .L64+4
  998 0024 08DB     		blt	.L63
  999              	.LVL76:
- 323:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 324:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     r = (x - abs_y) / (x + abs_y);
+ 323:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 324:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     r = (x - abs_y) / (x + abs_y);
  1000              		.loc 1 324 0
  1001 0026 77EEE67A 		fsubs	s15, s15, s13
  1002 002a C7EEA57A 		fdivs	s15, s15, s11
- 325:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     angle = coeff_1 - coeff_1 * r;
+ 325:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     angle = coeff_1 - coeff_1 * r;
  1003              		.loc 1 325 0
  1004 002e 07EEC77A 		fnmacs	s14, s15, s14
  1005 0032 F0EE477A 		fcpys	s15, s14
@@ -1369,40 +1369,40 @@
  1007 0036 07E0     		b	.L58
  1008              	.LVL78:
  1009              	.L63:
- 326:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 327:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   else 
- 328:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 329:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     r = (x + abs_y) / (abs_y - x);
+ 326:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 327:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   else 
+ 328:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 329:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     r = (x + abs_y) / (abs_y - x);
  1010              		.loc 1 329 0
  1011 0038 76EEE70A 		fsubs	s1, s13, s15
- 330:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     angle = coeff_2 - coeff_1 * r;
+ 330:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     angle = coeff_2 - coeff_1 * r;
  1012              		.loc 1 330 0
  1013 003c DFED097A 		flds	s15, .L64+8
- 329:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     r = (x + abs_y) / (abs_y - x);
+ 329:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     r = (x + abs_y) / (abs_y - x);
  1014              		.loc 1 329 0
  1015 0040 85EEA00A 		fdivs	s0, s11, s1
  1016              		.loc 1 330 0
  1017 0044 40EE477A 		fnmacs	s15, s0, s14
  1018              	.LVL79:
  1019              	.L58:
- 331:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 332:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if (y < 0)
+ 331:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 332:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if (y < 0)
  1020              		.loc 1 332 0
  1021 0048 B5EEC06A 		fcmpezs	s12
  1022 004c F1EE10FA 		fmstat
- 333:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 334:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     return(-angle);     // negate if in quad III or IV
+ 333:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 334:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     return(-angle);     // negate if in quad III or IV
  1023              		.loc 1 334 0
  1024 0050 48BF     		it	mi
  1025 0052 F1EE677A 		fnegsmi	s15, s15
  1026              	.LVL80:
  1027              	.LBE27:
- 335:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 336:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   else
- 337:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {
- 338:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     return(angle);
- 339:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 340:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 335:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 336:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   else
+ 337:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {
+ 338:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     return(angle);
+ 339:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 340:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  1028              		.loc 1 340 0
  1029 0056 17EE900A 		fmrs	r0, s15
  1030              	.LVL81:
@@ -1422,12 +1422,12 @@
  1045              		.thumb_func
  1047              	_Z15findMedianFloatPfi:
  1048              	.LFB132:
- 341:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 342:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Used for sensor calibration
- 343:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Takes the median of 50 results as zero
- 344:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** // Thanks ala42! Post: http://aeroquad.com/showthread.php?1369-The-big-enhancement-addition-to-2.0-
- 345:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float findMedianFloat(float *data, int arraySize) 
- 346:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 341:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 342:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Used for sensor calibration
+ 343:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Takes the median of 50 results as zero
+ 344:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Thanks ala42! Post: http://aeroquad.com/showthread.php?1369-The-big-enhancement-addition-to-2.0-
+ 345:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float findMedianFloat(float *data, int arraySize) 
+ 346:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  1049              		.loc 1 346 0
  1050              		.cfi_startproc
  1051              		@ args = 0, pretend = 0, frame = 0
@@ -1443,17 +1443,17 @@
  1061              	.LVL83:
  1062              	.L70:
  1063              	.LBB28:
- 347:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   float temp;
- 348:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   boolean done = 0;
- 349:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   byte i;
- 350:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   
- 351:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****    // Sorts numbers from lowest to highest
- 352:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
- 353:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {        
- 354:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     done = 1;
- 355:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
- 356:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	{
- 357:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       if (data[i] > data[i+1]) 
+ 347:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   float temp;
+ 348:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   boolean done = 0;
+ 349:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   byte i;
+ 350:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
+ 351:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****    // Sorts numbers from lowest to highest
+ 352:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
+ 353:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {        
+ 354:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     done = 1;
+ 355:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 356:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	{
+ 357:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       if (data[i] > data[i+1]) 
  1064              		.loc 1 357 0
  1065 0004 00EB8304 		add	r4, r0, r3, lsl #2
  1066 0008 0133     		adds	r3, r3, #1
@@ -1465,32 +1465,32 @@
  1072 001a F1EE10FA 		fmstat
  1073 001e 04DD     		ble	.L68
  1074              	.LVL85:
- 358:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	  {     // numbers are out of order - swap
- 359:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         temp = data[i+1];
- 360:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         data[i+1] = data[i];
+ 358:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	  {     // numbers are out of order - swap
+ 359:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         temp = data[i+1];
+ 360:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         data[i+1] = data[i];
  1075              		.loc 1 360 0
  1076 0020 85ED007A 		fsts	s14, [r5, #0]
- 361:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         data[i] = temp;
+ 361:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         data[i] = temp;
  1077              		.loc 1 361 0
  1078 0024 C4ED007A 		fsts	s15, [r4, #0]
  1079              	.LVL86:
- 362:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         done = 0;
+ 362:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         done = 0;
  1080              		.loc 1 362 0
  1081 0028 0022     		movs	r2, #0
  1082              	.LVL87:
  1083              	.L68:
- 355:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 355:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
  1084              		.loc 1 355 0
  1085 002a DBB2     		uxtb	r3, r3
  1086              	.LVL88:
  1087              	.L72:
- 355:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 355:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
  1088              		.loc 1 355 0 is_stmt 0 discriminator 1
  1089 002c 4C1E     		subs	r4, r1, #1
  1090 002e A342     		cmp	r3, r4
  1091 0030 E8DB     		blt	.L70
  1092              	.LVL89:
- 352:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
+ 352:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
  1093              		.loc 1 352 0 is_stmt 1
  1094 0032 12B9     		cbnz	r2, .L71
  1095              	.LVL90:
@@ -1501,11 +1501,11 @@
  1100 0038 F8E7     		b	.L72
  1101              	.LVL91:
  1102              	.L71:
- 363:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       }
- 364:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     }
- 365:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 366:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   
- 367:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return data[arraySize/2]; // return the median value
+ 363:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       }
+ 364:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     }
+ 365:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 366:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
+ 367:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return data[arraySize/2]; // return the median value
  1103              		.loc 1 367 0
  1104 003a 01EBD172 		add	r2, r1, r1, lsr #31
  1105              	.LVL92:
@@ -1514,7 +1514,7 @@
  1108 0040 00EB8100 		add	r0, r0, r1, lsl #2
  1109              	.LVL94:
  1110              	.LBE28:
- 368:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 368:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  1111              		.loc 1 368 0
  1112 0044 0068     		ldr	r0, [r0, #0]	@ float
  1113 0046 30BD     		pop	{r4, r5, pc}
@@ -1527,10 +1527,10 @@
  1121              		.thumb_func
  1123              	_Z13findMedianIntPii:
  1124              	.LFB133:
- 369:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 370:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 371:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** int findMedianInt(int *data, int arraySize) 
- 372:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** {
+ 369:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 370:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 371:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** int findMedianInt(int *data, int arraySize) 
+ 372:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
  1125              		.loc 1 372 0
  1126              		.cfi_startproc
  1127              		@ args = 0, pretend = 0, frame = 0
@@ -1547,17 +1547,17 @@
  1138              	.LVL96:
  1139              	.L77:
  1140              	.LBB29:
- 373:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   int temp;
- 374:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   boolean done = 0;
- 375:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   byte i;
- 376:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   
- 377:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****    // Sorts numbers from lowest to highest
- 378:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
- 379:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   {        
- 380:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     done = 1;
- 381:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
- 382:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	{
- 383:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       if (data[i] > data[i+1]) 
+ 373:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   int temp;
+ 374:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   boolean done = 0;
+ 375:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   byte i;
+ 376:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
+ 377:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****    // Sorts numbers from lowest to highest
+ 378:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
+ 379:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   {        
+ 380:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     done = 1;
+ 381:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 382:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	{
+ 383:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       if (data[i] > data[i+1]) 
  1141              		.loc 1 383 0
  1142 0004 5A1C     		adds	r2, r3, #1
  1143 0006 50F82360 		ldr	r6, [r0, r3, lsl #2]
@@ -1565,32 +1565,32 @@
  1145 000e AE42     		cmp	r6, r5
  1146 0010 04DD     		ble	.L76
  1147              	.LVL97:
- 384:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	  {     // numbers are out of order - swap
- 385:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         temp = data[i+1];
- 386:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         data[i+1] = data[i];
+ 384:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	  {     // numbers are out of order - swap
+ 385:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         temp = data[i+1];
+ 386:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         data[i+1] = data[i];
  1148              		.loc 1 386 0
  1149 0012 40F82260 		str	r6, [r0, r2, lsl #2]
- 387:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         data[i] = temp;
+ 387:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         data[i] = temp;
  1150              		.loc 1 387 0
  1151 0016 40F82350 		str	r5, [r0, r3, lsl #2]
  1152              	.LVL98:
- 388:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****         done = 0;
+ 388:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****         done = 0;
  1153              		.loc 1 388 0
  1154 001a 0024     		movs	r4, #0
  1155              	.LVL99:
  1156              	.L76:
- 381:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 381:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
  1157              		.loc 1 381 0
  1158 001c D3B2     		uxtb	r3, r2
  1159              	.LVL100:
  1160              	.L79:
- 381:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
+ 381:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     for (i=0; i<(arraySize-1); i++) 
  1161              		.loc 1 381 0 is_stmt 0 discriminator 1
  1162 001e 4A1E     		subs	r2, r1, #1
  1163 0020 9342     		cmp	r3, r2
  1164 0022 EFDB     		blt	.L77
  1165              	.LVL101:
- 378:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
+ 378:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   while (done != 1) 
  1166              		.loc 1 378 0 is_stmt 1
  1167 0024 14B9     		cbnz	r4, .L78
  1168              	.LVL102:
@@ -1601,18 +1601,18 @@
  1173 002a F8E7     		b	.L79
  1174              	.LVL103:
  1175              	.L78:
- 389:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****       }
- 390:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     }
- 391:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 392:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   
- 393:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return data[arraySize/2]; // return the median value
+ 389:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****       }
+ 390:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     }
+ 391:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 392:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
+ 393:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return data[arraySize/2]; // return the median value
  1176              		.loc 1 393 0
  1177 002c 01EBD173 		add	r3, r1, r1, lsr #31
  1178              	.LVL104:
  1179 0030 5910     		asrs	r1, r3, #1
  1180              	.LVL105:
  1181              	.LBE29:
- 394:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 394:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  1182              		.loc 1 394 0
  1183 0032 50F82100 		ldr	r0, [r0, r1, lsl #2]
  1184              	.LVL106:
@@ -1626,10 +1626,10 @@
  1193              		.thumb_func
  1195              	_Z10isSwitchedff:
  1196              	.LFB134:
- 395:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 396:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 397:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 398:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** boolean isSwitched(float previousError, float currentError) {
+ 395:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 396:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 397:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 398:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** boolean isSwitched(float previousError, float currentError) {
  1197              		.loc 1 398 0
  1198              		.cfi_startproc
  1199              		@ args = 0, pretend = 0, frame = 0
@@ -1638,11 +1638,11 @@
  1202              	.LVL107:
  1203              		.loc 1 398 0
  1204 0000 07EE100A 		fmsr	s14, r0
- 399:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   if ( (previousError > 0 &&  currentError < 0) ||
+ 399:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   if ( (previousError > 0 &&  currentError < 0) ||
  1205              		.loc 1 399 0
  1206 0004 B5EEC07A 		fcmpezs	s14
  1207 0008 F1EE10FA 		fmstat
- 398:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** boolean isSwitched(float previousError, float currentError) {
+ 398:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** boolean isSwitched(float previousError, float currentError) {
  1208              		.loc 1 398 0
  1209 000c 07EE901A 		fmsr	s15, r1
  1210              		.loc 1 399 0
@@ -1659,8 +1659,8 @@
  1221              		.loc 1 399 0 discriminator 3
  1222 0026 F5EEC07A 		fcmpezs	s15
  1223 002a F1EE10FA 		fmstat
- 400:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 	   (previousError < 0 &&  currentError > 0)) {
- 401:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     return true;
+ 400:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 	   (previousError < 0 &&  currentError > 0)) {
+ 401:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     return true;
  1224              		.loc 1 401 0 is_stmt 1 discriminator 3
  1225 002e D4BF     		ite	le
  1226 0030 0020     		movle	r0, #0
@@ -1672,11 +1672,11 @@
  1232 0036 0120     		movs	r0, #1
  1233 0038 7047     		bx	lr
  1234              	.L89:
- 402:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   }
- 403:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return false;
+ 402:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   }
+ 403:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return false;
  1235              		.loc 1 403 0 is_stmt 1
  1236 003a 0020     		movs	r0, #0
- 404:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 404:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  1237              		.loc 1 404 0
  1238 003c 7047     		bx	lr
  1239              		.cfi_endproc
@@ -1688,27 +1688,27 @@
  1246              		.thumb_func
  1248              	_Z7invSqrtf:
  1249              	.LFB135:
- 405:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 406:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** float invSqrt (float x){ 
+ 405:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 406:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float invSqrt (float x){ 
  1250              		.loc 1 406 0
  1251              		.cfi_startproc
  1252              		@ args = 0, pretend = 0, frame = 0
  1253              		@ frame_needed = 0, uses_anonymous_args = 0
  1254              		@ link register save eliminated.
  1255              	.LVL109:
- 407:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   union{  
- 408:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     int32_t i;  
- 409:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****     float   f; 
- 410:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   } conv; 
- 411:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   conv.f = x; 
- 412:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   conv.i = 0x5f3759df - (conv.i >> 1); 
+ 407:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   union{  
+ 408:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     int32_t i;  
+ 409:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****     float   f; 
+ 410:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   } conv; 
+ 411:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   conv.f = x; 
+ 412:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   conv.i = 0x5f3759df - (conv.i >> 1); 
  1256              		.loc 1 412 0
  1257 0000 0A49     		ldr	r1, .L91
  1258 0002 A1EB6003 		sub	r3, r1, r0, asr #1
  1259 0006 00EE103A 		fmsr	s0, r3	@ int
  1260              	.LVL110:
  1261              	.LBB30:
- 413:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return 0.5f * conv.f * (3.0f - x * conv.f * conv.f);
+ 413:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return 0.5f * conv.f * (3.0f - x * conv.f * conv.f);
  1262              		.loc 1 413 0
  1263 000a 00EE900A 		fmsr	s1, r0
  1264 000e 20EE806A 		fmuls	s12, s1, s0
@@ -1717,7 +1717,7 @@
  1267 001a B6EE001A 		fconsts	s2, #96
  1268 001e 60EE016A 		fmuls	s13, s0, s2
  1269              	.LBE30:
- 414:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** } 
+ 414:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** } 
  1270              		.loc 1 414 0
  1271 0022 26EEA77A 		fmuls	s14, s13, s15
  1272 0026 17EE100A 		fmrs	r0, s14
@@ -1736,16 +1736,16 @@
  1286              		.thumb_func
  1288              	_Z3isql:
  1289              	.LFB136:
- 415:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** 
- 416:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** int32_t isq(int32_t  x) {
+ 415:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
+ 416:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** int32_t isq(int32_t  x) {
  1290              		.loc 1 416 0
  1291              		.cfi_startproc
  1292              		@ args = 0, pretend = 0, frame = 0
  1293              		@ frame_needed = 0, uses_anonymous_args = 0
  1294              		@ link register save eliminated.
  1295              	.LVL112:
- 417:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp ****   return x * x;
- 418:C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math\AQMath.cpp **** }
+ 417:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   return x * x;
+ 418:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** }
  1296              		.loc 1 418 0
  1297 0000 4043     		muls	r0, r0, r0
  1298              	.LVL113:
@@ -1759,58 +1759,58 @@
  1307              		.file 2 "c:\\program files (x86)\\codesourcery\\sourcery_codebench_lite_for_arm_eabi\\bin\\../lib/
  1308              		.file 3 "../Libmaple/libmaple/libmaple/libmaple_types.h"
  1309              		.file 4 "../Libmaple/libmaple/wirish/wirish.h"
- 1310              		.file 5 "C:/MinGW/msys/1.0/home/ang/Libraries/AQ_Math/AQMath.h"
+ 1310              		.file 5 "C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.h"
  1311              		.file 6 "../Libmaple/libmaple/libmaple/systick.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 AQMath.cpp
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:20     .text._Z12filterSmoothfff:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:25     .text._Z12filterSmoothfff:00000000 _Z12filterSmoothfff
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:59     .text._Z20filterSmoothWithTimeffff:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:64     .text._Z20filterSmoothWithTimeffff:00000000 _Z20filterSmoothWithTimeffff
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:99     .text._ZN12MedianFilterC2Ev:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC2Ev
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:118    .text._ZN12MedianFilter10initializeEv:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:123    .text._ZN12MedianFilter10initializeEv:00000000 _ZN12MedianFilter10initializeEv
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:157    .text._ZN12MedianFilter6filterEf:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:162    .text._ZN12MedianFilter6filterEf:00000000 _ZN12MedianFilter6filterEf
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:260    .text._Z16vectorDotProductiPfS_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:265    .text._Z16vectorDotProductiPfS_:00000000 _Z16vectorDotProductiPfS_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:304    .text._Z16vectorDotProductiPfS_:00000020 $d
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:309    .text._Z18vectorCrossProductPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:314    .text._Z18vectorCrossProductPfS_S_:00000000 _Z18vectorCrossProductPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:352    .text._Z11vectorScaleiPfS_f:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:357    .text._Z11vectorScaleiPfS_f:00000000 _Z11vectorScaleiPfS_f
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:394    .text._Z9vectorAddiPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:399    .text._Z9vectorAddiPfS_S_:00000000 _Z9vectorAddiPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:438    .text._Z14vectorSubtractiPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:443    .text._Z14vectorSubtractiPfS_S_:00000000 _Z14vectorSubtractiPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:482    .text._Z14matrixMultiplyiiiPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:487    .text._Z14matrixMultiplyiiiPfS_S_:00000000 _Z14matrixMultiplyiiiPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:613    .text._Z9matrixAddiiPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:618    .text._Z9matrixAddiiPfS_S_:00000000 _Z9matrixAddiiPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:661    .text._Z14matrixSubtractiiPfS_S_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:666    .text._Z14matrixSubtractiiPfS_S_:00000000 _Z14matrixSubtractiiPfS_S_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:709    .text._Z11matrixScaleiiPffS_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:714    .text._Z11matrixScaleiiPffS_:00000000 _Z11matrixScaleiiPffS_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:755    .text._Z18matrixTranspose3x3PfS_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:760    .text._Z18matrixTranspose3x3PfS_:00000000 _Z18matrixTranspose3x3PfS_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:801    .text._Z16matrixInverse3x3PfS_:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:806    .text._Z16matrixInverse3x3PfS_:00000000 _Z16matrixInverse3x3PfS_
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:971    .text._Z7arctan2ff:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:976    .text._Z7arctan2ff:00000000 _Z7arctan2ff
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1035   .text._Z7arctan2ff:0000005c $d
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1042   .text._Z15findMedianFloatPfi:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1047   .text._Z15findMedianFloatPfi:00000000 _Z15findMedianFloatPfi
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1118   .text._Z13findMedianIntPii:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1123   .text._Z13findMedianIntPii:00000000 _Z13findMedianIntPii
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1190   .text._Z10isSwitchedff:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1195   .text._Z10isSwitchedff:00000000 _Z10isSwitchedff
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1243   .text._Z7invSqrtf:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1248   .text._Z7invSqrtf:00000000 _Z7invSqrtf
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1278   .text._Z7invSqrtf:0000002c $d
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1283   .text._Z3isql:00000000 $t
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:1288   .text._Z3isql:00000000 _Z3isql
-C:\Users\LORDHA~1\AppData\Local\Temp\cc9NYyOd.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC1Ev
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:20     .text._Z12filterSmoothfff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:25     .text._Z12filterSmoothfff:00000000 _Z12filterSmoothfff
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:59     .text._Z20filterSmoothWithTimeffff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:64     .text._Z20filterSmoothWithTimeffff:00000000 _Z20filterSmoothWithTimeffff
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:99     .text._ZN12MedianFilterC2Ev:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC2Ev
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:118    .text._ZN12MedianFilter10initializeEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:123    .text._ZN12MedianFilter10initializeEv:00000000 _ZN12MedianFilter10initializeEv
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:157    .text._ZN12MedianFilter6filterEf:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:162    .text._ZN12MedianFilter6filterEf:00000000 _ZN12MedianFilter6filterEf
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:260    .text._Z16vectorDotProductiPfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:265    .text._Z16vectorDotProductiPfS_:00000000 _Z16vectorDotProductiPfS_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:304    .text._Z16vectorDotProductiPfS_:00000020 $d
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:309    .text._Z18vectorCrossProductPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:314    .text._Z18vectorCrossProductPfS_S_:00000000 _Z18vectorCrossProductPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:352    .text._Z11vectorScaleiPfS_f:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:357    .text._Z11vectorScaleiPfS_f:00000000 _Z11vectorScaleiPfS_f
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:394    .text._Z9vectorAddiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:399    .text._Z9vectorAddiPfS_S_:00000000 _Z9vectorAddiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:438    .text._Z14vectorSubtractiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:443    .text._Z14vectorSubtractiPfS_S_:00000000 _Z14vectorSubtractiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:482    .text._Z14matrixMultiplyiiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:487    .text._Z14matrixMultiplyiiiPfS_S_:00000000 _Z14matrixMultiplyiiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:613    .text._Z9matrixAddiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:618    .text._Z9matrixAddiiPfS_S_:00000000 _Z9matrixAddiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:661    .text._Z14matrixSubtractiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:666    .text._Z14matrixSubtractiiPfS_S_:00000000 _Z14matrixSubtractiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:709    .text._Z11matrixScaleiiPffS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:714    .text._Z11matrixScaleiiPffS_:00000000 _Z11matrixScaleiiPffS_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:755    .text._Z18matrixTranspose3x3PfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:760    .text._Z18matrixTranspose3x3PfS_:00000000 _Z18matrixTranspose3x3PfS_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:801    .text._Z16matrixInverse3x3PfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:806    .text._Z16matrixInverse3x3PfS_:00000000 _Z16matrixInverse3x3PfS_
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:971    .text._Z7arctan2ff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:976    .text._Z7arctan2ff:00000000 _Z7arctan2ff
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1035   .text._Z7arctan2ff:0000005c $d
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1042   .text._Z15findMedianFloatPfi:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1047   .text._Z15findMedianFloatPfi:00000000 _Z15findMedianFloatPfi
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1118   .text._Z13findMedianIntPii:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1123   .text._Z13findMedianIntPii:00000000 _Z13findMedianIntPii
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1190   .text._Z10isSwitchedff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1195   .text._Z10isSwitchedff:00000000 _Z10isSwitchedff
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1243   .text._Z7invSqrtf:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1248   .text._Z7invSqrtf:00000000 _Z7invSqrtf
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1278   .text._Z7invSqrtf:0000002c $d
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1283   .text._Z3isql:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1288   .text._Z3isql:00000000 _Z3isql
+C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC1Ev
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

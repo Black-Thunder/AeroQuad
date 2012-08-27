@@ -116,9 +116,9 @@ typedef enum {
 	HoTTv4NotificationFollowing            = 0x33,
 	HoTTv4NotificationStarting             = 0x34,
 	HoTTv4NotificationReceiver             = 0x35,
-	} HoTTv4Notification;
+} HoTTv4Notification;
 
-  unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
+unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
 #endif
 
 // main loop time variable

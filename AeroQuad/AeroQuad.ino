@@ -1038,8 +1038,9 @@
 #if defined(CameraControl_STM32)
   #include <CameraStabilizer_STM32.h>
 #elif defined(CameraControl)
-   #include <CameraStabilizer_Aeroquad.h>
+  #include <CameraStabilizer_Aeroquad.h>
 #endif
+
 
 //********************************************************
 //******** FLIGHT CONFIGURATION DECLARATION **************
@@ -1266,10 +1267,9 @@ void setup() {
     initializeHeadingFusion();
   #endif
 
-#ifdef GraupnerHoTTTelemetry
+  #ifdef GraupnerHoTTTelemetry
 	hottv4Init(&Serial3);
-#endif
-
+  #endif
 
   
   previousTime = micros();
@@ -1334,6 +1334,9 @@ void loop () {
     // Evaluate are here because we want it to be synchronized with the processFlightControl
     #if defined(AltitudeHoldBaro)
       measureBaroSum(); 
+//      if (frameCounter % THROTTLE_ADJUST_TASK_SPEED == 0) {  //  50 Hz tasks
+//        evaluateBaroAltitude();
+//      }
     #endif
           
     // Combines external pilot commands and measured sensor data to generate motor commands
@@ -1360,7 +1363,7 @@ void loop () {
 
       // Reads external pilot commands and performs functions based on stick configuration
       readPilotCommands(); 
-            
+      
       #if defined(UseAnalogRSSIReader) || defined(UseEzUHFRSSIReader)
         readRSSI();
       #endif

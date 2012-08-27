@@ -85,6 +85,7 @@ void boardInit(void) {
 	gpio_set_af_mode(GPIOA,  0, 2);
 	gpio_set_af_mode(GPIOA,  1, 2);
 	gpio_set_af_mode(GPIOA,  2, 2);
+
 #else
 	__io uint32 *mapr = &AFIO_BASE->MAPR;
 	*mapr = ((*mapr) & ~(7 << 24) & AFIO_MAPR_SPI1_REMAP )

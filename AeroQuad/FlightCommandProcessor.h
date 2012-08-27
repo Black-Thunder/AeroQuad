@@ -40,10 +40,6 @@ void readPilotCommands() {
       commandAllMotors(MINCOMMAND);
       motorArmed = OFF;
       inFlight = false;
-
-	  #if defined GraupnerHoTTTelemetry
-	    SpeakHoTT = HoTTv4NotificationMicrocopterOff;
-	  #endif
             
       #ifdef OSD
         notifyOSD(OSD_CENTER|OSD_WARN, "MOTORS UNARMED");
@@ -58,10 +54,6 @@ void readPilotCommands() {
     
     // Zero Gyro and Accel sensors (left stick lower left, right stick lower right corner)
     if ((receiverCommand[ZAXIS] < MINCHECK) && (receiverCommand[XAXIS] > MAXCHECK) && (receiverCommand[YAXIS] < MINCHECK)) {
-	  #if defined GraupnerHoTTTelemetry
-	    SpeakHoTT = HoTTv4NotificationCalibrating;
-	  #endif
-
       calibrateGyro();
       computeAccelBias();
       storeSensorsZeroToEEPROM();
@@ -83,10 +75,6 @@ void readPilotCommands() {
         motorCommand[motor] = MINTHROTTLE;
       }
       motorArmed = ON;
-
-	  #if defined GraupnerHoTTTelemetry
-	    SpeakHoTT = HoTTv4NotificationStarting;
-      #endif
     
       #ifdef OSD
         notifyOSD(OSD_CENTER|OSD_WARN, "!MOTORS ARMED!");
@@ -117,7 +105,11 @@ void readPilotCommands() {
 
   
   #if defined AltitudeHoldBaro || defined AltitudeHoldRangeFinder
-     if (receiverCommand[AUX1] < 1750) {
+    #if defined (UseGPSNavigator)
+      if ((receiverCommand[AUX1] < 1750) || (receiverCommand[AUX2] < 1750)) {
+    #else
+      if (receiverCommand[AUX1] < 1750) {
+    #endif
       if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
         if (isStoreAltitudeNeeded) {
           #if defined AltitudeHoldBaro
@@ -195,7 +187,7 @@ void readPilotCommands() {
     }
   
   
-    if (receiverCommand[AUX2] >= 1700) {  // Enter in execute mission state, if none, go back home, override the position hold
+    if (receiverCommand[AUX2] < 1750) {  // Enter in execute mission state, if none, go back home, override the position hold
     
       if (isInitNavigationNeeded) {
         
@@ -210,7 +202,7 @@ void readPilotCommands() {
 
       navigationState = ON;
     }
-    else if (receiverCommand[AUX2] > 1400 && receiverCommand[AUX2] < 1700) {  // Enter in position hold state
+    else if (receiverCommand[AUX1] < 1600) {  // Enter in position hold state
       
       if (isStorePositionNeeded) {
         

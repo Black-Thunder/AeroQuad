@@ -72,3 +72,4 @@ void cameraControlMove(int servoPitch, int servoRoll, int servoYaw) {
 }
 
 #endif  // #define _AEROQUAD_CAMERA_STM32_H_
+

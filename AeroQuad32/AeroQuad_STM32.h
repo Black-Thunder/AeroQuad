@@ -116,9 +116,8 @@ tSerial &Serial = SERIAL_VAR;
 #endif
 
 #ifdef CameraControl
-	#define CameraControl_STM32
+        #define CameraControl_STM32
 #endif
-
 
 /**
  * Put AeroQuadSTM32 specific initialization need here
