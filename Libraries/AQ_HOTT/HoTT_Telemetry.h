@@ -31,7 +31,7 @@ static uint16_t milliseconds = 0;
 static signed int maxAltitude = 500;
 static signed int minAltitude = 500;
 volatile unsigned int CountMilliseconds = 0;
-unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
+bool isAHOff, isAHOn, isNavOn, isHoldOn, isGPSOff;
 
 /* ##################################################################### *
  *                HoTTv4 Common Serial                                   *
@@ -149,7 +149,7 @@ static int32_t hottv4UpdateAlt() {
   int32_t alt = 0;
   
 #if defined(AltitudeHoldBaro)
-  alt = (int)getBaroAltitude() + 500;
+  alt = (int)getBaroAltitude() + 500;  // 500 == 0m
 #endif 
 
 #if defined(AltitudeHoldRangeFinder)
@@ -186,18 +186,75 @@ char CheckDelay(unsigned int t)	{
 	return(((t - CountMilliseconds) & 0x8000) >> 9);
 }
 
-static unsigned char HoTTWarning()
+static unsigned char hottVoiceOutput()
 	{
 	unsigned char status = 0;
 	static char oldStatus = 0;
 	static int repeat;
 
+
 #if defined(HOTTV4BATT)
-	// Activate low voltage alarm
-	if (batteryWarning || batteryAlarm) {
+	if (batteryAlarm) {
 		status = HoTTv4NotificationUndervoltage;
 	}
 #endif
+
+	if(!SpeakHoTT) {
+#if defined(AltitudeHoldBaro) || defined(AltitudeHoldRangeFinder)
+		if(altitudeHoldState == ON)  isAHOn = true;
+		else if(altitudeHoldState == ALTPANIC || altitudeHoldState == OFF) isAHOff = true;
+
+		 if(isAHOn) {
+			 if (altitudeHoldState == ALTPANIC || altitudeHoldState == OFF) {
+				isAHOn = false;
+				SpeakHoTT = HoTTv4NotificationAltitudeOff;
+			 }
+		 }
+		 if(isAHOff) {
+			 if(altitudeHoldState == ON) {
+				 isAHOff = false;
+				 SpeakHoTT = HoTTv4NotificationAltitudeOn;
+			 }
+		 }
+#endif
+
+#if defined(UseGPSNavigator)
+		 if(navigationState == ON)  isNavOn = true;
+		 else if(positionHoldState == ON) isHoldOn = true;
+		 else if(positionHoldState == OFF && navigationState == OFF) isGPSOff = true;
+
+		 if(isNavOn) {
+			 if (positionHoldState == ON) {
+				 isNavOn = false;
+				 SpeakHoTT = HoTTv4NotificationGPSHold;
+			 }
+			 if (positionHoldState == OFF && navigationState == OFF) {
+				 isNavOn = false;
+				 SpeakHoTT = HoTTv4NotificationGPSOff;
+			 }
+		 }
+		 if(isHoldOn) {
+			 if(navigationState == ON) {
+				 isHoldOn = false;
+				 SpeakHoTT = HoTTv4NotificationGPSHome;
+				 }
+			 if (positionHoldState == OFF && navigationState == OFF) {
+				 isHoldOn = false;
+				 SpeakHoTT = HoTTv4NotificationGPSOff;
+				 }
+		 }
+		 if(isGPSOff) {
+			 if (positionHoldState == ON) {
+				 isGPSOff = false;
+				 SpeakHoTT = HoTTv4NotificationGPSHold;
+			 }
+			 if(navigationState == ON) {
+				 isGPSOff = false;
+				 SpeakHoTT = HoTTv4NotificationGPSHome;
+			}
+		 }
+#endif
+	}
 	
 	if(!status) {
 		status = SpeakHoTT; 
@@ -216,7 +273,7 @@ static unsigned char HoTTWarning()
 	oldStatus = status;
 
 	return status;
-	}
+}
 
 
 /**
@@ -405,14 +462,14 @@ static void hottV4SendGPSTelemetry() {
 
       /** Distance to home */
 	  if(isHomeBaseInitialized()) {
-		  computeDistanceAndBearing(currentPosition, missionPositionToReach);
+		  computeDistanceAndBearing(currentPosition, homePosition);
 		  telemetry_data[19] = (int)getDistanceMeter();
 		  telemetry_data[20] = (int)getDistanceMeter() >> 8;
 		  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG)) * 50;
 		  }
 
 	  if (navigationState == ON) { 
-		  telemetry_data[39] = HoTTGPSComingHome; // Displays a 'W' for Waypoint
+		  telemetry_data[39] = HoTTGPSWaypoint; // Displays a 'W' for Waypoint
 		  }
 	  else if(positionHoldState == ON) {
 		  telemetry_data[39] = HoTTGPSPositionHold; //Displays a 'P' for Position Hold
@@ -439,7 +496,7 @@ static void hottV4SendGPSTelemetry() {
 #endif
 
   // Triggers voice alarm if necessary
-  telemetry_data[2] = HoTTWarning();
+  telemetry_data[2] = hottVoiceOutput();
   
   // Write out telemetry data as GPS Module to serial           
   hottV4SendBinary(telemetry_data);
@@ -528,13 +585,6 @@ static void hottV4SendVarioTelemetry() {
  * Main entry point for HoTTv4 telemetry
  */
 bool hottV4Hook(uint8_t serialData) {
-#ifdef HOTTV4_DEBUG
-  Serial.print("Hott cmd ");
-  Serial.print((int)serialData);
-  Serial.print(" time ");
-  Serial.println(micros());
-#endif
-
   switch (serialData) {
     case HOTTV4_GPS_MODULE:
     case '1':

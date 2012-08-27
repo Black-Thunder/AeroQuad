@@ -115,6 +115,9 @@ tSerial &Serial = SERIAL_VAR;
 	#define MAX7456_OSD
 #endif
 
+#ifdef CameraControl
+	#define CameraControl_STM32
+#endif
 
 
 /**

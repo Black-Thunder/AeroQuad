@@ -40,6 +40,10 @@ void readPilotCommands() {
       commandAllMotors(MINCOMMAND);
       motorArmed = OFF;
       inFlight = false;
+
+	  #if defined GraupnerHoTTTelemetry
+	    SpeakHoTT = HoTTv4NotificationMicrocopterOff;
+	  #endif
             
       #ifdef OSD
         notifyOSD(OSD_CENTER|OSD_WARN, "MOTORS UNARMED");
@@ -54,6 +58,10 @@ void readPilotCommands() {
     
     // Zero Gyro and Accel sensors (left stick lower left, right stick lower right corner)
     if ((receiverCommand[ZAXIS] < MINCHECK) && (receiverCommand[XAXIS] > MAXCHECK) && (receiverCommand[YAXIS] < MINCHECK)) {
+	  #if defined GraupnerHoTTTelemetry
+	    SpeakHoTT = HoTTv4NotificationCalibrating;
+	  #endif
+
       calibrateGyro();
       computeAccelBias();
       storeSensorsZeroToEEPROM();
@@ -75,6 +83,10 @@ void readPilotCommands() {
         motorCommand[motor] = MINTHROTTLE;
       }
       motorArmed = ON;
+
+	  #if defined GraupnerHoTTTelemetry
+	    SpeakHoTT = HoTTv4NotificationStarting;
+      #endif
     
       #ifdef OSD
         notifyOSD(OSD_CENTER|OSD_WARN, "!MOTORS ARMED!");

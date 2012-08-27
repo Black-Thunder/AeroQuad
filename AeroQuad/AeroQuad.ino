@@ -362,7 +362,6 @@
   #define LED_Green 13
   #define LED_Red 4
   #define LED_Yellow 31
-  #define BuzzerPin 49
 
   #include <Device_I2C.h>
 
@@ -421,8 +420,6 @@
     digitalWrite(LED_Red, LOW);
     pinMode(LED_Yellow, OUTPUT);
     digitalWrite(LED_Yellow, LOW);
-	pinMode(BuzzerPin, OUTPUT);
-	digitalWrite(BuzzerPin, LOW);
 
     // pins set to INPUT for camera stabilization so won't interfere with new camera class
     pinMode(33, INPUT); // disable SERVO 1, jumper D12 for roll
@@ -1038,10 +1035,11 @@
 //************** CAMERA CONTROL DECLARATION **************
 //********************************************************
 // used only on mega for now
-#ifdef CameraControl
-  #include <CameraStabilizer_Aeroquad.h>
+#if defined(CameraControl_STM32)
+  #include <CameraStabilizer_STM32.h>
+#elif defined(CameraControl)
+   #include <CameraStabilizer_Aeroquad.h>
 #endif
-
 
 //********************************************************
 //******** FLIGHT CONFIGURATION DECLARATION **************
@@ -1362,11 +1360,7 @@ void loop () {
 
       // Reads external pilot commands and performs functions based on stick configuration
       readPilotCommands(); 
-      
-      #if defined(AltitudeHoldBaro)
-        evaluateBaroAltitude();
-      #endif
-      
+            
       #if defined(UseAnalogRSSIReader) || defined(UseEzUHFRSSIReader)
         readRSSI();
       #endif
