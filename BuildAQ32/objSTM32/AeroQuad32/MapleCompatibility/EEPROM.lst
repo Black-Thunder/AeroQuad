@@ -22,7 +22,7 @@
   22              		.thumb
   23              		.thumb_func
   25              	_ZN11EEPROMClass12EE_CheckPageEjt:
-  26              	.LFB113:
+  26              	.LFB114:
   27              		.file 1 "C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility/EEPROM.cpp"
    1:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** #include "wirish.h"
    2:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** #include "EEPROM.h"
@@ -110,14 +110,14 @@
   84              		.loc 1 22 0
   85 0034 10BD     		pop	{r4, pc}
   86              		.cfi_endproc
-  87              	.LFE113:
+  87              	.LFE114:
   89              		.section	.text._ZN11EEPROMClass12EE_ErasePageEj,"ax",%progbits
   90              		.align	1
   91              		.global	_ZN11EEPROMClass12EE_ErasePageEj
   92              		.thumb
   93              		.thumb_func
   95              	_ZN11EEPROMClass12EE_ErasePageEj:
-  96              	.LFB114:
+  96              	.LFB115:
   23:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
   24:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
   25:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Erase page with increment erase counter (page + 2)
@@ -213,14 +213,14 @@
  164              		.loc 1 45 0
  165 003c 38BD     		pop	{r3, r4, r5, pc}
  166              		.cfi_endproc
- 167              	.LFE114:
+ 167              	.LFE115:
  169              		.section	.text._ZN11EEPROMClass17EE_CheckErasePageEjt,"ax",%progbits
  170              		.align	1
  171              		.global	_ZN11EEPROMClass17EE_CheckErasePageEjt
  172              		.thumb
  173              		.thumb_func
  175              	_ZN11EEPROMClass17EE_CheckErasePageEjt:
- 176              	.LFB115:
+ 176              	.LFB116:
   46:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
   47:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
   48:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Check page for blank and erase it
@@ -288,14 +288,14 @@
  219              		.loc 1 66 0
  220 0028 70BD     		pop	{r4, r5, r6, pc}
  221              		.cfi_endproc
- 222              	.LFE115:
+ 222              	.LFE116:
  224              		.section	.text._ZN11EEPROMClass16EE_FindValidPageEv,"ax",%progbits
  225              		.align	1
  226              		.global	_ZN11EEPROMClass16EE_FindValidPageEv
  227              		.thumb
  228              		.thumb_func
  230              	_ZN11EEPROMClass16EE_FindValidPageEv:
- 231              	.LFB116:
+ 231              	.LFB117:
   67:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
   68:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
   69:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Find valid Page for write or read operation
@@ -380,14 +380,14 @@
  290              		.loc 1 85 0
  291 002e 10BD     		pop	{r4, pc}
  292              		.cfi_endproc
- 293              	.LFE116:
+ 293              	.LFE117:
  295              		.section	.text._ZN11EEPROMClass20EE_GetVariablesCountEjt,"ax",%progbits
  296              		.align	1
  297              		.global	_ZN11EEPROMClass20EE_GetVariablesCountEjt
  298              		.thumb
  299              		.thumb_func
  301              	_ZN11EEPROMClass20EE_GetVariablesCountEjt:
- 302              	.LFB117:
+ 302              	.LFB118:
   86:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
   87:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
   88:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Calculate unique variables in EEPROM
@@ -506,14 +506,14 @@
  377              		.loc 1 119 0 is_stmt 1
  378 0038 70BD     		pop	{r4, r5, r6, pc}
  379              		.cfi_endproc
- 380              	.LFE117:
+ 380              	.LFE118:
  382              		.section	.text._ZN11EEPROMClass15EE_PageTransferEjjt,"ax",%progbits
  383              		.align	1
  384              		.global	_ZN11EEPROMClass15EE_PageTransferEjjt
  385              		.thumb
  386              		.thumb_func
  388              	_ZN11EEPROMClass15EE_PageTransferEjjt:
- 389              	.LFB118:
+ 389              	.LFB119:
  120:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  121:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  122:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Transfers last updated variables data from the full Page to an empty one.
@@ -786,14 +786,14 @@
  570 00b0 F8E7     		b	.L32
  571              	.LBE13:
  572              		.cfi_endproc
- 573              	.LFE118:
+ 573              	.LFE119:
  575              		.section	.text._ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt,"ax",%progbits
  576              		.align	1
  577              		.global	_ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt
  578              		.thumb
  579              		.thumb_func
  581              	_ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt:
- 582              	.LFB119:
+ 582              	.LFB120:
  198:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  199:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  200:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Verify if active page is full and Writes variable in EEPROM.
@@ -1080,14 +1080,14 @@
  774              		.loc 1 280 0
  775 00f0 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, sl, pc}
  776              		.cfi_endproc
- 777              	.LFE119:
+ 777              	.LFE120:
  779              		.section	.text._ZN11EEPROMClassC2Ev,"ax",%progbits
  780              		.align	1
  781              		.global	_ZN11EEPROMClassC2Ev
  782              		.thumb
  783              		.thumb_func
  785              	_ZN11EEPROMClassC2Ev:
- 786              	.LFB121:
+ 786              	.LFB122:
  281:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  282:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** EEPROMClass::EEPROMClass(void)
  787              		.loc 1 282 0
@@ -1120,14 +1120,14 @@
  808 0014 00800008 		.word	134250496
  809 0018 00C00008 		.word	134266880
  810              		.cfi_endproc
- 811              	.LFE121:
+ 811              	.LFE122:
  813              		.section	.text._ZN11EEPROMClass6formatEv,"ax",%progbits
  814              		.align	1
  815              		.global	_ZN11EEPROMClass6formatEv
  816              		.thumb
  817              		.thumb_func
  819              	_ZN11EEPROMClass6formatEv:
- 820              	.LFB125:
+ 820              	.LFB126:
  289:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  290:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** uint16 EEPROMClass::init(uint32 pageBase0, uint32 pageBase1, uint32 pageSize)
  291:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** {
@@ -1320,14 +1320,14 @@
  878 0044 0846     		mov	r0, r1
  879 0046 10BD     		pop	{r4, pc}
  880              		.cfi_endproc
- 881              	.LFE125:
+ 881              	.LFE126:
  883              		.section	.text._ZN11EEPROMClass4initEv,"ax",%progbits
  884              		.align	1
  885              		.global	_ZN11EEPROMClass4initEv
  886              		.thumb
  887              		.thumb_func
  889              	_ZN11EEPROMClass4initEv:
- 890              	.LFB124:
+ 890              	.LFB125:
  299:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** {
  891              		.loc 1 299 0
  892              		.cfi_startproc
@@ -1548,14 +1548,14 @@
  1067 00c6 A089     		ldrh	r0, [r4, #12]
  1068 00c8 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  1069              		.cfi_endproc
- 1070              	.LFE124:
+ 1070              	.LFE125:
  1072              		.section	.text._ZN11EEPROMClass4initEjjj,"ax",%progbits
  1073              		.align	1
  1074              		.global	_ZN11EEPROMClass4initEjjj
  1075              		.thumb
  1076              		.thumb_func
  1078              	_ZN11EEPROMClass4initEjjj:
- 1079              	.LFB123:
+ 1079              	.LFB124:
  291:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** {
  1080              		.loc 1 291 0
  1081              		.cfi_startproc
@@ -1581,14 +1581,14 @@
  1098              	.LVL132:
  1099              	.LVL133:
  1100              		.cfi_endproc
- 1101              	.LFE123:
+ 1101              	.LFE124:
  1103              		.section	.text._ZN11EEPROMClass6erasesEPt,"ax",%progbits
  1104              		.align	1
  1105              		.global	_ZN11EEPROMClass6erasesEPt
  1106              		.thumb
  1107              		.thumb_func
  1109              	_ZN11EEPROMClass6erasesEPt:
- 1110              	.LFB126:
+ 1110              	.LFB127:
  420:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  421:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  422:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Returns the erase counter for current page
@@ -1667,14 +1667,14 @@
  1161              		.loc 1 442 0
  1162 0028 38BD     		pop	{r3, r4, r5, pc}
  1163              		.cfi_endproc
- 1164              	.LFE126:
+ 1164              	.LFE127:
  1166              		.section	.text._ZN11EEPROMClass4readEtPt,"ax",%progbits
  1167              		.align	1
  1168              		.global	_ZN11EEPROMClass4readEtPt
  1169              		.thumb
  1170              		.thumb_func
  1172              	_ZN11EEPROMClass4readEtPt:
- 1173              	.LFB128:
+ 1173              	.LFB129:
  443:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  444:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  445:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief	Returns the last stored variable data, if found,
@@ -1820,14 +1820,14 @@
  1258              		.loc 1 496 0
  1259 0052 70BD     		pop	{r4, r5, r6, pc}
  1260              		.cfi_endproc
- 1261              	.LFE128:
+ 1261              	.LFE129:
  1263              		.section	.text._ZN11EEPROMClass4readEt,"ax",%progbits
  1264              		.align	1
  1265              		.global	_ZN11EEPROMClass4readEt
  1266              		.thumb
  1267              		.thumb_func
  1269              	_ZN11EEPROMClass4readEt:
- 1270              	.LFB127:
+ 1270              	.LFB128:
  451:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** {
  1271              		.loc 1 451 0
  1272              		.cfi_startproc
@@ -1853,14 +1853,14 @@
  1290 000a BDF80600 		ldrh	r0, [sp, #6]
  1291 000e 0EBD     		pop	{r1, r2, r3, pc}
  1292              		.cfi_endproc
- 1293              	.LFE127:
+ 1293              	.LFE128:
  1295              		.section	.text._ZN11EEPROMClass5writeEtt,"ax",%progbits
  1296              		.align	1
  1297              		.global	_ZN11EEPROMClass5writeEtt
  1298              		.thumb
  1299              		.thumb_func
  1301              	_ZN11EEPROMClass5writeEtt:
- 1302              	.LFB129:
+ 1302              	.LFB130:
  497:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  498:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  499:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Writes/upadtes variable data in EEPROM.
@@ -1945,14 +1945,14 @@
  1354              		.loc 1 522 0
  1355 0030 70BD     		pop	{r4, r5, r6, pc}
  1356              		.cfi_endproc
- 1357              	.LFE129:
+ 1357              	.LFE130:
  1359              		.section	.text._ZN11EEPROMClass5countEPt,"ax",%progbits
  1360              		.align	1
  1361              		.global	_ZN11EEPROMClass5countEPt
  1362              		.thumb
  1363              		.thumb_func
  1365              	_ZN11EEPROMClass5countEPt:
- 1366              	.LFB130:
+ 1366              	.LFB131:
  523:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  524:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** /**
  525:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp ****   * @brief  Return number of variable
@@ -2031,14 +2031,14 @@
  1421              		.loc 1 541 0
  1422 0032 38BD     		pop	{r3, r4, r5, pc}
  1423              		.cfi_endproc
- 1424              	.LFE130:
+ 1424              	.LFE131:
  1426              		.section	.text._ZN11EEPROMClass8maxcountEv,"ax",%progbits
  1427              		.align	1
  1428              		.global	_ZN11EEPROMClass8maxcountEv
  1429              		.thumb
  1430              		.thumb_func
  1432              	_ZN11EEPROMClass8maxcountEv:
- 1433              	.LFB131:
+ 1433              	.LFB132:
  542:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  543:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** uint16 EEPROMClass::maxcount(void)
  544:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** {
@@ -2059,13 +2059,13 @@
  1446 0006 80B2     		uxth	r0, r0
  1447 0008 7047     		bx	lr
  1448              		.cfi_endproc
- 1449              	.LFE131:
+ 1449              	.LFE132:
  1451              		.section	.text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt,"ax",%progbits
  1452              		.align	1
  1453              		.thumb
  1454              		.thumb_func
  1456              	_GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:
- 1457              	.LFB133:
+ 1457              	.LFB134:
  547:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** 
  548:C:/MinGW/msys/1.0/home/LordHahn/AeroQuad32/MapleCompatibility\EEPROM.cpp **** EEPROMClass EEPROM;
  1458              		.loc 1 548 0
@@ -2090,7 +2090,7 @@
  1477              	.LBE34:
  1478              	.LBE35:
  1479              		.cfi_endproc
- 1480              	.LFE133:
+ 1480              	.LFE134:
  1482              		.section	.init_array,"aw",%init_array
  1483              		.align	2
  1484 0000 00000000 		.word	_GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt(target1)
@@ -2114,48 +2114,48 @@
  1501              		.file 6 "../Libmaple/libmaple/libmaple/systick.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 EEPROM.cpp
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:20     .text._ZN11EEPROMClass12EE_CheckPageEjt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:25     .text._ZN11EEPROMClass12EE_CheckPageEjt:00000000 _ZN11EEPROMClass12EE_CheckPageEjt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:90     .text._ZN11EEPROMClass12EE_ErasePageEj:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:95     .text._ZN11EEPROMClass12EE_ErasePageEj:00000000 _ZN11EEPROMClass12EE_ErasePageEj
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:170    .text._ZN11EEPROMClass17EE_CheckErasePageEjt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:175    .text._ZN11EEPROMClass17EE_CheckErasePageEjt:00000000 _ZN11EEPROMClass17EE_CheckErasePageEjt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:225    .text._ZN11EEPROMClass16EE_FindValidPageEv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:230    .text._ZN11EEPROMClass16EE_FindValidPageEv:00000000 _ZN11EEPROMClass16EE_FindValidPageEv
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:296    .text._ZN11EEPROMClass20EE_GetVariablesCountEjt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:301    .text._ZN11EEPROMClass20EE_GetVariablesCountEjt:00000000 _ZN11EEPROMClass20EE_GetVariablesCountEjt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:383    .text._ZN11EEPROMClass15EE_PageTransferEjjt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:388    .text._ZN11EEPROMClass15EE_PageTransferEjjt:00000000 _ZN11EEPROMClass15EE_PageTransferEjjt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:576    .text._ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:581    .text._ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt:00000000 _ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:780    .text._ZN11EEPROMClassC2Ev:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:785    .text._ZN11EEPROMClassC2Ev:00000000 _ZN11EEPROMClassC2Ev
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:808    .text._ZN11EEPROMClassC2Ev:00000014 $d
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:814    .text._ZN11EEPROMClass6formatEv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:819    .text._ZN11EEPROMClass6formatEv:00000000 _ZN11EEPROMClass6formatEv
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:884    .text._ZN11EEPROMClass4initEv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:889    .text._ZN11EEPROMClass4initEv:00000000 _ZN11EEPROMClass4initEv
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1073   .text._ZN11EEPROMClass4initEjjj:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1078   .text._ZN11EEPROMClass4initEjjj:00000000 _ZN11EEPROMClass4initEjjj
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1104   .text._ZN11EEPROMClass6erasesEPt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1109   .text._ZN11EEPROMClass6erasesEPt:00000000 _ZN11EEPROMClass6erasesEPt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1167   .text._ZN11EEPROMClass4readEtPt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1172   .text._ZN11EEPROMClass4readEtPt:00000000 _ZN11EEPROMClass4readEtPt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1264   .text._ZN11EEPROMClass4readEt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1269   .text._ZN11EEPROMClass4readEt:00000000 _ZN11EEPROMClass4readEt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1296   .text._ZN11EEPROMClass5writeEtt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1301   .text._ZN11EEPROMClass5writeEtt:00000000 _ZN11EEPROMClass5writeEtt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1360   .text._ZN11EEPROMClass5countEPt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1365   .text._ZN11EEPROMClass5countEPt:00000000 _ZN11EEPROMClass5countEPt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1427   .text._ZN11EEPROMClass8maxcountEv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1432   .text._ZN11EEPROMClass8maxcountEv:00000000 _ZN11EEPROMClass8maxcountEv
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1452   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1456   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000000 _GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:785    .text._ZN11EEPROMClassC2Ev:00000000 _ZN11EEPROMClassC1Ev
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1476   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000008 $d
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1483   .init_array:00000000 $d
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1493   .bss.EEPROM:00000000 EEPROM
-C:\Users\LordHahn\AppData\Local\Temp\cckuG2Iv.s:1489   .bss.EEPROM:00000000 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:20     .text._ZN11EEPROMClass12EE_CheckPageEjt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:25     .text._ZN11EEPROMClass12EE_CheckPageEjt:00000000 _ZN11EEPROMClass12EE_CheckPageEjt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:90     .text._ZN11EEPROMClass12EE_ErasePageEj:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:95     .text._ZN11EEPROMClass12EE_ErasePageEj:00000000 _ZN11EEPROMClass12EE_ErasePageEj
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:170    .text._ZN11EEPROMClass17EE_CheckErasePageEjt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:175    .text._ZN11EEPROMClass17EE_CheckErasePageEjt:00000000 _ZN11EEPROMClass17EE_CheckErasePageEjt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:225    .text._ZN11EEPROMClass16EE_FindValidPageEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:230    .text._ZN11EEPROMClass16EE_FindValidPageEv:00000000 _ZN11EEPROMClass16EE_FindValidPageEv
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:296    .text._ZN11EEPROMClass20EE_GetVariablesCountEjt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:301    .text._ZN11EEPROMClass20EE_GetVariablesCountEjt:00000000 _ZN11EEPROMClass20EE_GetVariablesCountEjt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:383    .text._ZN11EEPROMClass15EE_PageTransferEjjt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:388    .text._ZN11EEPROMClass15EE_PageTransferEjjt:00000000 _ZN11EEPROMClass15EE_PageTransferEjjt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:576    .text._ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:581    .text._ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt:00000000 _ZN11EEPROMClass30EE_VerifyPageFullWriteVariableEtt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:780    .text._ZN11EEPROMClassC2Ev:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:785    .text._ZN11EEPROMClassC2Ev:00000000 _ZN11EEPROMClassC2Ev
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:808    .text._ZN11EEPROMClassC2Ev:00000014 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:814    .text._ZN11EEPROMClass6formatEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:819    .text._ZN11EEPROMClass6formatEv:00000000 _ZN11EEPROMClass6formatEv
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:884    .text._ZN11EEPROMClass4initEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:889    .text._ZN11EEPROMClass4initEv:00000000 _ZN11EEPROMClass4initEv
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1073   .text._ZN11EEPROMClass4initEjjj:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1078   .text._ZN11EEPROMClass4initEjjj:00000000 _ZN11EEPROMClass4initEjjj
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1104   .text._ZN11EEPROMClass6erasesEPt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1109   .text._ZN11EEPROMClass6erasesEPt:00000000 _ZN11EEPROMClass6erasesEPt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1167   .text._ZN11EEPROMClass4readEtPt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1172   .text._ZN11EEPROMClass4readEtPt:00000000 _ZN11EEPROMClass4readEtPt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1264   .text._ZN11EEPROMClass4readEt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1269   .text._ZN11EEPROMClass4readEt:00000000 _ZN11EEPROMClass4readEt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1296   .text._ZN11EEPROMClass5writeEtt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1301   .text._ZN11EEPROMClass5writeEtt:00000000 _ZN11EEPROMClass5writeEtt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1360   .text._ZN11EEPROMClass5countEPt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1365   .text._ZN11EEPROMClass5countEPt:00000000 _ZN11EEPROMClass5countEPt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1427   .text._ZN11EEPROMClass8maxcountEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1432   .text._ZN11EEPROMClass8maxcountEv:00000000 _ZN11EEPROMClass8maxcountEv
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1452   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1456   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000000 _GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:785    .text._ZN11EEPROMClassC2Ev:00000000 _ZN11EEPROMClassC1Ev
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1476   .text.startup._GLOBAL__sub_I__ZN11EEPROMClass12EE_CheckPageEjt:00000008 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1483   .init_array:00000000 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1493   .bss.EEPROM:00000000 EEPROM
+C:\Users\LordHahn\AppData\Local\Temp\ccaLT82f.s:1489   .bss.EEPROM:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

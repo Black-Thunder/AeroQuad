@@ -22,7 +22,7 @@
   22              		.thumb
   23              		.thumb_func
   25              	_Z12filterSmoothfff:
-  26              	.LFB113:
+  26              	.LFB114:
   27              		.file 1 "C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.cpp"
    1:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** /*
    2:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   AeroQuad v3.0.1 - February 2012
@@ -85,14 +85,14 @@
   53              	.LVL1:
   54 002e 7047     		bx	lr
   55              		.cfi_endproc
-  56              	.LFE113:
+  56              	.LFE114:
   58              		.section	.text._Z20filterSmoothWithTimeffff,"ax",%progbits
   59              		.align	1
   60              		.global	_Z20filterSmoothWithTimeffff
   61              		.thumb
   62              		.thumb_func
   64              	_Z20filterSmoothWithTimeffff:
-  65              	.LFB114:
+  65              	.LFB115:
   33:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
   34:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float filterSmoothWithTime(float currentData, float previousData, float smoothFactor, float dT_scal
   35:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {  //time scale factor
@@ -133,14 +133,14 @@
   93              	.LVL3:
   94 0036 7047     		bx	lr
   95              		.cfi_endproc
-  96              	.LFE114:
+  96              	.LFE115:
   98              		.section	.text._ZN12MedianFilterC2Ev,"ax",%progbits
   99              		.align	1
  100              		.global	_ZN12MedianFilterC2Ev
  101              		.thumb
  102              		.thumb_func
  104              	_ZN12MedianFilterC2Ev:
- 105              	.LFB116:
+ 105              	.LFB117:
   42:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
   43:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // ***********************************************************************
   44:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // *********************** Median Filter Class ***************************
@@ -158,14 +158,14 @@
  112              		.loc 1 49 0
  113 0000 7047     		bx	lr
  114              		.cfi_endproc
- 115              	.LFE116:
+ 115              	.LFE117:
  117              		.section	.text._ZN12MedianFilter10initializeEv,"ax",%progbits
  118              		.align	1
  119              		.global	_ZN12MedianFilter10initializeEv
  120              		.thumb
  121              		.thumb_func
  123              	_ZN12MedianFilter10initializeEv:
- 124              	.LFB118:
+ 124              	.LFB119:
   50:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
   51:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** void MedianFilter::initialize() 
   52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
@@ -207,14 +207,14 @@
  151              		.loc 1 59 0
  152 0014 7047     		bx	lr
  153              		.cfi_endproc
- 154              	.LFE118:
+ 154              	.LFE119:
  156              		.section	.text._ZN12MedianFilter6filterEf,"ax",%progbits
  157              		.align	1
  158              		.global	_ZN12MedianFilter6filterEf
  159              		.thumb
  160              		.thumb_func
  162              	_ZN12MedianFilter6filterEf:
- 163              	.LFB119:
+ 163              	.LFB120:
   60:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp ****   
   61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** const float MedianFilter::filter(float newData) 
   62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** {
@@ -349,14 +349,14 @@
  254 006a 206B     		ldr	r0, [r4, #48]	@ float
  255 006c 10BD     		pop	{r4, pc}
  256              		.cfi_endproc
- 257              	.LFE119:
+ 257              	.LFE120:
  259              		.section	.text._Z16vectorDotProductiPfS_,"ax",%progbits
  260              		.align	1
  261              		.global	_Z16vectorDotProductiPfS_
  262              		.thumb
  263              		.thumb_func
  265              	_Z16vectorDotProductiPfS_:
- 266              	.LFB120:
+ 266              	.LFB121:
   93:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
   94:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
   95:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Vector Dot Product
@@ -419,14 +419,14 @@
  303              	.L23:
  304 0020 00000000 		.word	0
  305              		.cfi_endproc
- 306              	.LFE120:
+ 306              	.LFE121:
  308              		.section	.text._Z18vectorCrossProductPfS_S_,"ax",%progbits
  309              		.align	1
  310              		.global	_Z18vectorCrossProductPfS_S_
  311              		.thumb
  312              		.thumb_func
  314              	_Z18vectorCrossProductPfS_S_:
- 315              	.LFB121:
+ 315              	.LFB122:
  113:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  114:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  115:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Vector Cross Product
@@ -475,14 +475,14 @@
  346              		.loc 1 127 0
  347 0054 7047     		bx	lr
  348              		.cfi_endproc
- 349              	.LFE121:
+ 349              	.LFE122:
  351              		.section	.text._Z11vectorScaleiPfS_f,"ax",%progbits
  352              		.align	1
  353              		.global	_Z11vectorScaleiPfS_f
  354              		.thumb
  355              		.thumb_func
  357              	_Z11vectorScaleiPfS_f:
- 358              	.LFB122:
+ 358              	.LFB123:
  128:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  129:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  130:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Multiply a vector by a scalar
@@ -533,14 +533,14 @@
  388              		.loc 1 143 0
  389 001a 7047     		bx	lr
  390              		.cfi_endproc
- 391              	.LFE122:
+ 391              	.LFE123:
  393              		.section	.text._Z9vectorAddiPfS_S_,"ax",%progbits
  394              		.align	1
  395              		.global	_Z9vectorAddiPfS_S_
  396              		.thumb
  397              		.thumb_func
  399              	_Z9vectorAddiPfS_S_:
- 400              	.LFB123:
+ 400              	.LFB124:
  144:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  145:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  146:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute sum of 2 vectors
@@ -593,14 +593,14 @@
  432              		.loc 1 159 0
  433 001c 10BD     		pop	{r4, pc}
  434              		.cfi_endproc
- 435              	.LFE123:
+ 435              	.LFE124:
  437              		.section	.text._Z14vectorSubtractiPfS_S_,"ax",%progbits
  438              		.align	1
  439              		.global	_Z14vectorSubtractiPfS_S_
  440              		.thumb
  441              		.thumb_func
  443              	_Z14vectorSubtractiPfS_S_:
- 444              	.LFB124:
+ 444              	.LFB125:
  160:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  161:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  162:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Compute difference of 2 vectors
@@ -653,14 +653,14 @@
  476              		.loc 1 175 0
  477 001c 10BD     		pop	{r4, pc}
  478              		.cfi_endproc
- 479              	.LFE124:
+ 479              	.LFE125:
  481              		.section	.text._Z14matrixMultiplyiiiPfS_S_,"ax",%progbits
  482              		.align	1
  483              		.global	_Z14matrixMultiplyiiiPfS_S_
  484              		.thumb
  485              		.thumb_func
  487              	_Z14matrixMultiplyiiiPfS_S_:
- 488              	.LFB125:
+ 488              	.LFB126:
  176:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  177:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  178:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Multiply
@@ -821,14 +821,14 @@
  607              		.loc 1 202 0
  608 0076 BDE8FE8F 		pop	{r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
  609              		.cfi_endproc
- 610              	.LFE125:
+ 610              	.LFE126:
  612              		.section	.text._Z9matrixAddiiPfS_S_,"ax",%progbits
  613              		.align	1
  614              		.global	_Z9matrixAddiiPfS_S_
  615              		.thumb
  616              		.thumb_func
  618              	_Z9matrixAddiiPfS_S_:
- 619              	.LFB126:
+ 619              	.LFB127:
  203:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  204:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  205:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Addition
@@ -885,14 +885,14 @@
  655              		.loc 1 218 0
  656 0020 10BD     		pop	{r4, pc}
  657              		.cfi_endproc
- 658              	.LFE126:
+ 658              	.LFE127:
  660              		.section	.text._Z14matrixSubtractiiPfS_S_,"ax",%progbits
  661              		.align	1
  662              		.global	_Z14matrixSubtractiiPfS_S_
  663              		.thumb
  664              		.thumb_func
  666              	_Z14matrixSubtractiiPfS_S_:
- 667              	.LFB127:
+ 667              	.LFB128:
  219:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  220:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  221:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  Matrix Subtraction
@@ -949,14 +949,14 @@
  703              		.loc 1 234 0
  704 0020 10BD     		pop	{r4, pc}
  705              		.cfi_endproc
- 706              	.LFE127:
+ 706              	.LFE128:
  708              		.section	.text._Z11matrixScaleiiPffS_,"ax",%progbits
  709              		.align	1
  710              		.global	_Z11matrixScaleiiPffS_
  711              		.thumb
  712              		.thumb_func
  714              	_Z11matrixScaleiiPffS_:
- 715              	.LFB128:
+ 715              	.LFB129:
  235:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  236:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  237:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
@@ -1012,14 +1012,14 @@
  749              		.loc 1 251 0
  750 001e 7047     		bx	lr
  751              		.cfi_endproc
- 752              	.LFE128:
+ 752              	.LFE129:
  754              		.section	.text._Z18matrixTranspose3x3PfS_,"ax",%progbits
  755              		.align	1
  756              		.global	_Z18matrixTranspose3x3PfS_
  757              		.thumb
  758              		.thumb_func
  760              	_Z18matrixTranspose3x3PfS_:
- 761              	.LFB129:
+ 761              	.LFB130:
  252:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  253:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  254:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Transpose
@@ -1077,14 +1077,14 @@
  795              		.loc 1 272 0
  796 0030 7047     		bx	lr
  797              		.cfi_endproc
- 798              	.LFE129:
+ 798              	.LFE130:
  800              		.section	.text._Z16matrixInverse3x3PfS_,"ax",%progbits
  801              		.align	1
  802              		.global	_Z16matrixInverse3x3PfS_
  803              		.thumb
  804              		.thumb_func
  806              	_Z16matrixInverse3x3PfS_:
- 807              	.LFB130:
+ 807              	.LFB131:
  273:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  274:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** ////////////////////////////////////////////////////////////////////////////////
  275:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** //  3 x 3 Matrix Inverse
@@ -1315,14 +1315,14 @@
  965 010e BDEC028B 		fldmfdd	sp!, {d8}
  966 0112 30BD     		pop	{r4, r5, pc}
  967              		.cfi_endproc
- 968              	.LFE130:
+ 968              	.LFE131:
  970              		.section	.text._Z7arctan2ff,"ax",%progbits
  971              		.align	1
  972              		.global	_Z7arctan2ff
  973              		.thumb
  974              		.thumb_func
  976              	_Z7arctan2ff:
- 977              	.LFB131:
+ 977              	.LFB132:
  312:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  313:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  314:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Alternate method to calculate arctangent from: http://www.dspguru.com/comp.dsp/tricks/alg/fxdata
@@ -1414,14 +1414,14 @@
  1036 0060 DB0F493F 		.word	1061752795
  1037 0064 E4CB1640 		.word	1075235812
  1038              		.cfi_endproc
- 1039              	.LFE131:
+ 1039              	.LFE132:
  1041              		.section	.text._Z15findMedianFloatPfi,"ax",%progbits
  1042              		.align	1
  1043              		.global	_Z15findMedianFloatPfi
  1044              		.thumb
  1045              		.thumb_func
  1047              	_Z15findMedianFloatPfi:
- 1048              	.LFB132:
+ 1048              	.LFB133:
  341:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  342:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Used for sensor calibration
  343:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** // Takes the median of 50 results as zero
@@ -1519,14 +1519,14 @@
  1112 0044 0068     		ldr	r0, [r0, #0]	@ float
  1113 0046 30BD     		pop	{r4, r5, pc}
  1114              		.cfi_endproc
- 1115              	.LFE132:
+ 1115              	.LFE133:
  1117              		.section	.text._Z13findMedianIntPii,"ax",%progbits
  1118              		.align	1
  1119              		.global	_Z13findMedianIntPii
  1120              		.thumb
  1121              		.thumb_func
  1123              	_Z13findMedianIntPii:
- 1124              	.LFB133:
+ 1124              	.LFB134:
  369:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  370:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  371:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** int findMedianInt(int *data, int arraySize) 
@@ -1618,14 +1618,14 @@
  1184              	.LVL106:
  1185 0036 70BD     		pop	{r4, r5, r6, pc}
  1186              		.cfi_endproc
- 1187              	.LFE133:
+ 1187              	.LFE134:
  1189              		.section	.text._Z10isSwitchedff,"ax",%progbits
  1190              		.align	1
  1191              		.global	_Z10isSwitchedff
  1192              		.thumb
  1193              		.thumb_func
  1195              	_Z10isSwitchedff:
- 1196              	.LFB134:
+ 1196              	.LFB135:
  395:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  396:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  397:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
@@ -1680,14 +1680,14 @@
  1237              		.loc 1 404 0
  1238 003c 7047     		bx	lr
  1239              		.cfi_endproc
- 1240              	.LFE134:
+ 1240              	.LFE135:
  1242              		.section	.text._Z7invSqrtf,"ax",%progbits
  1243              		.align	1
  1244              		.global	_Z7invSqrtf
  1245              		.thumb
  1246              		.thumb_func
  1248              	_Z7invSqrtf:
- 1249              	.LFB135:
+ 1249              	.LFB136:
  405:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  406:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** float invSqrt (float x){ 
  1250              		.loc 1 406 0
@@ -1728,14 +1728,14 @@
  1277              	.L91:
  1278 002c DF59375F 		.word	1597463007
  1279              		.cfi_endproc
- 1280              	.LFE135:
+ 1280              	.LFE136:
  1282              		.section	.text._Z3isql,"ax",%progbits
  1283              		.align	1
  1284              		.global	_Z3isql
  1285              		.thumb
  1286              		.thumb_func
  1288              	_Z3isql:
- 1289              	.LFB136:
+ 1289              	.LFB137:
  415:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** 
  416:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math\AQMath.cpp **** int32_t isq(int32_t  x) {
  1290              		.loc 1 416 0
@@ -1751,7 +1751,7 @@
  1298              	.LVL113:
  1299 0002 7047     		bx	lr
  1300              		.cfi_endproc
- 1301              	.LFE136:
+ 1301              	.LFE137:
  1303              		.global	_ZN12MedianFilterC1Ev
  1304              		.thumb_set _ZN12MedianFilterC1Ev,_ZN12MedianFilterC2Ev
  1305              		.text
@@ -1763,54 +1763,54 @@
  1311              		.file 6 "../Libmaple/libmaple/libmaple/systick.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 AQMath.cpp
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:20     .text._Z12filterSmoothfff:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:25     .text._Z12filterSmoothfff:00000000 _Z12filterSmoothfff
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:59     .text._Z20filterSmoothWithTimeffff:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:64     .text._Z20filterSmoothWithTimeffff:00000000 _Z20filterSmoothWithTimeffff
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:99     .text._ZN12MedianFilterC2Ev:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC2Ev
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:118    .text._ZN12MedianFilter10initializeEv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:123    .text._ZN12MedianFilter10initializeEv:00000000 _ZN12MedianFilter10initializeEv
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:157    .text._ZN12MedianFilter6filterEf:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:162    .text._ZN12MedianFilter6filterEf:00000000 _ZN12MedianFilter6filterEf
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:260    .text._Z16vectorDotProductiPfS_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:265    .text._Z16vectorDotProductiPfS_:00000000 _Z16vectorDotProductiPfS_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:304    .text._Z16vectorDotProductiPfS_:00000020 $d
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:309    .text._Z18vectorCrossProductPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:314    .text._Z18vectorCrossProductPfS_S_:00000000 _Z18vectorCrossProductPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:352    .text._Z11vectorScaleiPfS_f:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:357    .text._Z11vectorScaleiPfS_f:00000000 _Z11vectorScaleiPfS_f
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:394    .text._Z9vectorAddiPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:399    .text._Z9vectorAddiPfS_S_:00000000 _Z9vectorAddiPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:438    .text._Z14vectorSubtractiPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:443    .text._Z14vectorSubtractiPfS_S_:00000000 _Z14vectorSubtractiPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:482    .text._Z14matrixMultiplyiiiPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:487    .text._Z14matrixMultiplyiiiPfS_S_:00000000 _Z14matrixMultiplyiiiPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:613    .text._Z9matrixAddiiPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:618    .text._Z9matrixAddiiPfS_S_:00000000 _Z9matrixAddiiPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:661    .text._Z14matrixSubtractiiPfS_S_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:666    .text._Z14matrixSubtractiiPfS_S_:00000000 _Z14matrixSubtractiiPfS_S_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:709    .text._Z11matrixScaleiiPffS_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:714    .text._Z11matrixScaleiiPffS_:00000000 _Z11matrixScaleiiPffS_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:755    .text._Z18matrixTranspose3x3PfS_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:760    .text._Z18matrixTranspose3x3PfS_:00000000 _Z18matrixTranspose3x3PfS_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:801    .text._Z16matrixInverse3x3PfS_:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:806    .text._Z16matrixInverse3x3PfS_:00000000 _Z16matrixInverse3x3PfS_
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:971    .text._Z7arctan2ff:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:976    .text._Z7arctan2ff:00000000 _Z7arctan2ff
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1035   .text._Z7arctan2ff:0000005c $d
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1042   .text._Z15findMedianFloatPfi:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1047   .text._Z15findMedianFloatPfi:00000000 _Z15findMedianFloatPfi
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1118   .text._Z13findMedianIntPii:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1123   .text._Z13findMedianIntPii:00000000 _Z13findMedianIntPii
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1190   .text._Z10isSwitchedff:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1195   .text._Z10isSwitchedff:00000000 _Z10isSwitchedff
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1243   .text._Z7invSqrtf:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1248   .text._Z7invSqrtf:00000000 _Z7invSqrtf
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1278   .text._Z7invSqrtf:0000002c $d
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1283   .text._Z3isql:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:1288   .text._Z3isql:00000000 _Z3isql
-C:\Users\LordHahn\AppData\Local\Temp\cc4fL926.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC1Ev
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:20     .text._Z12filterSmoothfff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:25     .text._Z12filterSmoothfff:00000000 _Z12filterSmoothfff
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:59     .text._Z20filterSmoothWithTimeffff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:64     .text._Z20filterSmoothWithTimeffff:00000000 _Z20filterSmoothWithTimeffff
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:99     .text._ZN12MedianFilterC2Ev:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC2Ev
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:118    .text._ZN12MedianFilter10initializeEv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:123    .text._ZN12MedianFilter10initializeEv:00000000 _ZN12MedianFilter10initializeEv
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:157    .text._ZN12MedianFilter6filterEf:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:162    .text._ZN12MedianFilter6filterEf:00000000 _ZN12MedianFilter6filterEf
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:260    .text._Z16vectorDotProductiPfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:265    .text._Z16vectorDotProductiPfS_:00000000 _Z16vectorDotProductiPfS_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:304    .text._Z16vectorDotProductiPfS_:00000020 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:309    .text._Z18vectorCrossProductPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:314    .text._Z18vectorCrossProductPfS_S_:00000000 _Z18vectorCrossProductPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:352    .text._Z11vectorScaleiPfS_f:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:357    .text._Z11vectorScaleiPfS_f:00000000 _Z11vectorScaleiPfS_f
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:394    .text._Z9vectorAddiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:399    .text._Z9vectorAddiPfS_S_:00000000 _Z9vectorAddiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:438    .text._Z14vectorSubtractiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:443    .text._Z14vectorSubtractiPfS_S_:00000000 _Z14vectorSubtractiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:482    .text._Z14matrixMultiplyiiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:487    .text._Z14matrixMultiplyiiiPfS_S_:00000000 _Z14matrixMultiplyiiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:613    .text._Z9matrixAddiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:618    .text._Z9matrixAddiiPfS_S_:00000000 _Z9matrixAddiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:661    .text._Z14matrixSubtractiiPfS_S_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:666    .text._Z14matrixSubtractiiPfS_S_:00000000 _Z14matrixSubtractiiPfS_S_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:709    .text._Z11matrixScaleiiPffS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:714    .text._Z11matrixScaleiiPffS_:00000000 _Z11matrixScaleiiPffS_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:755    .text._Z18matrixTranspose3x3PfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:760    .text._Z18matrixTranspose3x3PfS_:00000000 _Z18matrixTranspose3x3PfS_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:801    .text._Z16matrixInverse3x3PfS_:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:806    .text._Z16matrixInverse3x3PfS_:00000000 _Z16matrixInverse3x3PfS_
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:971    .text._Z7arctan2ff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:976    .text._Z7arctan2ff:00000000 _Z7arctan2ff
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1035   .text._Z7arctan2ff:0000005c $d
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1042   .text._Z15findMedianFloatPfi:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1047   .text._Z15findMedianFloatPfi:00000000 _Z15findMedianFloatPfi
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1118   .text._Z13findMedianIntPii:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1123   .text._Z13findMedianIntPii:00000000 _Z13findMedianIntPii
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1190   .text._Z10isSwitchedff:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1195   .text._Z10isSwitchedff:00000000 _Z10isSwitchedff
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1243   .text._Z7invSqrtf:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1248   .text._Z7invSqrtf:00000000 _Z7invSqrtf
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1278   .text._Z7invSqrtf:0000002c $d
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1283   .text._Z3isql:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:1288   .text._Z3isql:00000000 _Z3isql
+C:\Users\LordHahn\AppData\Local\Temp\ccNYcQea.s:104    .text._ZN12MedianFilterC2Ev:00000000 _ZN12MedianFilterC1Ev
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

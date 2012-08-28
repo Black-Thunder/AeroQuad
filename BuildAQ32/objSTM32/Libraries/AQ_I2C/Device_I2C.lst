@@ -21,7 +21,7 @@
   21              		.thumb
   22              		.thumb_func
   24              	_ZN7TwoWire4readEv.constprop.0:
-  25              	.LFB131:
+  25              	.LFB132:
   26              		.file 1 "../Libmaple/libmaple/libraries/Wire/Wire.h"
    1:../Libmaple/libmaple/libraries/Wire/Wire.h **** /* *****************************************************************************
    2:../Libmaple/libmaple/libraries/Wire/Wire.h ****  * The MIT License
@@ -131,14 +131,14 @@
   38              	.L2:
   39 0008 00000000 		.word	Wire
   40              		.cfi_endproc
-  41              	.LFE131:
+  41              	.LFE132:
   43              		.section	.text._ZN7TwoWire5writeEh,"axG",%progbits,_ZN7TwoWire5writeEh,comdat
   44              		.align	1
   45              		.weak	_ZN7TwoWire5writeEh
   46              		.thumb
   47              		.thumb_func
   49              	_ZN7TwoWire5writeEh:
-  50              	.LFB114:
+  50              	.LFB115:
   95:../Libmaple/libmaple/libraries/Wire/Wire.h ****     void write(uint8 data) { send(data); };
   51              		.loc 1 95 0
   52              		.cfi_startproc
@@ -151,14 +151,14 @@
   59              	.LVL2:
   60              	.LVL3:
   61              		.cfi_endproc
-  62              	.LFE114:
+  62              	.LFE115:
   64              		.section	.text._Z11sendByteI2Cih,"ax",%progbits
   65              		.align	1
   66              		.global	_Z11sendByteI2Cih
   67              		.thumb
   68              		.thumb_func
   70              	_Z11sendByteI2Cih:
-  71              	.LFB119:
+  71              	.LFB120:
   72              		.file 2 "C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C/Device_I2C.cpp"
    1:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** /*
    2:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   AeroQuad v3.0.1 - February 2012
@@ -227,14 +227,14 @@
  106              	.L6:
  107 0020 00000000 		.word	Wire
  108              		.cfi_endproc
- 109              	.LFE119:
+ 109              	.LFE120:
  111              		.section	.text._Z11readByteI2Cv,"ax",%progbits
  112              		.align	1
  113              		.global	_Z11readByteI2Cv
  114              		.thumb
  115              		.thumb_func
  117              	_Z11readByteI2Cv:
- 118              	.LFB120:
+ 118              	.LFB121:
   30:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   31:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C() {
  119              		.loc 2 31 0
@@ -249,14 +249,14 @@
  125              		.loc 2 32 0
  126 0000 FFF7FEBF 		b	_ZN7TwoWire4readEv.constprop.0
  127              		.cfi_endproc
- 128              	.LFE120:
+ 128              	.LFE121:
  130              		.section	.text._Z11readByteI2Ci,"ax",%progbits
  131              		.align	1
  132              		.global	_Z11readByteI2Ci
  133              		.thumb
  134              		.thumb_func
  136              	_Z11readByteI2Ci:
- 137              	.LFB121:
+ 137              	.LFB122:
   34:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   35:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C(int deviceAddress) {
  138              		.loc 2 35 0
@@ -291,14 +291,14 @@
  162              	.L10:
  163 0014 00000000 		.word	Wire
  164              		.cfi_endproc
- 165              	.LFE121:
+ 165              	.LFE122:
  167              		.section	.text._Z11readWordI2Ci,"ax",%progbits
  168              		.align	1
  169              		.global	_Z11readWordI2Ci
  170              		.thumb
  171              		.thumb_func
  173              	_Z11readWordI2Ci:
- 174              	.LFB122:
+ 174              	.LFB123:
   40:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   41:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C(int deviceAddress) {
  175              		.loc 2 41 0
@@ -335,14 +335,14 @@
  202              	.L13:
  203 001c 00000000 		.word	Wire
  204              		.cfi_endproc
- 205              	.LFE122:
+ 205              	.LFE123:
  207              		.section	.text._Z11readWordI2Cv,"ax",%progbits
  208              		.align	1
  209              		.global	_Z11readWordI2Cv
  210              		.thumb
  211              		.thumb_func
  213              	_Z11readWordI2Cv:
- 214              	.LFB123:
+ 214              	.LFB124:
   46:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   47:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C() {
  215              		.loc 2 47 0
@@ -365,14 +365,14 @@
  229 000c 40EA0420 		orr	r0, r0, r4, lsl #8
  230 0010 10BD     		pop	{r4, pc}
  231              		.cfi_endproc
- 232              	.LFE123:
+ 232              	.LFE124:
  234              		.section	.text._Z12readShortI2Cv,"ax",%progbits
  235              		.align	1
  236              		.global	_Z12readShortI2Cv
  237              		.thumb
  238              		.thumb_func
  240              	_Z12readShortI2Cv:
- 241              	.LFB125:
+ 241              	.LFB126:
   51:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
   53:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
@@ -399,14 +399,14 @@
  254 0006 00B2     		sxth	r0, r0
  255 0008 08BD     		pop	{r3, pc}
  256              		.cfi_endproc
- 257              	.LFE125:
+ 257              	.LFE126:
  259              		.section	.text._Z12readShortI2Ci,"ax",%progbits
  260              		.align	1
  261              		.global	_Z12readShortI2Ci
  262              		.thumb
  263              		.thumb_func
  265              	_Z12readShortI2Ci:
- 266              	.LFB124:
+ 266              	.LFB125:
   52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
  267              		.loc 2 52 0
  268              		.cfi_startproc
@@ -439,14 +439,14 @@
  291              	.L18:
  292 0014 00000000 		.word	Wire
  293              		.cfi_endproc
- 294              	.LFE124:
+ 294              	.LFE125:
  296              		.section	.text._Z19readReverseShortI2Cv,"ax",%progbits
  297              		.align	1
  298              		.global	_Z19readReverseShortI2Cv
  299              		.thumb
  300              		.thumb_func
  302              	_Z19readReverseShortI2Cv:
- 303              	.LFB126:
+ 303              	.LFB127:
   62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   63:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseShortI2C() {
  304              		.loc 2 63 0
@@ -470,14 +470,14 @@
  319 0010 00B2     		sxth	r0, r0
  320 0012 10BD     		pop	{r4, pc}
  321              		.cfi_endproc
- 322              	.LFE126:
+ 322              	.LFE127:
  324              		.section	.text._Z15readWordWaitI2Ci,"ax",%progbits
  325              		.align	1
  326              		.global	_Z15readWordWaitI2Ci
  327              		.thumb
  328              		.thumb_func
  330              	_Z15readWordWaitI2Ci:
- 331              	.LFB127:
+ 331              	.LFB128:
   67:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   68:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordWaitI2C(int deviceAddress) {
  332              		.loc 2 68 0
@@ -535,14 +535,14 @@
  376              	.L26:
  377 0030 00000000 		.word	Wire
  378              		.cfi_endproc
- 379              	.LFE127:
+ 379              	.LFE128:
  381              		.section	.text._Z18readReverseWordI2Ci,"ax",%progbits
  382              		.align	1
  383              		.global	_Z18readReverseWordI2Ci
  384              		.thumb
  385              		.thumb_func
  387              	_Z18readReverseWordI2Ci:
- 388              	.LFB128:
+ 388              	.LFB129:
   77:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   78:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseWordI2C(int deviceAddress) {
  389              		.loc 2 78 0
@@ -585,14 +585,14 @@
  421              	.L29:
  422 001c 00000000 		.word	Wire
  423              		.cfi_endproc
- 424              	.LFE128:
+ 424              	.LFE129:
  426              		.section	.text._Z10readWhoI2Ci,"ax",%progbits
  427              		.align	1
  428              		.global	_Z10readWhoI2Ci
  429              		.thumb
  430              		.thumb_func
  432              	_Z10readWhoI2Ci:
- 433              	.LFB129:
+ 433              	.LFB130:
   84:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   85:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readWhoI2C(int deviceAddress) {
  434              		.loc 2 85 0
@@ -647,14 +647,14 @@
  473              	.L32:
  474 0034 00000000 		.word	Wire
  475              		.cfi_endproc
- 476              	.LFE129:
+ 476              	.LFE130:
  478              		.section	.text._Z17updateRegisterI2Cihh,"ax",%progbits
  479              		.align	1
  480              		.global	_Z17updateRegisterI2Cihh
  481              		.thumb
  482              		.thumb_func
  484              	_Z17updateRegisterI2Cihh:
- 485              	.LFB130:
+ 485              	.LFB131:
   95:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
   96:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** void updateRegisterI2C(int deviceAddress, byte dataAddress, byte dataValue) {
  486              		.loc 2 96 0
@@ -709,7 +709,7 @@
  527              	.L35:
  528 002c 00000000 		.word	Wire
  529              		.cfi_endproc
- 530              	.LFE130:
+ 530              	.LFE131:
  532              		.text
  533              	.Letext0:
  534              		.file 3 "../Libmaple/libmaple/libmaple/libmaple_types.h"
@@ -717,43 +717,43 @@
  536              		.file 5 "../Libmaple/libmaple/libmaple/systick.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 Device_I2C.cpp
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:20     .text._ZN7TwoWire4readEv.constprop.0:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:24     .text._ZN7TwoWire4readEv.constprop.0:00000000 _ZN7TwoWire4readEv.constprop.0
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:39     .text._ZN7TwoWire4readEv.constprop.0:00000008 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:44     .text._ZN7TwoWire5writeEh:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:49     .text._ZN7TwoWire5writeEh:00000000 _ZN7TwoWire5writeEh
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:65     .text._Z11sendByteI2Cih:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:70     .text._Z11sendByteI2Cih:00000000 _Z11sendByteI2Cih
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:107    .text._Z11sendByteI2Cih:00000020 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:112    .text._Z11readByteI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:117    .text._Z11readByteI2Cv:00000000 _Z11readByteI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:131    .text._Z11readByteI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:136    .text._Z11readByteI2Ci:00000000 _Z11readByteI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:163    .text._Z11readByteI2Ci:00000014 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:168    .text._Z11readWordI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:173    .text._Z11readWordI2Ci:00000000 _Z11readWordI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:203    .text._Z11readWordI2Ci:0000001c $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:208    .text._Z11readWordI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:213    .text._Z11readWordI2Cv:00000000 _Z11readWordI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:235    .text._Z12readShortI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:240    .text._Z12readShortI2Cv:00000000 _Z12readShortI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:260    .text._Z12readShortI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:265    .text._Z12readShortI2Ci:00000000 _Z12readShortI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:292    .text._Z12readShortI2Ci:00000014 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:297    .text._Z19readReverseShortI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:302    .text._Z19readReverseShortI2Cv:00000000 _Z19readReverseShortI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:325    .text._Z15readWordWaitI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:330    .text._Z15readWordWaitI2Ci:00000000 _Z15readWordWaitI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:377    .text._Z15readWordWaitI2Ci:00000030 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:382    .text._Z18readReverseWordI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:387    .text._Z18readReverseWordI2Ci:00000000 _Z18readReverseWordI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:422    .text._Z18readReverseWordI2Ci:0000001c $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:427    .text._Z10readWhoI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:432    .text._Z10readWhoI2Ci:00000000 _Z10readWhoI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:474    .text._Z10readWhoI2Ci:00000034 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:479    .text._Z17updateRegisterI2Cihh:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:484    .text._Z17updateRegisterI2Cihh:00000000 _Z17updateRegisterI2Cihh
-C:\Users\LordHahn\AppData\Local\Temp\ccwwmqfU.s:528    .text._Z17updateRegisterI2Cihh:0000002c $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:20     .text._ZN7TwoWire4readEv.constprop.0:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:24     .text._ZN7TwoWire4readEv.constprop.0:00000000 _ZN7TwoWire4readEv.constprop.0
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:39     .text._ZN7TwoWire4readEv.constprop.0:00000008 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:44     .text._ZN7TwoWire5writeEh:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:49     .text._ZN7TwoWire5writeEh:00000000 _ZN7TwoWire5writeEh
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:65     .text._Z11sendByteI2Cih:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:70     .text._Z11sendByteI2Cih:00000000 _Z11sendByteI2Cih
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:107    .text._Z11sendByteI2Cih:00000020 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:112    .text._Z11readByteI2Cv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:117    .text._Z11readByteI2Cv:00000000 _Z11readByteI2Cv
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:131    .text._Z11readByteI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:136    .text._Z11readByteI2Ci:00000000 _Z11readByteI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:163    .text._Z11readByteI2Ci:00000014 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:168    .text._Z11readWordI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:173    .text._Z11readWordI2Ci:00000000 _Z11readWordI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:203    .text._Z11readWordI2Ci:0000001c $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:208    .text._Z11readWordI2Cv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:213    .text._Z11readWordI2Cv:00000000 _Z11readWordI2Cv
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:235    .text._Z12readShortI2Cv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:240    .text._Z12readShortI2Cv:00000000 _Z12readShortI2Cv
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:260    .text._Z12readShortI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:265    .text._Z12readShortI2Ci:00000000 _Z12readShortI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:292    .text._Z12readShortI2Ci:00000014 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:297    .text._Z19readReverseShortI2Cv:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:302    .text._Z19readReverseShortI2Cv:00000000 _Z19readReverseShortI2Cv
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:325    .text._Z15readWordWaitI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:330    .text._Z15readWordWaitI2Ci:00000000 _Z15readWordWaitI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:377    .text._Z15readWordWaitI2Ci:00000030 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:382    .text._Z18readReverseWordI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:387    .text._Z18readReverseWordI2Ci:00000000 _Z18readReverseWordI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:422    .text._Z18readReverseWordI2Ci:0000001c $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:427    .text._Z10readWhoI2Ci:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:432    .text._Z10readWhoI2Ci:00000000 _Z10readWhoI2Ci
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:474    .text._Z10readWhoI2Ci:00000034 $d
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:479    .text._Z17updateRegisterI2Cihh:00000000 $t
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:484    .text._Z17updateRegisterI2Cihh:00000000 _Z17updateRegisterI2Cihh
+C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:528    .text._Z17updateRegisterI2Cihh:0000002c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
