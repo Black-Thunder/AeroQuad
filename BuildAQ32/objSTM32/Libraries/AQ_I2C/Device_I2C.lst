@@ -159,31 +159,31 @@
   68              		.thumb_func
   70              	_Z11sendByteI2Cih:
   71              	.LFB120:
-  72              		.file 2 "C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C/Device_I2C.cpp"
-   1:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** /*
-   2:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   AeroQuad v3.0.1 - February 2012
-   3:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   www.AeroQuad.com
-   4:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Copyright (c) 2012 Ted Carancho.  All rights reserved.
-   5:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   An Open Source Arduino based multicopter.
-   6:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****  
-   7:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   This program is free software: you can redistribute it and/or modify 
-   8:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   it under the terms of the GNU General Public License as published by 
-   9:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   the Free Software Foundation, either version 3 of the License, or 
-  10:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   (at your option) any later version. 
-  11:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  12:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   This program is distributed in the hope that it will be useful, 
-  13:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   but WITHOUT ANY WARRANTY; without even the implied warranty of 
-  14:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
-  15:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   GNU General Public License for more details. 
-  16:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  17:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   You should have received a copy of the GNU General Public License 
-  18:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   along with this program. If not, see <http://www.gnu.org/licenses/>. 
-  19:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** */
-  20:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  21:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** // I2C functions
-  22:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** #include "Device_I2C.h"
-  23:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  24:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** void sendByteI2C(int deviceAddress, byte dataValue) {
+  72              		.file 2 "C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C/Device_I2C.cpp"
+   1:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** /*
+   2:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   AeroQuad v3.0.1 - February 2012
+   3:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   www.AeroQuad.com
+   4:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Copyright (c) 2012 Ted Carancho.  All rights reserved.
+   5:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   An Open Source Arduino based multicopter.
+   6:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****  
+   7:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   This program is free software: you can redistribute it and/or modify 
+   8:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   it under the terms of the GNU General Public License as published by 
+   9:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   the Free Software Foundation, either version 3 of the License, or 
+  10:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   (at your option) any later version. 
+  11:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  12:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   This program is distributed in the hope that it will be useful, 
+  13:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+  14:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+  15:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   GNU General Public License for more details. 
+  16:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  17:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   You should have received a copy of the GNU General Public License 
+  18:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   along with this program. If not, see <http://www.gnu.org/licenses/>. 
+  19:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** */
+  20:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  21:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** // I2C functions
+  22:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** #include "Device_I2C.h"
+  23:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  24:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** void sendByteI2C(int deviceAddress, byte dataValue) {
   73              		.loc 2 24 0
   74              		.cfi_startproc
   75              		@ args = 0, pretend = 0, frame = 0
@@ -195,12 +195,12 @@
   81              		.cfi_def_cfa_offset 8
   82              		.cfi_offset 14, -4
   83              		.cfi_offset 4, -8
-  25:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  26:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
+  25:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  26:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
   84              		.loc 2 26 0
   85 0004 0648     		ldr	r0, .L6
   86              	.LVL5:
-  24:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** void sendByteI2C(int deviceAddress, byte dataValue) {
+  24:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** void sendByteI2C(int deviceAddress, byte dataValue) {
   87              		.loc 2 24 0
   88 0006 0C46     		mov	r4, r1
   89              		.loc 2 26 0
@@ -208,18 +208,18 @@
   91              	.LVL6:
   92 000a FFF7FEFF 		bl	_ZN7TwoWire17beginTransmissionEi
   93              	.LVL7:
-  27:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataValue);
+  27:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataValue);
   94              		.loc 2 27 0
   95 000e 0448     		ldr	r0, .L6
   96 0010 2146     		mov	r1, r4
   97 0012 FFF7FEFF 		bl	_ZN7TwoWire5writeEh
-  28:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
+  28:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
   98              		.loc 2 28 0
   99 0016 0248     		ldr	r0, .L6
-  29:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  29:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  100              		.loc 2 29 0
  101 0018 BDE81040 		pop	{r4, lr}
-  28:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
+  28:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
  102              		.loc 2 28 0
  103 001c FFF7FEBF 		b	_ZN7TwoWire15endTransmissionEv
  104              	.L7:
@@ -235,17 +235,17 @@
  115              		.thumb_func
  117              	_Z11readByteI2Cv:
  118              	.LFB121:
-  30:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  31:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C() {
+  30:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  31:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C() {
  119              		.loc 2 31 0
  120              		.cfi_startproc
  121              		@ args = 0, pretend = 0, frame = 0
  122              		@ frame_needed = 0, uses_anonymous_args = 0
  123              		@ link register save eliminated.
-  32:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
-  33:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  32:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
+  33:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  124              		.loc 2 33 0
-  32:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
+  32:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
  125              		.loc 2 32 0
  126 0000 FFF7FEBF 		b	_ZN7TwoWire4readEv.constprop.0
  127              		.cfi_endproc
@@ -257,8 +257,8 @@
  134              		.thumb_func
  136              	_Z11readByteI2Ci:
  137              	.LFB122:
-  34:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  35:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C(int deviceAddress) {
+  34:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  35:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** byte readByteI2C(int deviceAddress) {
  138              		.loc 2 35 0
  139              		.cfi_startproc
  140              		@ args = 0, pretend = 0, frame = 0
@@ -271,19 +271,19 @@
  147              		.cfi_offset 3, -8
  148              		.loc 2 35 0
  149 0002 0146     		mov	r1, r0
-  36:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  37:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****     Wire.requestFrom(deviceAddress, 1);
+  36:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  37:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****     Wire.requestFrom(deviceAddress, 1);
  150              		.loc 2 37 0
  151 0004 0122     		movs	r2, #1
  152 0006 0348     		ldr	r0, .L10
  153              	.LVL9:
  154 0008 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
  155              	.LVL10:
-  38:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
-  39:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  38:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
+  39:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  156              		.loc 2 39 0
  157 000c BDE80840 		pop	{r3, lr}
-  38:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
+  38:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****     return Wire.read();
  158              		.loc 2 38 0
  159 0010 FFF7FEBF 		b	_ZN7TwoWire4readEv.constprop.0
  160              	.L11:
@@ -299,8 +299,8 @@
  171              		.thumb_func
  173              	_Z11readWordI2Ci:
  174              	.LFB123:
-  40:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  41:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C(int deviceAddress) {
+  40:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  41:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C(int deviceAddress) {
  175              		.loc 2 41 0
  176              		.cfi_startproc
  177              		@ args = 0, pretend = 0, frame = 0
@@ -313,20 +313,20 @@
  184              		.cfi_offset 4, -8
  185              		.loc 2 41 0
  186 0002 0146     		mov	r1, r0
-  42:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  43:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2);
+  42:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  43:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2);
  187              		.loc 2 43 0
  188 0004 0222     		movs	r2, #2
  189 0006 0548     		ldr	r0, .L13
  190              	.LVL12:
  191 0008 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
  192              	.LVL13:
-  44:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | Wire.read();
+  44:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | Wire.read();
  193              		.loc 2 44 0
  194 000c FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  195 0010 0446     		mov	r4, r0
  196 0012 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
-  45:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  45:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  197              		.loc 2 45 0
  198 0016 40EA0420 		orr	r0, r0, r4, lsl #8
  199 001a 10BD     		pop	{r4, pc}
@@ -343,8 +343,8 @@
  211              		.thumb_func
  213              	_Z11readWordI2Cv:
  214              	.LFB124:
-  46:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  47:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C() {
+  46:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  47:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordI2C() {
  215              		.loc 2 47 0
  216              		.cfi_startproc
  217              		@ args = 0, pretend = 0, frame = 0
@@ -354,13 +354,13 @@
  221              		.cfi_def_cfa_offset 8
  222              		.cfi_offset 14, -4
  223              		.cfi_offset 4, -8
-  48:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  49:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | Wire.read();
+  48:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  49:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | Wire.read();
  224              		.loc 2 49 0
  225 0002 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  226 0006 0446     		mov	r4, r0
  227 0008 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
-  50:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  50:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  228              		.loc 2 50 0
  229 000c 40EA0420 		orr	r0, r0, r4, lsl #8
  230 0010 10BD     		pop	{r4, pc}
@@ -373,14 +373,14 @@
  238              		.thumb_func
  240              	_Z12readShortI2Cv:
  241              	.LFB126:
-  51:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
-  53:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  54:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****  Wire.requestFrom(deviceAddress, 2);
-  55:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****  return readShortI2C();
-  56:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
-  57:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  58:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C() {
+  51:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  52:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
+  53:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  54:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****  Wire.requestFrom(deviceAddress, 2);
+  55:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****  return readShortI2C();
+  56:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  57:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  58:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C() {
  242              		.loc 2 58 0
  243              		.cfi_startproc
  244              		@ args = 0, pretend = 0, frame = 0
@@ -390,11 +390,11 @@
  248              		.cfi_def_cfa_offset 8
  249              		.cfi_offset 14, -4
  250              		.cfi_offset 3, -8
-  59:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  60:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (signed short)readWordI2C();
+  59:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  60:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (signed short)readWordI2C();
  251              		.loc 2 60 0
  252 0002 FFF7FEFF 		bl	_Z11readWordI2Cv
-  61:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  61:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  253              		.loc 2 61 0
  254 0006 00B2     		sxth	r0, r0
  255 0008 08BD     		pop	{r3, pc}
@@ -407,7 +407,7 @@
  263              		.thumb_func
  265              	_Z12readShortI2Ci:
  266              	.LFB125:
-  52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
+  52:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
  267              		.loc 2 52 0
  268              		.cfi_startproc
  269              		@ args = 0, pretend = 0, frame = 0
@@ -418,20 +418,20 @@
  274              		.cfi_def_cfa_offset 8
  275              		.cfi_offset 14, -4
  276              		.cfi_offset 3, -8
-  52:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
+  52:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readShortI2C(int deviceAddress) {
  277              		.loc 2 52 0
  278 0002 0146     		mov	r1, r0
-  54:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****  Wire.requestFrom(deviceAddress, 2);
+  54:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****  Wire.requestFrom(deviceAddress, 2);
  279              		.loc 2 54 0
  280 0004 0222     		movs	r2, #2
  281 0006 0348     		ldr	r0, .L18
  282              	.LVL15:
  283 0008 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
  284              	.LVL16:
-  56:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  56:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  285              		.loc 2 56 0
  286 000c BDE80840 		pop	{r3, lr}
-  55:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****  return readShortI2C();
+  55:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****  return readShortI2C();
  287              		.loc 2 55 0
  288 0010 FFF7FEBF 		b	_Z12readShortI2Cv
  289              	.L19:
@@ -447,8 +447,8 @@
  300              		.thumb_func
  302              	_Z19readReverseShortI2Cv:
  303              	.LFB127:
-  62:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  63:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseShortI2C() {
+  62:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  63:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseShortI2C() {
  304              		.loc 2 63 0
  305              		.cfi_startproc
  306              		@ args = 0, pretend = 0, frame = 0
@@ -458,14 +458,14 @@
  310              		.cfi_def_cfa_offset 8
  311              		.cfi_offset 14, -4
  312              		.cfi_offset 4, -8
-  64:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  65:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (signed short)( Wire.read() | (Wire.read() << 8));
+  64:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  65:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (signed short)( Wire.read() | (Wire.read() << 8));
  313              		.loc 2 65 0
  314 0002 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  315 0006 0446     		mov	r4, r0
  316 0008 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  317 000c 44EA0020 		orr	r0, r4, r0, lsl #8
-  66:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  66:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  318              		.loc 2 66 0
  319 0010 00B2     		sxth	r0, r0
  320 0012 10BD     		pop	{r4, pc}
@@ -478,8 +478,8 @@
  328              		.thumb_func
  330              	_Z15readWordWaitI2Ci:
  331              	.LFB128:
-  67:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  68:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordWaitI2C(int deviceAddress) {
+  67:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  68:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readWordWaitI2C(int deviceAddress) {
  332              		.loc 2 68 0
  333              		.cfi_startproc
  334              		@ args = 0, pretend = 0, frame = 0
@@ -492,8 +492,8 @@
  341              		.cfi_offset 14, -4
  342              		.cfi_offset 4, -8
  343              	.LBB2:
-  69:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  70:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2); // request two bytes
+  69:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  70:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2); // request two bytes
  344              		.loc 2 70 0
  345 0004 0A48     		ldr	r0, .L26
  346              	.LVL18:
@@ -501,31 +501,31 @@
  348 0008 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
  349              	.LVL19:
  350              	.L22:
-  71:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   while(!Wire.available()); // wait until data available
+  71:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   while(!Wire.available()); // wait until data available
  351              		.loc 2 71 0 discriminator 1
  352 000c 0848     		ldr	r0, .L26
  353 000e FFF7FEFF 		bl	_ZN7TwoWire9availableEv
  354 0012 0028     		cmp	r0, #0
  355 0014 FAD0     		beq	.L22
-  72:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   unsigned char msb = Wire.read();
+  72:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   unsigned char msb = Wire.read();
  356              		.loc 2 72 0
  357 0016 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  358 001a 0446     		mov	r4, r0
  359              	.LVL20:
  360              	.L23:
-  73:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   while(!Wire.available()); // wait until data available
+  73:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   while(!Wire.available()); // wait until data available
  361              		.loc 2 73 0 discriminator 1
  362 001c 0448     		ldr	r0, .L26
  363 001e FFF7FEFF 		bl	_ZN7TwoWire9availableEv
  364 0022 0028     		cmp	r0, #0
  365 0024 FAD0     		beq	.L23
-  74:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   unsigned char lsb = Wire.read();
+  74:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   unsigned char lsb = Wire.read();
  366              		.loc 2 74 0
  367 0026 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  368              	.LVL21:
  369              	.LBE2:
-  75:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (((int)msb<<8) | ((int)lsb));
-  76:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  75:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (((int)msb<<8) | ((int)lsb));
+  76:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  370              		.loc 2 76 0
  371 002a 40EA0420 		orr	r0, r0, r4, lsl #8
  372              	.LVL22:
@@ -543,8 +543,8 @@
  385              		.thumb_func
  387              	_Z18readReverseWordI2Ci:
  388              	.LFB129:
-  77:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  78:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseWordI2C(int deviceAddress) {
+  77:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  78:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** int readReverseWordI2C(int deviceAddress) {
  389              		.loc 2 78 0
  390              		.cfi_startproc
  391              		@ args = 0, pretend = 0, frame = 0
@@ -558,25 +558,25 @@
  399              		.loc 2 78 0
  400 0002 0146     		mov	r1, r0
  401              	.LBB3:
-  79:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  80:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2);
+  79:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  80:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 2);
  402              		.loc 2 80 0
  403 0004 0222     		movs	r2, #2
  404 0006 0548     		ldr	r0, .L29
  405              	.LVL24:
  406 0008 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
  407              	.LVL25:
-  81:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   byte lowerByte = Wire.read();
+  81:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   byte lowerByte = Wire.read();
  408              		.loc 2 81 0
  409 000c FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  410 0010 0446     		mov	r4, r0
  411              	.LVL26:
-  82:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | lowerByte;
+  82:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return (Wire.read() << 8) | lowerByte;
  412              		.loc 2 82 0
  413 0012 FFF7FEFF 		bl	_ZN7TwoWire4readEv.constprop.0
  414              	.LVL27:
  415              	.LBE3:
-  83:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  83:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  416              		.loc 2 83 0
  417 0016 44EA0020 		orr	r0, r4, r0, lsl #8
  418 001a 10BD     		pop	{r4, pc}
@@ -593,8 +593,8 @@
  430              		.thumb_func
  432              	_Z10readWhoI2Ci:
  433              	.LFB130:
-  84:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  85:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** byte readWhoI2C(int deviceAddress) {
+  84:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  85:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** byte readWhoI2C(int deviceAddress) {
  434              		.loc 2 85 0
  435              		.cfi_startproc
  436              		@ args = 0, pretend = 0, frame = 0
@@ -607,39 +607,39 @@
  443              		.cfi_offset 4, -8
  444              		.loc 2 85 0
  445 0002 0446     		mov	r4, r0
-  86:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  87:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   // read the ID of the I2C device
-  88:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
+  86:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  87:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   // read the ID of the I2C device
+  88:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
  446              		.loc 2 88 0
  447 0004 2146     		mov	r1, r4
  448 0006 0B48     		ldr	r0, .L32
  449              	.LVL29:
  450 0008 FFF7FEFF 		bl	_ZN7TwoWire17beginTransmissionEi
  451              	.LVL30:
-  89:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write((byte)0);
+  89:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write((byte)0);
  452              		.loc 2 89 0
  453 000c 0021     		movs	r1, #0
  454 000e 0948     		ldr	r0, .L32
  455 0010 FFF7FEFF 		bl	_ZN7TwoWire5writeEh
-  90:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
+  90:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
  456              		.loc 2 90 0
  457 0014 0748     		ldr	r0, .L32
  458 0016 FFF7FEFF 		bl	_ZN7TwoWire15endTransmissionEv
-  91:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   delay(100);
+  91:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   delay(100);
  459              		.loc 2 91 0
  460 001a 6420     		movs	r0, #100
  461 001c FFF7FEFF 		bl	_Z5delaym
-  92:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 1);
+  92:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.requestFrom(deviceAddress, 1);
  462              		.loc 2 92 0
  463 0020 2146     		mov	r1, r4
  464 0022 0122     		movs	r2, #1
  465 0024 0348     		ldr	r0, .L32
  466 0026 FFF7FEFF 		bl	_ZN7TwoWire11requestFromEii
-  93:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return Wire.read();
-  94:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }
+  93:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return Wire.read();
+  94:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }
  467              		.loc 2 94 0
  468 002a BDE81040 		pop	{r4, lr}
-  93:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   return Wire.read();
+  93:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   return Wire.read();
  469              		.loc 2 93 0
  470 002e FFF7FEBF 		b	_ZN7TwoWire4readEv.constprop.0
  471              	.L33:
@@ -655,8 +655,8 @@
  482              		.thumb_func
  484              	_Z17updateRegisterI2Cihh:
  485              	.LFB131:
-  95:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  96:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** void updateRegisterI2C(int deviceAddress, byte dataAddress, byte dataValue) {
+  95:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  96:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** void updateRegisterI2C(int deviceAddress, byte dataAddress, byte dataValue) {
  486              		.loc 2 96 0
  487              		.cfi_startproc
  488              		@ args = 0, pretend = 0, frame = 0
@@ -672,36 +672,36 @@
  498              		.loc 2 96 0
  499 0002 0346     		mov	r3, r0
  500 0004 0C46     		mov	r4, r1
-  97:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** 
-  98:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
+  97:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** 
+  98:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.beginTransmission(deviceAddress);
  501              		.loc 2 98 0
  502 0006 0948     		ldr	r0, .L35
  503              	.LVL32:
  504 0008 1946     		mov	r1, r3
  505              	.LVL33:
-  96:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** void updateRegisterI2C(int deviceAddress, byte dataAddress, byte dataValue) {
+  96:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** void updateRegisterI2C(int deviceAddress, byte dataAddress, byte dataValue) {
  506              		.loc 2 96 0
  507 000a 1546     		mov	r5, r2
  508              		.loc 2 98 0
  509 000c FFF7FEFF 		bl	_ZN7TwoWire17beginTransmissionEi
  510              	.LVL34:
-  99:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataAddress);
+  99:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataAddress);
  511              		.loc 2 99 0
  512 0010 2146     		mov	r1, r4
  513 0012 0648     		ldr	r0, .L35
  514 0014 FFF7FEFF 		bl	_ZN7TwoWire5writeEh
- 100:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataValue);
+ 100:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.write(dataValue);
  515              		.loc 2 100 0
  516 0018 0448     		ldr	r0, .L35
  517 001a 2946     		mov	r1, r5
  518 001c FFF7FEFF 		bl	_ZN7TwoWire5writeEh
- 101:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
+ 101:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
  519              		.loc 2 101 0
  520 0020 0248     		ldr	r0, .L35
- 102:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp **** }  
+ 102:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp **** }  
  521              		.loc 2 102 0
  522 0022 BDE83840 		pop	{r3, r4, r5, lr}
- 101:C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
+ 101:C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_I2C\Device_I2C.cpp ****   Wire.endTransmission();
  523              		.loc 2 101 0
  524 0026 FFF7FEBF 		b	_ZN7TwoWire15endTransmissionEv
  525              	.L36:
@@ -717,43 +717,43 @@
  536              		.file 5 "../Libmaple/libmaple/libmaple/systick.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 Device_I2C.cpp
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:20     .text._ZN7TwoWire4readEv.constprop.0:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:24     .text._ZN7TwoWire4readEv.constprop.0:00000000 _ZN7TwoWire4readEv.constprop.0
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:39     .text._ZN7TwoWire4readEv.constprop.0:00000008 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:44     .text._ZN7TwoWire5writeEh:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:49     .text._ZN7TwoWire5writeEh:00000000 _ZN7TwoWire5writeEh
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:65     .text._Z11sendByteI2Cih:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:70     .text._Z11sendByteI2Cih:00000000 _Z11sendByteI2Cih
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:107    .text._Z11sendByteI2Cih:00000020 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:112    .text._Z11readByteI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:117    .text._Z11readByteI2Cv:00000000 _Z11readByteI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:131    .text._Z11readByteI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:136    .text._Z11readByteI2Ci:00000000 _Z11readByteI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:163    .text._Z11readByteI2Ci:00000014 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:168    .text._Z11readWordI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:173    .text._Z11readWordI2Ci:00000000 _Z11readWordI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:203    .text._Z11readWordI2Ci:0000001c $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:208    .text._Z11readWordI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:213    .text._Z11readWordI2Cv:00000000 _Z11readWordI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:235    .text._Z12readShortI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:240    .text._Z12readShortI2Cv:00000000 _Z12readShortI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:260    .text._Z12readShortI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:265    .text._Z12readShortI2Ci:00000000 _Z12readShortI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:292    .text._Z12readShortI2Ci:00000014 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:297    .text._Z19readReverseShortI2Cv:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:302    .text._Z19readReverseShortI2Cv:00000000 _Z19readReverseShortI2Cv
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:325    .text._Z15readWordWaitI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:330    .text._Z15readWordWaitI2Ci:00000000 _Z15readWordWaitI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:377    .text._Z15readWordWaitI2Ci:00000030 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:382    .text._Z18readReverseWordI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:387    .text._Z18readReverseWordI2Ci:00000000 _Z18readReverseWordI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:422    .text._Z18readReverseWordI2Ci:0000001c $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:427    .text._Z10readWhoI2Ci:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:432    .text._Z10readWhoI2Ci:00000000 _Z10readWhoI2Ci
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:474    .text._Z10readWhoI2Ci:00000034 $d
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:479    .text._Z17updateRegisterI2Cihh:00000000 $t
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:484    .text._Z17updateRegisterI2Cihh:00000000 _Z17updateRegisterI2Cihh
-C:\Users\LordHahn\AppData\Local\Temp\ccWvaGEe.s:528    .text._Z17updateRegisterI2Cihh:0000002c $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:20     .text._ZN7TwoWire4readEv.constprop.0:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:24     .text._ZN7TwoWire4readEv.constprop.0:00000000 _ZN7TwoWire4readEv.constprop.0
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:39     .text._ZN7TwoWire4readEv.constprop.0:00000008 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:44     .text._ZN7TwoWire5writeEh:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:49     .text._ZN7TwoWire5writeEh:00000000 _ZN7TwoWire5writeEh
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:65     .text._Z11sendByteI2Cih:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:70     .text._Z11sendByteI2Cih:00000000 _Z11sendByteI2Cih
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:107    .text._Z11sendByteI2Cih:00000020 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:112    .text._Z11readByteI2Cv:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:117    .text._Z11readByteI2Cv:00000000 _Z11readByteI2Cv
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:131    .text._Z11readByteI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:136    .text._Z11readByteI2Ci:00000000 _Z11readByteI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:163    .text._Z11readByteI2Ci:00000014 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:168    .text._Z11readWordI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:173    .text._Z11readWordI2Ci:00000000 _Z11readWordI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:203    .text._Z11readWordI2Ci:0000001c $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:208    .text._Z11readWordI2Cv:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:213    .text._Z11readWordI2Cv:00000000 _Z11readWordI2Cv
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:235    .text._Z12readShortI2Cv:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:240    .text._Z12readShortI2Cv:00000000 _Z12readShortI2Cv
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:260    .text._Z12readShortI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:265    .text._Z12readShortI2Ci:00000000 _Z12readShortI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:292    .text._Z12readShortI2Ci:00000014 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:297    .text._Z19readReverseShortI2Cv:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:302    .text._Z19readReverseShortI2Cv:00000000 _Z19readReverseShortI2Cv
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:325    .text._Z15readWordWaitI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:330    .text._Z15readWordWaitI2Ci:00000000 _Z15readWordWaitI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:377    .text._Z15readWordWaitI2Ci:00000030 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:382    .text._Z18readReverseWordI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:387    .text._Z18readReverseWordI2Ci:00000000 _Z18readReverseWordI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:422    .text._Z18readReverseWordI2Ci:0000001c $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:427    .text._Z10readWhoI2Ci:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:432    .text._Z10readWhoI2Ci:00000000 _Z10readWhoI2Ci
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:474    .text._Z10readWhoI2Ci:00000034 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:479    .text._Z17updateRegisterI2Cihh:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:484    .text._Z17updateRegisterI2Cihh:00000000 _Z17updateRegisterI2Cihh
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccTVz5Vg.s:528    .text._Z17updateRegisterI2Cihh:0000002c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

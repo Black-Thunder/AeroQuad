@@ -1,6 +1,6 @@
 objSTM32/dummy/../Libraries/AQ_Math/AQMath.o: \
- C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.cpp \
- C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.h \
+ C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_Math/AQMath.cpp \
+ C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_Math/AQMath.h \
  ../AeroQuad32/MapleCompatibility/Arduino.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
  c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.3/include/stdint.h \
@@ -62,7 +62,7 @@ objSTM32/dummy/../Libraries/AQ_Math/AQMath.o: \
  ../Libmaple/libmaple/wirish/usb_serial.h \
  ../Libmaple/libmaple/wirish/Print.h
 
-C:/MinGW/msys/1.0/home/LordHahn/Libraries/AQ_Math/AQMath.h:
+C:/MinGW/msys/1.0/home/KlausHerbst/Libraries/AQ_Math/AQMath.h:
 
 ../AeroQuad32/MapleCompatibility/Arduino.h:
 
