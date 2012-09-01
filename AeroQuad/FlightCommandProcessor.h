@@ -117,12 +117,8 @@ void readPilotCommands() {
 
   
   #if defined AltitudeHoldBaro || defined AltitudeHoldRangeFinder
-    #if defined (UseGPSNavigator)
-      if ((receiverCommand[AUX1] < 1750) || (receiverCommand[AUX2] < 1750)) {
-    #else
-      if (receiverCommand[AUX1] < 1750) {
-    #endif
-      if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
+    if (receiverCommand[AUX1] < 1750) {
+     if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
         if (isStoreAltitudeNeeded) {
           #if defined AltitudeHoldBaro
             baroAltitudeToHoldTarget = getBaroAltitude();
@@ -199,7 +195,7 @@ void readPilotCommands() {
     }
   
   
-    if (receiverCommand[AUX2] < 1750) {  // Enter in execute mission state, if none, go back home, override the position hold
+    if (receiverCommand[AUX2] >= 1700) {  // Enter in execute mission state, if none, go back home, override the position hold
     
       if (isInitNavigationNeeded) {
         
@@ -214,7 +210,7 @@ void readPilotCommands() {
 
       navigationState = ON;
     }
-    else if (receiverCommand[AUX1] < 1600) {  // Enter in position hold state
+    else if (receiverCommand[AUX2] > 1400 && receiverCommand[AUX2] < 1700) {  // Enter in position hold state
       
       if (isStorePositionNeeded) {
         
