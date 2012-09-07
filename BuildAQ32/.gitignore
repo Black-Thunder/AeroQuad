@@ -1,2 +1,2 @@
-.dep
-objSTM32
+.dep/
+objSTM32/
