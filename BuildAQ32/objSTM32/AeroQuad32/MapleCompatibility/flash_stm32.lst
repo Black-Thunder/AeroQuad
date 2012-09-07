@@ -777,26 +777,26 @@
  464              		.file 3 "C:/MinGW/msys/1.0/home/KlausHerbst/AeroQuad32/MapleCompatibility/flash_stm32.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 flash_stm32.c
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:20     .text.FLASH_GetStatus:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:25     .text.FLASH_GetStatus:00000000 FLASH_GetStatus
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:73     .text.FLASH_GetStatus:00000034 $d
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:78     .text.FLASH_WaitForLastOperation:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:83     .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:156    .text.FLASH_EraseSector:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:161    .text.FLASH_EraseSector:00000000 FLASH_EraseSector
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:249    .text.FLASH_EraseSector:00000070 $d
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:254    .text.FLASH_ErasePage:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:259    .text.FLASH_ErasePage:00000000 FLASH_ErasePage
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:310    .text.FLASH_ErasePage:0000002c $d
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:315    .text.FLASH_ProgramHalfWord:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:320    .text.FLASH_ProgramHalfWord:00000000 FLASH_ProgramHalfWord
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:392    .text.FLASH_ProgramHalfWord:00000050 $d
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:398    .text.FLASH_Unlock:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:403    .text.FLASH_Unlock:00000000 FLASH_Unlock
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:428    .text.FLASH_Unlock:00000014 $d
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:435    .text.FLASH_Lock:00000000 $t
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:440    .text.FLASH_Lock:00000000 FLASH_Lock
-C:\Users\KLAUSH~1\AppData\Local\Temp\ccT3x2By.s:457    .text.FLASH_Lock:0000000c $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:20     .text.FLASH_GetStatus:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:25     .text.FLASH_GetStatus:00000000 FLASH_GetStatus
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:73     .text.FLASH_GetStatus:00000034 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:78     .text.FLASH_WaitForLastOperation:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:83     .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:156    .text.FLASH_EraseSector:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:161    .text.FLASH_EraseSector:00000000 FLASH_EraseSector
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:249    .text.FLASH_EraseSector:00000070 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:254    .text.FLASH_ErasePage:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:259    .text.FLASH_ErasePage:00000000 FLASH_ErasePage
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:310    .text.FLASH_ErasePage:0000002c $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:315    .text.FLASH_ProgramHalfWord:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:320    .text.FLASH_ProgramHalfWord:00000000 FLASH_ProgramHalfWord
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:392    .text.FLASH_ProgramHalfWord:00000050 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:398    .text.FLASH_Unlock:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:403    .text.FLASH_Unlock:00000000 FLASH_Unlock
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:428    .text.FLASH_Unlock:00000014 $d
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:435    .text.FLASH_Lock:00000000 $t
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:440    .text.FLASH_Lock:00000000 FLASH_Lock
+C:\Users\KLAUSH~1\AppData\Local\Temp\ccBmZXT0.s:457    .text.FLASH_Lock:0000000c $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS
