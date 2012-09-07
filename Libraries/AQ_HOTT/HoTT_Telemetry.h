@@ -101,7 +101,7 @@ static void hottV4SendBinary(uint8_t *data) {
  * Updates current direction related on compass information.
  */
 static int hottV4UpdateDirection() {
-	return ((int)(trueNorthHeading / M_PI * 180.0) + 360) % 360;
+	return (((int)(trueNorthHeading / M_PI * 180.0) + 360) % 360) >> 1;
 	}
 #endif
 
