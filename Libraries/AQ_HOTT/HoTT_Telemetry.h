@@ -449,7 +449,7 @@ static void hottV4SendGPSTelemetry() {
 
 #if defined(UseGPS)
 
-  telemetry_data[26] = nbSatelitesInUse;
+  telemetry_data[26] = gpsData.sats;
 
     if (haveAGpsLock()) {
       updatePosition(telemetry_data, currentPosition.latitude, 9);

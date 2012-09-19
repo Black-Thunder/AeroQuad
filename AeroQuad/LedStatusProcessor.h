@@ -32,23 +32,23 @@ void processLedStatus() {
   //
   // process ready state light in case we use GPS
   //
-  #if defined (UseGPS)
-    if (haveAGpsLock()) {
-      if (isHomeBaseInitialized()) {
-        digitalWrite(LED_Green, HIGH);
-      }
-      else {
-        digitalWrite(LED_Green, (flashingLedState & 4));
-      }
-    }
-    else { 
-      digitalWrite(LED_Green, (flashingLedState & 2));
-    }
-  #endif
-  
-  //
-  // process ready state light in case we use Batt monitor
-  //
+#if defined (UseGPS)
+	if (haveAGpsLock()) {
+		if (isHomeBaseInitialized()) {
+			digitalWrite(LED_Green, HIGH);
+		}
+		else {
+			digitalWrite(LED_Green, (flashingLedState & 4));
+		}
+	}
+	else { 
+		digitalWrite(LED_Green, (flashingLedState & 2));
+	}
+#endif
+
+	//
+	// process ready state light in case we use Batt monitor
+	//
 #if defined (BattMonitor)
 	if(motorArmed) {
 		if (batteryAlarm) {

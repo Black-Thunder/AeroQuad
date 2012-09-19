@@ -42,7 +42,7 @@ void readPilotCommands() {
       inFlight = false;
 
 	  #if defined GraupnerHoTTTelemetry
-		SpeakHoTT = HoTTv4NotificationMicrocopterOff;
+	    SpeakHoTT = HoTTv4NotificationMicrocopterOff;
 	  #endif
             
       #ifdef OSD
@@ -59,9 +59,8 @@ void readPilotCommands() {
     // Zero Gyro and Accel sensors (left stick lower left, right stick lower right corner)
     if ((receiverCommand[ZAXIS] < MINCHECK) && (receiverCommand[XAXIS] > MAXCHECK) && (receiverCommand[YAXIS] < MINCHECK)) {
 	  #if defined GraupnerHoTTTelemetry
-	    SpeakHoTT = HoTTv4NotificationCalibrating;
-      #endif
-
+		SpeakHoTT = HoTTv4NotificationCalibrating;
+	  #endif
       calibrateGyro();
       computeAccelBias();
       storeSensorsZeroToEEPROM();
@@ -84,9 +83,9 @@ void readPilotCommands() {
       }
       motorArmed = ON;
 
-	 #if defined GraupnerHoTTTelemetry
-		SpeakHoTT = HoTTv4NotificationStarting;
-	 #endif
+	  #if defined GraupnerHoTTTelemetry
+	    SpeakHoTT = HoTTv4NotificationStarting;
+	  #endif
     
       #ifdef OSD
         notifyOSD(OSD_CENTER|OSD_WARN, "!MOTORS ARMED!");
@@ -117,8 +116,8 @@ void readPilotCommands() {
 
   
   #if defined AltitudeHoldBaro || defined AltitudeHoldRangeFinder
-    if (receiverCommand[AUX1] < 1750) {
-     if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
+     if (receiverCommand[AUX1] < 1750) {
+      if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
         if (isStoreAltitudeNeeded) {
           #if defined AltitudeHoldBaro
             baroAltitudeToHoldTarget = getBaroAltitude();
