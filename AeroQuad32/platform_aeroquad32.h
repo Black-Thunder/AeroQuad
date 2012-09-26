@@ -33,7 +33,7 @@
 	#define LED_Red    Port2Pin('E', 5)
 	#define LED_Yellow LED_Red
 
-	#define BATT_ANALOG_INPUT	Port2Pin('C', 0)
+	#define BATT_ANALOG_INPUT	Port2Pin('C', 2)
 	#define A1       Port2Pin('B',0)
 	#define A2       Port2Pin('C',4)
 	#define A3       Port2Pin('B',1)
@@ -66,8 +66,8 @@
 		#define BuzzerPin Port2Pin('A', 0)
 		#define BATT_AREF         3.3		// V
 
-		#define BATT_R_HIGH       10.0	// kOhm
-		#define BATT_R_LOW        1.5		// kOhm
+		#define BATT_R_HIGH       10.6	// kOhm
+		#define BATT_R_LOW        1.55		// kOhm
 		#define BATT_DIODE_LOSS		0.0
 		#define BattDefaultConfig DEFINE_BATTERY(0, BATT_ANALOG_INPUT, (BATT_AREF * (BATT_R_HIGH + BATT_R_LOW) / BATT_R_LOW), BATT_DIODE_LOSS, BM_NOPIN, 0, 0)
 	#endif

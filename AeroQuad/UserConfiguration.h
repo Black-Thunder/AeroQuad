@@ -194,6 +194,7 @@
 //#define CALLSIGN "Aeroquad"       // Show (optional) callsign
 #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
 //#define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
+#define OSD50HZ
 
 #define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
 
