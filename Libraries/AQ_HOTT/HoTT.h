@@ -69,4 +69,12 @@ typedef enum {
 	HoTTGPSFree           = '/'
 	} HoTTGPSChar;
 
+typedef enum {
+	HoTTGPSDetecting	= '?',
+	HoTTGPSNoFix		= ' ',
+	HoTTGPS2DFix		= '2',
+	HoTTGPS3DFix		= '3',
+	HoTTGPS3DDFix       = 'D'
+} HoTTGPSFixChar;
+
 #endif

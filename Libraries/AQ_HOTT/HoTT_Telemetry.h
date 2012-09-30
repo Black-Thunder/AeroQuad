@@ -451,11 +451,13 @@ static void hottV4SendGPSTelemetry() {
 
   telemetry_data[26] = gpsData.sats;
 
-    if (haveAGpsLock()) {
+  if (gpsData.state > GPS_NOFIX)  {
+      if(gpsData.state == GPS_FIX2D) telemetry_data[27] = telemetry_data[41] = HoTTGPS2DFix;
+	  else if(gpsData.state == GPS_FIX3D) telemetry_data[27] = telemetry_data[41] = HoTTGPS3DFix;
+	  else if(gpsData.state == GPS_FIX3DD) telemetry_data[27] = telemetry_data[41] = HoTTGPS3DDFix;
+
       updatePosition(telemetry_data, currentPosition.latitude, 9);
       updatePosition(telemetry_data, currentPosition.longitude, 14);
-
-      telemetry_data[27] = telemetry_data[41] = 'f'; // Displays a 'f' for fix
 
       /** GPS Speed in km/h */
       telemetry_data[7] = getGpsSpeed()*36/1000;
@@ -465,19 +467,25 @@ static void hottV4SendGPSTelemetry() {
 		  computeDistanceAndBearing(currentPosition, homePosition);
 		  telemetry_data[19] = (int)getDistanceMeter();
 		  telemetry_data[20] = (int)getDistanceMeter() >> 8;
-		  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG)) * 50;
+		  telemetry_data[28] = (gpsBearing - (int)(trueNorthHeading * RAD2DEG));
 		  }
 
-	  if (navigationState == ON) { 
-		  telemetry_data[39] = HoTTGPSWaypoint; // Displays a 'W' for Waypoint
+	  if(navigationState == ON) { 
+		  telemetry_data[39] = HoTTGPSWaypoint;
 		  }
 	  else if(positionHoldState == ON) {
-		  telemetry_data[39] = HoTTGPSPositionHold; //Displays a 'P' for Position Hold
+		  telemetry_data[39] = HoTTGPSPositionHold;
 		  }
 	  else {
-		  telemetry_data[39] = HoTTGPSFree; //Displays a '/' for GPS Mode off 
+		  telemetry_data[39] = HoTTGPSFree;
 		  }
-    }
+  }
+  else if(gpsData.state == GPS_NOFIX)  {
+	  telemetry_data[27] = telemetry_data[41] = HoTTGPSNoFix;
+  }
+  else  {
+	  telemetry_data[27] = telemetry_data[41] = HoTTGPSDetecting;
+  }
 #endif
           
 #if defined(HOTTV4ALTITUDE)
