@@ -145,6 +145,7 @@
 // *******************************************************************************************************************************
 //#define LASTCHANNEL 6
 #define LASTCHANNEL 8
+//#define LASTCHANNEL 10 // EXPERIMENTAL only works with ReceiverSBUS, only tested on AQ32
 
 
 //
@@ -159,6 +160,8 @@
 				// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
 
 #define GraupnerHoTTTelemetry
+
+//#define CONFIG_BAUDRATE 19200 // override baudrate for serial port (configurator/mavvlink/wirelesstelemetry)
 
 //
 // *******************************************************************************************************************************
@@ -181,6 +184,7 @@
 // For more information please refer to http://aeroquad.com/showwiki.php?title=Camera+Stabilization
 // *******************************************************************************************************************************
 //#define CameraControl
+//#define CameraTXControl  // need to have CameraControl to work
 
 //
 // *******************************************************************************************************************************
