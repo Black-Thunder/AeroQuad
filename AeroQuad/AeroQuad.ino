@@ -50,13 +50,10 @@
 
 #if defined (CameraTXControl) && !defined (CameraControl)
   #error "CameraTXControl need to have CameraControl defined"
-#endif
+#endif 
 
-// Special motor config additionnal variable
-#if defined(quadXHT_FPVConfig)
- #define quadXConfig
- #define FRONT_YAW_CORRECTION 0.95
- #define REAR_YAW_CORRECTION 1.17
+#if defined (OSD50HZ) && !defined (AeroQuadSTM32)
+  #error "OSD can't be updated at that speed on artduino"
 #endif
 
 
@@ -965,6 +962,8 @@
   #include <AnalogRSSIReader.h>
 #elif defined(UseEzUHFRSSIReader)
   #include <EzUHFRSSIReader.h>
+#elif defined(UseSBUSRSSIReader)
+  #include <SBUSRSSIReader.h>
 #endif
 
 
@@ -1032,7 +1031,6 @@
 #if defined (CameraTXControl)
   #include <CameraStabilizer_TXControl.h>
 #endif
-
 
 //********************************************************
 //******** FLIGHT CONFIGURATION DECLARATION **************
@@ -1137,7 +1135,6 @@
 #endif
 
 #ifdef GraupnerHoTTTelemetry
-  #include <HoTT.h>
   #include <HoTT_Telemetry.h>
 #endif
 
@@ -1327,7 +1324,7 @@ void process50HzTask() {
   // Reads external pilot commands and performs functions based on stick configuration
   readPilotCommands(); 
   
-  #if defined(UseAnalogRSSIReader) || defined(UseEzUHFRSSIReader)
+  #if defined(UseAnalogRSSIReader) || defined(UseEzUHFRSSIReader) || defined(UseSBUSRSSIReader)
     readRSSI();
   #endif
 
@@ -1343,11 +1340,12 @@ void process50HzTask() {
   
   #if defined(CameraControl)
     moveCamera(kinematicsAngle[YAXIS],kinematicsAngle[XAXIS],kinematicsAngle[ZAXIS]);
-  #endif   
-
+  #endif      
+  
   #if defined CameraTXControl
     processCameraTXControl();
   #endif
+
 
   #ifdef MAX7456_OSD
     #ifdef OSD50HZ

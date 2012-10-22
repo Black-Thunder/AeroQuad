@@ -37,11 +37,12 @@
 #include <avr/interrupt.h>
 #include <AQMath.h>
 #include "GlobalDefined.h"
+#include "Receiver_PPM_common.h"
 
 // Channel data
 volatile unsigned int startPulse = 0;
-volatile byte         ppmCounter = 8; // ignore data until first sync pulse
-volatile int          PWM_RAW[8] = { 3000,3000,3000,3000,3000,3000,3000,3000 };
+volatile byte         ppmCounter = PPM_CHANNELS; // ignore data until first sync pulse
+volatile int          PWM_RAW[PPM_CHANNELS] = { 3000,3000,3000,3000,3000,3000,3000,3000,3000,3000 };
 
 #define TIMER5_FREQUENCY_HZ 50
 #define TIMER5_PRESCALER    8
@@ -61,7 +62,7 @@ ISR(TIMER5_CAPT_vect)//interrupt.
     ppmCounter = 0;             // -> restart the channel counter
   }
   else {
-    if (ppmCounter < 8) { // channels 9- will get ignored here
+    if (ppmCounter < PPM_CHANNELS) { // extra channels will get ignored here
       PWM_RAW[ppmCounter] = pulseWidth; // Store measured pulse length
       ppmCounter++;                     // Advance to next channel
     }
@@ -69,17 +70,7 @@ ISR(TIMER5_CAPT_vect)//interrupt.
   startPulse = stopPulse;         // Save time at pulse start
 }
 
-#define SERIAL_SUM_PPM_1         1,2,3,0,4,5,6,7 // PITCH,YAW,THR,ROLL... For Graupner/Spektrum
-#define SERIAL_SUM_PPM_2         0,1,3,2,4,5,6,7 // ROLL,PITCH,THR,YAW... For Robe/Hitec/Futaba
-#define SERIAL_SUM_PPM_3         1,0,3,2,4,5,6,7 // PITCH,ROLL,THR,YAW... For some Hitec/Sanwa/Others
-
-#if defined (SKETCH_SERIAL_SUM_PPM)
-  #define SERIAL_SUM_PPM SKETCH_SERIAL_SUM_PPM
-#else	
-  #define SERIAL_SUM_PPM SERIAL_SUM_PPM_1
-#endif
-
-static uint8_t rcChannel[8] = {SERIAL_SUM_PPM};
+static uint8_t rcChannel[] = {SERIAL_SUM_PPM};
 
 void initializeReceiver(int nbChannel) {
 
@@ -108,6 +99,4 @@ int getRawChannelValue(byte channel) {
 }
 
 #endif
-
-
 

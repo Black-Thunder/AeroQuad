@@ -14,7 +14,7 @@
 
 #ifdef RECEIVER_STM32PPM
   static byte receiverPinPPM = Port2Pin('D', 15);
-#elif defined (ReceiverSBUS)
+#elif defined ReceiverSBUS
 #else
 	static byte receiverPin[] = {
 		Port2Pin('D', 12),
@@ -114,11 +114,11 @@
 		pinMode(LED_Yellow, OUTPUT);
 		digitalWrite(LED_Yellow, LOW);
 
-		#ifdef BattMonitor
-		  pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
-		  pinMode(BuzzerPin, OUTPUT);
-	      digitalWrite(BuzzerPin, LOW);
-		#endif
+#ifdef BattMonitor
+		pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
+		pinMode(BuzzerPin, OUTPUT);
+		digitalWrite(BuzzerPin, LOW);
+#endif
 	    pinMode(A1, INPUT_ANALOG);
 	    pinMode(A2, INPUT_ANALOG);
 	    pinMode(A3, INPUT_ANALOG);
