@@ -145,8 +145,8 @@
 // Define how many channels are connected from your R/C receiver
 // *******************************************************************************************************************************
 //#define LASTCHANNEL 6
-//#define LASTCHANNEL 8
-#define LASTCHANNEL 10 // EXPERIMENTAL only works with ReceiverSBUS, only tested on AQ32
+#define LASTCHANNEL 8
+//#define LASTCHANNEL 10 // EXPERIMENTAL only works with ReceiverSBUS, only tested on AQ32
 
 
 //
