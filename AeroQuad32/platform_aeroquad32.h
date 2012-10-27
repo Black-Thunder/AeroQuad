@@ -67,9 +67,9 @@
 		#define BuzzerPin Port2Pin('A', 0)
 		#define BATT_AREF         3.3		// V
 
-		#define BATT_R_HIGH       10.6	// kOhm
-		#define BATT_R_LOW        1.55		// kOhm
-		#define BATT_DIODE_LOSS		0.7
+		#define BATT_R_HIGH       9.88   	// 9.88 - 10.6kOhm
+		#define BATT_R_LOW        1.48		// 1.48 - 1.55 kOhm
+		#define BATT_DIODE_LOSS		0.8
 		#define BattDefaultConfig DEFINE_BATTERY(0, BATT_ANALOG_INPUT, (BATT_AREF * (BATT_R_HIGH + BATT_R_LOW) / BATT_R_LOW), BATT_DIODE_LOSS, BM_NOPIN, 0, 0)
 	#endif
 
