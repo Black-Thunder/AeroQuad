@@ -421,6 +421,7 @@ void sendSerialTelemetry() {
     for (byte axis = XAXIS; axis < LASTCHANNEL; axis++) {
       PrintValueComma(receiverSmoothFactor[axis]);
     }
+	PrintDummyValues(10 - LASTCHANNEL);
     SERIAL_PRINTLN();
     queryType = 'X';
     break;
