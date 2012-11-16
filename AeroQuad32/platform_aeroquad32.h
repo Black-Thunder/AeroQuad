@@ -64,7 +64,7 @@
 
 	// Battery Monitor declaration
 	#ifdef BattMonitor
-		#define BuzzerPin Port2Pin('E', 0) // ('A', 0)
+		#define BuzzerPin Port2Pin('A', 0)
 		#define BATT_AREF         3.3		// V
 
 		#define BATT_R_HIGH       9.88   	// 9.88 - 10.6kOhm
