@@ -57,7 +57,6 @@
 //For more information please refer to http://aeroquad.com/showwiki.php?title=Flight+Configurations
 
 #define quadXConfig
-//#define quadXHT_FPVConfig
 //#define quadPlusConfig
 //#define hexPlusConfig
 //#define hexXConfig      
@@ -118,7 +117,7 @@
 //#define POWERED_BY_VIN          // NEED BattMonitor defined. Uncomment this if your v2.x shield is powered directly by the Vin/Gnd of the arduino
 //
 // Advanced configuration. Please refer to the wiki for instructions.
-//#define BattCustomConfig DEFINE_BATTERY(3,BATT_ANALOG_INPUT,25.3,0,A6,66,0)
+//#define BattCustomConfig DEFINE_BATTERY(0,A4,51.8,0,A3,180.3,0)
 
 //
 // *******************************************************************************************************************************
@@ -146,7 +145,7 @@
 // *******************************************************************************************************************************
 //#define LASTCHANNEL 6
 #define LASTCHANNEL 8
-//#define LASTCHANNEL 10 // EXPERIMENTAL only works with ReceiverSBUS, only tested on AQ32
+//#define LASTCHANNEL 10 // EXPERIMENTAL only tested with ReceiverSBUS on AQ32, test extensively before using other boards/receiver types
 
 
 //
@@ -158,11 +157,11 @@
 
 //#define MavLink               // Enables the MavLink protocol
 //#define MAV_SYSTEM_ID 100		// Needs to be enabled when using MavLink, used to identify each of your copters using MavLink
-			// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
-
-#define GraupnerHoTTTelemetry
+								// If you've only got one, leave the default value unchanged, otherwise make sure that each copter has a different ID 
 
 //#define CONFIG_BAUDRATE 19200 // overrides default baudrate for serial port (Configurator/MavLink/WirelessTelemetry)
+
+#define GraupnerHoTTTelemetry
 
 //
 // *******************************************************************************************************************************
@@ -196,10 +195,9 @@
 //#define ShowRSSI                  // This REQUIRES a RSSI reader
 #define PAL                       // uncomment this to default to PAL video
 //#define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
-//#define CALLSIGN "Aeroquad"       // Show (optional) callsign
+//#define CALLSIGN "AQ"             // Show (optional) callsign
 #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
 //#define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
-#define OSD50HZ					// Experimental - Runs OSD at 50Hz for faster and smoother response ON BALOO ONLY
 
 #define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
 

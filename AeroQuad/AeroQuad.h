@@ -77,7 +77,7 @@ boolean inFlight = false; // true when motor are armed and that the user pass on
 float rotationSpeedFactor = 1.0; 
 
 #if defined GraupnerHoTTTelemetry
-typedef enum {
+  typedef enum {
 	HoTTv4NotificationErrorCalibration     = 0x01,
 	HoTTv4NotificationErrorReceiver        = 0x02,
 	HoTTv4NotificationErrorDataBus         = 0x03,
@@ -119,11 +119,10 @@ typedef enum {
 	HoTTv4NotificationFollowing            = 0x33,
 	HoTTv4NotificationStarting             = 0x34,
 	HoTTv4NotificationReceiver             = 0x35,
-} HoTTv4Notification;
+  } HoTTv4Notification;
 
-unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
+  unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
 #endif
-
 
 // main loop time variable
 unsigned long previousTime = 0;
@@ -282,7 +281,7 @@ void reportVehicleState();
     boolean isGpsNavigationInitialized = false;
 
     int waypointIndex = -1;    
-    float gpsDistanceToDestination = 99999999.0;
+    float distanceToDestination = 99999999.0;
     GeodeticPosition waypoint[MAX_WAYPOINTS] = {
       GPS_INVALID_POSITION, GPS_INVALID_POSITION, GPS_INVALID_POSITION, GPS_INVALID_POSITION,
       GPS_INVALID_POSITION, GPS_INVALID_POSITION, GPS_INVALID_POSITION, GPS_INVALID_POSITION,
@@ -382,6 +381,7 @@ typedef struct {
   float SERVOMAXPITCH_ADR;
   float SERVOMAXROLL_ADR;
   float SERVOMAXYAW_ADR;
+  float SERVOTXCHANNELS_ADR;
   // GPS mission storing
   float GPS_MISSION_NB_POINT_ADR;
   GeodeticPosition WAYPOINT_ADR[MAX_WAYPOINTS];

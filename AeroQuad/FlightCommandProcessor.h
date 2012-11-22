@@ -29,10 +29,10 @@
 
 #if defined (AltitudeHoldBaro) || defined (AltitudeHoldRangeFinder)
   boolean isPositionHoldEnabledByUser() {
-      if (receiverCommand[AUX1] < 1750) {
-        return true;
-      }
-      return false;
+	  if (receiverCommand[AUX1] < 1750) {
+		  return true;
+	  }
+	  return false;
   }
 #endif
 
@@ -176,9 +176,9 @@ void processZeroThrottleFunctionFromReceiverCommand() {
     motorArmed = OFF;
     inFlight = false;
 
-#if defined GraupnerHoTTTelemetry
-	SpeakHoTT = HoTTv4NotificationMicrocopterOff;
-#endif
+	#if defined GraupnerHoTTTelemetry
+	  SpeakHoTT = HoTTv4NotificationMicrocopterOff;
+	#endif
 
     #ifdef OSD
       notifyOSD(OSD_CENTER|OSD_WARN, "MOTORS UNARMED");
@@ -193,9 +193,9 @@ void processZeroThrottleFunctionFromReceiverCommand() {
 
   // Zero Gyro and Accel sensors (left stick lower left, right stick lower right corner)
   if ((receiverCommand[ZAXIS] < MINCHECK) && (receiverCommand[XAXIS] > MAXCHECK) && (receiverCommand[YAXIS] < MINCHECK)) {
-#if defined GraupnerHoTTTelemetry
+	#if defined GraupnerHoTTTelemetry
 	  SpeakHoTT = HoTTv4NotificationCalibrating;
-#endif
+	#endif
 	calibrateGyro();
     computeAccelBias();
     storeSensorsZeroToEEPROM();
@@ -218,9 +218,9 @@ void processZeroThrottleFunctionFromReceiverCommand() {
     }
     motorArmed = ON;
 
-#if defined GraupnerHoTTTelemetry
-	SpeakHoTT = HoTTv4NotificationStarting;
-#endif
+	#if defined GraupnerHoTTTelemetry
+	  SpeakHoTT = HoTTv4NotificationStarting;
+	#endif
 
     #ifdef OSD
       notifyOSD(OSD_CENTER|OSD_WARN, "!MOTORS ARMED!");

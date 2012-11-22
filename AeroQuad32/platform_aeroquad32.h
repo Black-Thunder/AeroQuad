@@ -1,7 +1,7 @@
 #ifndef _PLATFORM_AEROQUAD32_H_
 	#define _PLATFORM_AEROQUAD32_H_
 
-	static byte stm32_motor_mapping[] = {
+        static byte __attribute__((unused)) stm32_motor_mapping[] = {
 		Port2Pin('C',  9),
 		Port2Pin('C',  8),
 		Port2Pin('C',  7),
@@ -12,8 +12,15 @@
 		Port2Pin('B',  5)
 	};
 
+        static byte __attribute__((unused)) stm32_motor_mapping_tri[] = {
+	  Port2Pin('A', 15), // note this must be on separate timer device !!
+	  Port2Pin('C',  8),
+	  Port2Pin('C',  7),
+	  Port2Pin('C',  6),
+	};
+
 #ifdef RECEIVER_STM32PPM
-  static byte receiverPinPPM = Port2Pin('D', 14); //('D', 15) original
+  static byte receiverPinPPM = Port2Pin('D', 15);
 #elif defined ReceiverSBUS
 #else
 	static byte receiverPin[] = {
@@ -67,8 +74,8 @@
 		#define BuzzerPin Port2Pin('A', 0)
 		#define BATT_AREF         3.3		// V
 
-		#define BATT_R_HIGH       9.88   	// 9.88 - 10.6kOhm
-		#define BATT_R_LOW        1.48		// 1.48 - 1.55 kOhm
+		#define BATT_R_HIGH       9.88	// kOhm
+		#define BATT_R_LOW        1.48		// kOhm
 		#define BATT_DIODE_LOSS		0.8
 		#define BattDefaultConfig DEFINE_BATTERY(0, BATT_ANALOG_INPUT, (BATT_AREF * (BATT_R_HIGH + BATT_R_LOW) / BATT_R_LOW), BATT_DIODE_LOSS, BM_NOPIN, 0, 0)
 	#endif
@@ -114,11 +121,7 @@
 		pinMode(LED_Yellow, OUTPUT);
 		digitalWrite(LED_Yellow, LOW);
 
-#ifdef BattMonitor
-		pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
-		pinMode(BuzzerPin, OUTPUT);
-		digitalWrite(BuzzerPin, LOW);
-#endif
+	    pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
 	    pinMode(A1, INPUT_ANALOG);
 	    pinMode(A2, INPUT_ANALOG);
 	    pinMode(A3, INPUT_ANALOG);

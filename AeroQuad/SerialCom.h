@@ -89,7 +89,7 @@ void readSerialCommand() {
     case 'C': // Receive yaw PID
       readSerialPID(ZAXIS_PID_IDX);
       readSerialPID(HEADING_HOLD_PID_IDX);
-      readFloatSerial();
+      headingHoldConfig = readFloatSerial();
       break;
 
     case 'D': // Altitude hold PID
@@ -219,8 +219,15 @@ void readSerialCommand() {
         servoMaxPitch = readFloatSerial();
         servoMaxRoll = readFloatSerial();
         servoMaxYaw = readFloatSerial();
+        #ifdef CameraTXControl
+          servoTXChannels = readFloatSerial();
+        #endif
       #else
-        skipSerialValues(13);
+        #ifdef CameraTXControl
+          skipSerialValues(14)
+        #else
+          skipSerialValues(13);
+        #endif
       #endif
       break;
 
@@ -548,8 +555,15 @@ void sendSerialTelemetry() {
       PrintValueComma(servoMaxPitch);
       PrintValueComma(servoMaxRoll);
       PrintValueComma(servoMaxYaw);
+      #ifdef CameraTXControl
+        PrintValueComma(servoTXChannels);
+      #endif
     #else
-      PrintDummyValues(13);
+      #ifdef CameraTXControl
+        PrintDummyValues(14);
+      #else
+        PrintDummyValues(13);
+      #endif
     #endif
     SERIAL_PRINTLN();
     queryType = 'X';
@@ -648,6 +662,35 @@ void sendSerialTelemetry() {
       PrintDummyValues(11);
     #endif    
     SERIAL_PRINTLN();
+    break;
+    
+  case 'z': // send rangeFinderRange
+    #if defined (AltitudeHoldRangeFinder)
+      SERIAL_PRINTLN(rangeFinderRange[ALTITUDE_RANGE_FINDER_INDEX]);
+    #endif
+    break;
+    
+  case '$': // send BatteryMonitor voltage/current readings
+    #if defined (BattMonitor)
+      PrintValueComma((float)batteryData[0].voltage/100.0); // voltage internally stored at 10mV:s
+      #if defined (BM_EXTENDED)
+        PrintValueComma((float)batteryData[0].current/100.0);
+		PrintValueComma((float)batteryData[0].usedCapacity/1000.0);
+	  #else
+		PrintDummyValues(2);
+      #endif
+    #else
+      PrintDummyValues(3);
+    #endif
+    SERIAL_PRINTLN();
+    break;
+    
+  case '%': // send RSSI
+    #if defined (UseAnalogRSSIReader) || defined (UseEzUHFRSSIReader) || defined (UseSBUSRSSIReader)
+      SERIAL_PRINTLN(rssiRawValue);
+    #else
+      SERIAL_PRINTLN(0);
+    #endif
     break;
 
   case 'x': // Stop sending messages
@@ -884,9 +927,8 @@ void reportVehicleState() {
     SERIAL_PRINTLN("Octo X8");
   #elif defined(octoXConfig)
     SERIAL_PRINTLN("Octo X");
-  // *** For next rev, updat OctoPlus config name here and in Configurator
   #elif defined(octoPlusConfig)
-    SERIAL_PRINTLN("Octo X+");
+    SERIAL_PRINTLN("Octo +");
   #endif
 
   SERIAL_PRINT("Receiver Channels: ");

@@ -52,11 +52,6 @@
   #error "CameraTXControl need to have CameraControl defined"
 #endif 
 
-#if defined (OSD50HZ) && !defined (AeroQuadSTM32)
-  #error "OSD can't be updated at that speed on artduino"
-#endif
-
-
 #include <EEPROM.h>
 #include <Wire.h>
 #include <GlobalDefined.h>
@@ -972,7 +967,12 @@
 //********************** MOTORS DECLARATION **************
 //********************************************************
 #if defined(triConfig)
-  #include <Motors_Tri.h>
+  #if defined (MOTOR_STM32)
+    #define MOTORS_STM32_TRI
+    #include <Motors_STM32.h>    
+  #else
+    #include <Motors_Tri.h>
+  #endif
 #elif defined(MOTOR_PWM)
   #include <Motors_PWM.h>
 #elif defined(MOTOR_PWM_Timer)
@@ -1312,6 +1312,14 @@ void process100HzTask() {
   #if defined(UseGPS)
     updateGps();
   #endif      
+  
+  #if defined(CameraControl)
+    moveCamera(kinematicsAngle[YAXIS],kinematicsAngle[XAXIS],kinematicsAngle[ZAXIS]);
+    #if defined CameraTXControl
+      processCameraTXControl();
+    #endif
+  #endif       
+
 }
 
 /*******************************************************************
@@ -1328,6 +1336,10 @@ void process50HzTask() {
     readRSSI();
   #endif
 
+  #ifdef MAX7456_OSD
+    updateOSD();
+  #endif
+
   #ifdef AltitudeHoldRangeFinder
     updateRangeFinders();
   #endif
@@ -1337,22 +1349,6 @@ void process50HzTask() {
       initHomeBase();
     }
   #endif      
-  
-  #if defined(CameraControl)
-    moveCamera(kinematicsAngle[YAXIS],kinematicsAngle[XAXIS],kinematicsAngle[ZAXIS]);
-  #endif      
-  
-  #if defined CameraTXControl
-    processCameraTXControl();
-  #endif
-
-
-  #ifdef MAX7456_OSD
-    #ifdef OSD50HZ
-      updateOSD();
-    #endif
-  #endif
-    
 }
 
 /*******************************************************************
@@ -1397,12 +1393,6 @@ void process10HzTask3() {
       updateOSDMenu();
     #endif
 
-    #ifdef MAX7456_OSD
-    #ifndef OSD50HZ
-      updateOSD();
-    #endif
-    #endif
-    
     #if defined(UseGPS) || defined(BattMonitor)
       processLedStatus();
     #endif
