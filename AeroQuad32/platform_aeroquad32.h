@@ -121,7 +121,12 @@
 		pinMode(LED_Yellow, OUTPUT);
 		digitalWrite(LED_Yellow, LOW);
 
-	    pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
+		#ifdef BattMonitor
+	      pinMode(BATT_ANALOG_INPUT, INPUT_ANALOG);
+		  pinMode(BuzzerPin, OUTPUT);
+		  digitalWrite(BuzzerPin, LOW);
+		#endif
+
 	    pinMode(A1, INPUT_ANALOG);
 	    pinMode(A2, INPUT_ANALOG);
 	    pinMode(A3, INPUT_ANALOG);
