@@ -31,7 +31,7 @@
 #include "Receiver.h"
 
 // Flight Software Version
-#define SOFTWARE_VERSION 3.1
+#define SOFTWARE_VERSION 3.2
 
 #if defined CONFIG_BAUDRATE
   #define BAUD CONFIG_BAUDRATE
@@ -55,7 +55,7 @@ int testCommand = 1000;
  */
 #define RATE_FLIGHT_MODE 0
 #define ATTITUDE_FLIGHT_MODE 1
-
+byte previousFlightMode = ATTITUDE_FLIGHT_MODE;
 #define TASK_100HZ 1
 #define TASK_50HZ 2
 #define TASK_10HZ 10
@@ -74,10 +74,10 @@ byte maxLimit = OFF;
 byte minLimit = OFF;
 float filteredAccel[3] = {0.0,0.0,0.0};
 boolean inFlight = false; // true when motor are armed and that the user pass one time the min throttle
-float rotationSpeedFactor = 1.0; 
+float rotationSpeedFactor = 1.0;
 
 #if defined GraupnerHoTTTelemetry
-  typedef enum {
+typedef enum {
 	HoTTv4NotificationErrorCalibration     = 0x01,
 	HoTTv4NotificationErrorReceiver        = 0x02,
 	HoTTv4NotificationErrorDataBus         = 0x03,
@@ -119,9 +119,9 @@ float rotationSpeedFactor = 1.0;
 	HoTTv4NotificationFollowing            = 0x33,
 	HoTTv4NotificationStarting             = 0x34,
 	HoTTv4NotificationReceiver             = 0x35,
-  } HoTTv4Notification;
+} HoTTv4Notification;
 
-  unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
+unsigned char SpeakHoTT = HoTTv4NotificationMicrocopter;
 #endif
 
 // main loop time variable
@@ -342,9 +342,6 @@ typedef struct {
   float ALTITUDE_BUMP_ADR;
   float ALTITUDE_PANIC_ADR;
   // Gyro calibration
-  float GYRO_ROLL_ZERO_ADR;
-  float GYRO_PITCH_ZERO_ADR;
-  float GYRO_YAW_ZERO_ADR;
   float ROTATION_SPEED_FACTOR_ARD;
   // Accel Calibration
   float XAXIS_ACCEL_BIAS_ADR;
@@ -355,11 +352,8 @@ typedef struct {
   float ZAXIS_ACCEL_SCALE_FACTOR_ADR;
   // Mag Calibration
   float XAXIS_MAG_BIAS_ADR;
-  float XAXIS_MAG_SCALE_FACTOR_ADR;
   float YAXIS_MAG_BIAS_ADR;
-  float YAXIS_MAG_SCALE_FACTOR_ADR;
   float ZAXIS_MAG_BIAS_ADR;
-  float ZAXIS_MAG_SCALE_FACTOR_ADR;
   // Battery Monitor
   float BATT_ALARM_VOLTAGE_ADR;
   float BATT_THROTTLE_TARGET_ADR;

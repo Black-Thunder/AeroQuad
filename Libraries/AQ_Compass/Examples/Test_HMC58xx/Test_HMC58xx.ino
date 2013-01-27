@@ -18,40 +18,45 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>. 
 */
 
-#include <AQMath.h>
-#include <GlobalDefined.h>
-#include <Receiver_MEGA.h>
+#include <Wire.h>             // Arduino IDE bug, needed because that the ITG3200 use Wire!
+#include <Device_I2C.h>       // Arduino IDE bug, needed because that the ITG3200 use Wire!
 
+#include <GlobalDefined.h>
+#include <AQMath.h>
+
+//Uncomment the following two lines when testing the mag on v2.1 shield
+//#define SPARKFUN_9DOF_5883L
+//#include <Magnetometer_HMC5883L.h>
+
+//Uncomment the following line when testing the mag on v2.0 shield
+#include <Magnetometer_HMC5843.h>
 
 unsigned long timer;
 
 void setup() {
   
   Serial.begin(115200);
-  Serial.println("Receiver library test (Receiver_APM)");
-
-  initializeReceiver();   
+  Serial.println("Magnetometer library test (HMC58xx)");
+  
+  Wire.begin();
+  initializeMagnetometer();
 }
 
 void loop() {
   
-  if((millis() - timer) > 50) // 20Hz
+  if((millis() - timer) > 10) // 100Hz
   {
     timer = millis();
-    readReceiver();
+    measureMagnetometer(0.0,0.0);
     
-    Serial.print("Throttle: ");
-    Serial.print(receiverCommand[THROTTLE]);
-    Serial.print(" Yaw: ");
-    Serial.print(receiverCommand[YAW]);
-    Serial.print(" Roll: ");
-    Serial.print(receiverCommand[XAXIS]);
+    Serial.print("Roll: ");
+    Serial.print(getMagnetometerRawData(XAXIS));
     Serial.print(" Pitch: ");
-    Serial.print(receiverCommand[YAXIS]);
-    Serial.print(" Mode: ");
-    Serial.print(receiverCommand[ZAXIS]);
-    Serial.print(" Aux: ");
-    Serial.print(receiverCommand[AUX]);
+    Serial.print(getMagnetometerRawData(YAXIS));
+    Serial.print(" Yaw: ");
+    Serial.print(getMagnetometerRawData(ZAXIS));
+    Serial.print(" Heading: ");
+    Serial.print(getAbsoluteHeading());
     Serial.println();
   }
 }

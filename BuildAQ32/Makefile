@@ -131,7 +131,8 @@ ifeq ($(BUILDTYPE), STM32)
 	SRCROOT := $(LIB_MAPLE_HOME)
 	SUPPORT_PATH := $(SRCROOT)/support
 	LDDIR    := $(SUPPORT_PATH)/ld
-	LDFLAGSSTM32 = -T$(LDDIR)/$(LDSCRIPT) -L$(LDDIR) -Xlinker --gc-sections -lc
+##### Uncomment the -nostartfiles if compiling on OS X #####
+	LDFLAGSSTM32 = -T$(LDDIR)/$(LDSCRIPT) -L$(LDDIR)  -Xlinker --gc-sections -lc -nostartfiles
 
 # Set up build rules and some useful templates
 include $(SUPPORT_PATH)/make/build-rules.mk
@@ -165,7 +166,8 @@ EXTRAINCDIRS += $(LIBDIR)/AQ_Accelerometer $(LIBDIR)/AQ_BarometricSensor $(LIBDI
  $(LIBDIR)/AQ_OSD  $(LIBDIR)/AQ_Platform_APM $(LIBDIR)/AQ_Platform_CHR6DM \
  $(LIBDIR)/AQ_Platform_MPU6000 $(LIBDIR)/AQ_Platform_Wii $(LIBDIR)/AQ_RangeFinder \
  $(LIBDIR)/AQ_Receiver $(LIBDIR)/AQ_SPI $(LIBDIR)/AQ_RSSI $(LIBDIR)/AQ_SoftModem \
- $(LIBDIR)/AQ_RSCode $(LIBDIR)/AQ_HoTT
+ $(LIBDIR)/AQ_RSCode \
+$(LIBDIR)/AQ_HoTT \
 
 
 # Processor frequency.
@@ -292,7 +294,7 @@ CFLAGS += -fdata-sections
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
 CFLAGS += -fsingle-precision-constant
-//CFLAGS += -fpack-struct
+#CFLAGS += -fpack-struct
 CFLAGS += -fshort-enums
 CFLAGS += -Wall
 CFLAGS += -Wstrict-prototypes
