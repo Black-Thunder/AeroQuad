@@ -124,7 +124,7 @@ boolean checkFailsafeStatus() {
 		failsafeCounter = 0;
 	}
 
-	if(failsafeCounter > 20) {
+	if(failsafeCounter > 40) {
 		return true;
 	}
 	return false;
@@ -134,7 +134,7 @@ void overrideChannelValuesWithFailsafe() {
 	receiverCommand[XAXIS] = 1500;
 	receiverCommand[YAXIS] = 1500;
 	receiverCommand[ZAXIS] = 1500;
-	receiverCommand[THROTTLE] = 1300;
+	receiverCommand[THROTTLE] = 1400;
 	receiverCommand[MODE] = 2000;
 	receiverCommand[AUX1] = 2000;
 
@@ -153,10 +153,6 @@ void readReceiver() {
 
 	for(byte channel = XAXIS; channel < lastReceiverChannel; channel++) {
 		oldReceiverCommand[channel] = receiverCommand[channel];
-	}
-
-	for(byte channel = XAXIS; channel < lastReceiverChannel; channel++) {
-
 		// Apply receiver calibration adjustment
 		receiverData[channel] = (receiverSlope[channel] * getRawChannelValue(channel)) + receiverOffset[channel];
 		// Smooth the flight control receiver inputs
