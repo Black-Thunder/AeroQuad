@@ -43,8 +43,10 @@ float receiverXmitFactor = 0.0;
 int receiverData[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
 int receiverZero[3] = {0,0,0};
 int receiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
+#if defined(GraupnerFailsafe)
 int oldReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
 int lastGoodReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
+#endif
 int receiverCommandSmooth[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0,};
 float receiverSlope[MAX_NB_CHANNEL] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
 float receiverOffset[MAX_NB_CHANNEL] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
@@ -88,6 +90,7 @@ void initializeReceiverParam(int nbChannel = 6) {
 int getRawChannelValue(byte channel);  
 void readReceiver();
 
+#if defined(GraupnerFailsafe)
 boolean areOldAndNewChannelValuesTheSame() {
 	bool areSame = true;
 
@@ -134,7 +137,7 @@ void overrideChannelValuesWithFailsafe() {
 	receiverCommand[XAXIS] = 1500;
 	receiverCommand[YAXIS] = 1500;
 	receiverCommand[ZAXIS] = 1500;
-	receiverCommand[THROTTLE] = 1400;
+	receiverCommand[THROTTLE] = 1520;
 	receiverCommand[MODE] = 2000;
 	receiverCommand[AUX1] = 2000;
 
@@ -148,30 +151,38 @@ void overrideChannelValuesWithFailsafe() {
 		}
 	}
 }
+#endif
 
 void readReceiver() {
 
 	for(byte channel = XAXIS; channel < lastReceiverChannel; channel++) {
+	#if defined(GraupnerFailsafe)
 		oldReceiverCommand[channel] = receiverCommand[channel];
+	#endif
 		// Apply receiver calibration adjustment
 		receiverData[channel] = (receiverSlope[channel] * getRawChannelValue(channel)) + receiverOffset[channel];
 		// Smooth the flight control receiver inputs
 		receiverCommandSmooth[channel] = filterSmooth(receiverData[channel], receiverCommandSmooth[channel], receiverSmoothFactor[channel]);
 	}
-
+#if defined(GraupnerFailsafe)
 	if (checkFailsafeStatus())	{
 		overrideChannelValuesWithFailsafe();
 	} 
 	else {
+#endif
 		// Reduce receiver commands using receiverXmitFactor and center around 1500
 		for (byte channel = XAXIS; channel < THROTTLE; channel++) {
 			receiverCommand[channel] = ((receiverCommandSmooth[channel] - receiverZero[channel]) * receiverXmitFactor) + receiverZero[channel];
+		#if defined(GraupnerFailsafe)
 			lastGoodReceiverCommand[channel] = receiverCommand[channel];
+		#endif
 		}	
 		// No xmitFactor reduction applied for throttle, mode and AUX
 		for (byte channel = THROTTLE; channel < lastReceiverChannel; channel++) {
 			receiverCommand[channel] = receiverCommandSmooth[channel];
+		#if defined(GraupnerFailsafe)
 			lastGoodReceiverCommand[channel] = receiverCommand[channel];
+		#endif
 		}
 	}
 }

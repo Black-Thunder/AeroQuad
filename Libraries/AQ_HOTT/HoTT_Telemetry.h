@@ -194,7 +194,7 @@ static unsigned char hottVoiceOutput()
 
 
 #if defined(HOTTV4BATT)
-	if (batteryAlarm) {
+	if (speakBatteryWarning) {
 		status = HoTTv4NotificationUndervoltage;
 	}
 #endif
