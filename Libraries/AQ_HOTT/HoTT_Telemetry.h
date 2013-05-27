@@ -28,6 +28,7 @@ HardwareSerial *hottV4Serial;
 
 static uint8_t minutes = 0;
 static uint16_t milliseconds = 0;
+unsigned int varioSoundNeutral = 30000;
 static signed int maxAltitude = 500;
 static signed int minAltitude = 500;
 volatile unsigned int CountMilliseconds = 0;
@@ -166,12 +167,12 @@ static int32_t hottv4UpdateAlt() {
 
 
 static unsigned int hottv4UpdateAltVario() {
-	unsigned int varioSound = 30000;
+	unsigned int varioSound = varioSoundNeutral;
 
 	if(altitudeHoldState == ON)
 	{
-		if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound = 30100;
-		else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound = 29900;
+		if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound += 300;
+		else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound -= 300;
 	}
 
 	return varioSound;
@@ -551,6 +552,7 @@ static void hottV4SendVarioTelemetry() {
   telemetry_data[9] = minAltitude;
 
   unsigned int varioSound = hottv4UpdateAltVario();
+	
   telemetry_data[11] = telemetry_data[13] = telemetry_data[15] = varioSound;
   telemetry_data[12] = telemetry_data[14] = telemetry_data[16] = (varioSound >> 8) & 0xFF;
 
