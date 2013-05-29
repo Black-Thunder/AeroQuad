@@ -386,6 +386,9 @@ static void FillGeneralTelemetryPackage() {
 	telemetry_data[32] = capacity;
 	telemetry_data[33] = (capacity >> 8) & 0xFF;
   #endif
+  
+    // Write out telemetry data as General Module to serial           
+  hottV4SendBinary(telemetry_data);
 }
 
 
