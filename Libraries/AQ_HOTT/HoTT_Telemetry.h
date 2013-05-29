@@ -327,7 +327,7 @@ void hottv4Init(HardwareSerial *serial) {
  * Main method to send General telemetry data
  */
 
-static void FillGeneralTelemetryPacket() {
+static void FillGeneralTelemetryPackage() {
 
  uint8_t telemetry_data[] = { 
               0x7C, /* 0 */
@@ -532,7 +532,7 @@ static void FillGPSTelemetryPackage() {
       updatePosition(telemetry_data, currentPosition.longitude, 14);
 
       /** GPS Speed in km/h */
-	  uint8_t gpsSpeed = (int)getGpsSpeed()*36/1000
+	  uint8_t gpsSpeed = (int)getGpsSpeed()*36/1000;
       telemetry_data[7] = gpsSpeed;
 	  telemetry_data[8] = (gpsSpeed >> 8) & 0xFF;
 
