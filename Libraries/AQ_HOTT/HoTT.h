@@ -35,9 +35,14 @@
 #define HOTTV4DIR
 #endif
 
+#if defined(UseGPS) && defined(UseGPSNavigator)
+#define HOTTV4NAV
+#endif
+
 /** ###### HoTT module specific settings ###### */
 
-#define HOTTV4_GENERAL_AIR_SENSOR_ID 0xD0
+#define HOTTV4_GENERAL_MODULE 0x8D
+#define HOTTV4_GENERAL_SENSOR_ID 0xD0
 
 #define HOTTV4_ELECTRICAL_AIR_SENSOR_ID 0xE0 // Electric Air Sensor ID
 #define HOTTV4_ELECTRICAL_AIR_MODULE 0x8E // Electric Air Module ID
@@ -55,6 +60,7 @@
 
 /** ###### VARIO Text ###### */
 
+#define HOTTV4_VARIO_LOWVOLTAGE "!! LOW VOLTAGE !!"
 #define HOTTV4_VARIO_ATTITUDE "AeroQuad (Attitude)"
 #define HOTTV4_VARIO_RATE     "AeroQuad (Rate)"
 

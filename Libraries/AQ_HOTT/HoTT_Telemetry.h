@@ -219,7 +219,7 @@ static unsigned char hottVoiceOutput()
 		 }
 #endif
 
-#if defined(UseGPSNavigator)
+#if defined(HOTTV4NAV)
 		 if(navigationState == ON)  isNavOn = true;
 		 else if(positionHoldState == ON) isHoldOn = true;
 		 else if(positionHoldState == OFF && navigationState == OFF) isGPSOff = true;
@@ -320,38 +320,108 @@ void hottv4Init(HardwareSerial *serial) {
 }
 
 /* ##################################################################### *
+ *                HoTTv4 General Module                                      *
+ * ##################################################################### */
+
+/**
+ * Main method to send General telemetry data
+ */
+
+static void FillGeneralTelemetryPacket() {
+
+ uint8_t telemetry_data[] = { 
+              0x7C, /* 0 */
+              HOTTV4_GENERAL_MODULE, /* 1 */
+              0x00, /* 2 Alarm */
+              HOTTV4_GENERAL_SENSOR_ID, /* 3 */
+              0x00, /* 4 InverseStatus1 */
+              0x00, /* 5 InverseStatus2 */
+              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* 6-11 Voltage Cell 1-6 208 = 4,16V  (Voltage * 50 = Value) */
+              0x00, 0x00, /* 12-13 Battetry 1 LSB/MSB in 100mv steps, 50 == 5V */
+              0x00, 0x00, /* 14-15 Battetry 2 LSB/MSB in 100mv steps, 50 == 5V */
+              0x14, /* 16 Temp 1, Offset of 20. 20 == 0C */ 
+              0x14, /* 17 Temp 2, Offset of 20. 20 == 0C */
+			  0x00, /* 18 FuelPercent */
+			  0x00, 0x00, /* 19-20 FuelCapacity */
+			  0x00, 0x00, /* 21-22 Rpm */
+              0xF4, 0x01, /* 23-24 Altitude Offset -500. 500 == 0 */
+			  0x48, 0x00, /* 25-26 m_s 3000 = 0 */ 
+              0x78, /* 27 m_3s 120 = 0*/
+              0x00, 0x00, /* 28-29 Current LSB, MSB 1 = 0.1A */
+              0x00, 0x00, /* 30-31 Drive Voltage 66 = 6.6V*/
+              0x00, 0x00,  /* 32-33 Capacity 1 = 10mAh */
+              0x00, 0x00, /* 34-35 Speed */
+			  0x00, /* 36  LowestCellVoltage*/
+			  0x00, /* 37 LowestCellNumber */
+              0x00, 0x00, /* 38-39 RPM2 10er steps, 300 == 3000rpm */
+              0x00, /* 40 ErrorNumber */
+              0x00, /* 41 Pressure in 0,1bar 20 = 2,0bar */
+              0x00, /* 42 Version Number */
+              0x7D, /* 43 End sign */
+              0x00 /* 44 Checksum */
+ };
+ 
+   #if defined(HOTTV4ALTITUDE)
+    int32_t altitude = hottv4UpdateAlt();
+	telemetry_data[23] = altitude;
+	telemetry_data[24] = (altitude >> 8) & 0xFF;
+
+	unsigned int varioSound = hottv4UpdateAltVario();
+	telemetry_data[25] = varioSound;
+    telemetry_data[26] = (varioSound >> 8) & 0xFF;
+	
+	telemetry_data[27] = 120;
+  #endif
+
+  #if defined(HOTTV4BATT)
+    short voltage = hottv4UpdateBattery(telemetry_data);
+	telemetry_data[30] = telemetry_data[12] = telemetry_data[14] = voltage;
+	telemetry_data[31] = telemetry_data[13] = telemetry_data[15] = (voltage >> 8) & 0xFF;
+
+	short current = hottv4UpdateCurrent();
+	telemetry_data[28] = current;
+	telemetry_data[29] = (current >> 8) & 0xFF;
+
+	long capacity = hottv4UpdateCapacity();
+	telemetry_data[32] = capacity;
+	telemetry_data[33] = (capacity >> 8) & 0xFF;
+  #endif
+}
+
+
+/* ##################################################################### *
  *                HoTTv4 EAM Module                                      *
  * ##################################################################### */
 
 /**
  * Main method to send EAM telemetry data
  */
-static void hottV4SendEAMTelemetry() {  
+static void FillEAMTelemetryPackage() {  
   uint8_t telemetry_data[] = { 
-              0x7C,
-              HOTTV4_ELECTRICAL_AIR_MODULE, 
-              0x00, /* Alarm */
-              HOTTV4_ELECTRICAL_AIR_SENSOR_ID,
-              0x00, 0x00, /* Alarm Value 1 and 2 */
-              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* Low Voltage Cell 1-7 in 2mV steps */
-              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* High Voltage Cell 1-7 in 2mV steps */
-              0x00, 0x00, /* Battetry 1 LSB/MSB in 100mv steps, 50 == 5V */
-              0x00, 0x00, /* Battetry 2 LSB/MSB in 100mv steps, 50 == 5V */
-              0x14, /* Temp 1, Offset of 20. 20 == 0C */ 
-              0x14, /* Temp 2, Offset of 20. 20 == 0C */
-              0xF4, 0x01, /* Height. Offset -500. 500 == 0 */
-              0x00, 0x00, /* Current LSB, MSB 1 = 0.1A */
-              0x00, 0x00, /* Drive Voltage */
-              0x00, 0x00,  /* mAh */
-              0x48, 0x00, /* m2s */ 
-              0x78, /* m3s */
-              0x00, 0x00, /* RPM. 10er steps, 300 == 3000rpm */
-              0x00, /* Electric minutes */
-              0x00, /* Electric seconds */
-              0x00, /* Speed */
-              0x00, /* Version Number */
-              0x7D, /* End sign */
-              0x00 /* Checksum */
+              0x7C, /* 0 */
+              HOTTV4_ELECTRICAL_AIR_MODULE, /* 1 */
+              0x00, /* 2 Alarm */
+              HOTTV4_ELECTRICAL_AIR_SENSOR_ID, /* 3 */
+              0x00, 0x00, /* 4-5 Alarm Value 1 and 2 */
+              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* 6-12 Low Voltage Cell 1-7 in 2mV steps */
+              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* 13-19 High Voltage Cell 1-7 in 2mV steps */
+              0x00, 0x00, /* 20-21 Battetry 1 LSB/MSB in 100mv steps, 50 == 5V */
+              0x00, 0x00, /* 22-23 Battetry 2 LSB/MSB in 100mv steps, 50 == 5V */
+              0x14, /* 24 Temp 1, Offset of 20. 20 == 0C */ 
+              0x14, /* 25 Temp 2, Offset of 20. 20 == 0C */
+              0xF4, 0x01, /* 26-27 Height. Offset -500. 500 == 0 */
+              0x00, 0x00, /* 28-29 Current LSB, MSB 1 = 0.1A */
+              0x00, 0x00, /* 30-31 Drive Voltage */
+              0x00, 0x00,  /* 32-33 Capacity mAh */
+              0x48, 0x00, /* 34-35 m_s */ 
+              0x78, /* 36 m_3s 120 = 0*/
+              0x00, 0x00, /* 37-38 RPM. 10er steps, 300 == 3000rpm */
+              0x00, /* 39 Electric minutes */
+              0x00, /* 40 Electric seconds */
+              0x00, /* 41 Speed */
+              0x00, /* 42 Version Number */
+              0x7D, /* 43 End sign */
+              0x00 /* 44 Checksum */
             };
   
   #if defined(HOTTV4BATT)
@@ -374,8 +444,9 @@ static void hottV4SendEAMTelemetry() {
 	telemetry_data[27] = (altitude >> 8) & 0xFF;
 
 	unsigned int varioSound = hottv4UpdateAltVario();
-	telemetry_data[34] = telemetry_data[36] = varioSound;
+	telemetry_data[34] = varioSound;
     telemetry_data[35] = (varioSound >> 8) & 0xFF;
+	telemetry_data[36] = 120;
   #endif
 
   hottv4UpdateFlightTime(telemetry_data);
@@ -388,7 +459,7 @@ static void hottV4SendEAMTelemetry() {
  *                HoTTv4 GPS Module                                      *
  * ##################################################################### */
 
-#if defined(UseGPS)
+#if defined(HOTTV4NAV)
 /**
  * Converts unsigned long representation of GPS coordinate back to
  * N Deg MM.SSSS representation and puts it into GPS data frame.
@@ -413,42 +484,42 @@ static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
 /**
  * Main method to send GPS telemetry data
  */
-static void hottV4SendGPSTelemetry() {
+static void FillGPSTelemetryPackage() {
   uint8_t telemetry_data[] = { 
-              0x7C,
-              HOTTV4_GPS_MODULE, 
-              0x00, /* Alarm */
-              HOTTV4_GPS_SENSOR_ID,
-              0x00, 0x00, /* Alarm Value 1 and 2 */
-              0x00, /* Flight direction */ 
-              0x00, 0x00, /* Velocity */ 
-              0x00, 0x00, 0x00, 0x00, 0x00, /* Latitude */
-              0x00, 0x00, 0x00, 0x00, 0x00, /* Longitude */
-              0x00, 0x00, /* Distance */
-              0xF4, 0x01, /* Altitude, 500 = 0m */
-              0x78, 0x00, /* m/s, 1 = 0.01m/s */ 
-              0x78, /* m/3s, 120 = 0 */
-              0x00, /* Number of satelites */ 
-              0x00, /* GPS fix character */
-              0x00, /* Home direction */
-              0x00, /* angle x-direction */
-              0x00, /* angle y-direction */
-              0x00, /* angle z-direction */
-              0x00, 0x00,  /* gyro x */
-              0x00, 0x00, /* gyro y */ 
-              0x00, 0x00, /* gyro z */
-              0x00, /* Vibrations */
-              0x00, /* ASCII Free Character 4 */
-              0x00, /* ASCII Free Character 5 */
-              0x00, /* ASCII Free Character 6 */
-              0x00, /* Version Number */
-              0x7D, /* End sign */
-              0x00 /* Checksum */
+              0x7C, /* 0 */
+              HOTTV4_GPS_MODULE, /* 1 */ 
+              0x00, /* 2 Alarm */
+              HOTTV4_GPS_SENSOR_ID, /* 3 */
+              0x00, 0x00, /* 4-5 Alarm Value 1 and 2 */
+              0x00, /* 6 Flight direction */ 
+              0x00, 0x00, /* 7-8 Velocity in km/h*/ 
+              0x00, 0x00, 0x00, 0x00, 0x00, /* 9-13 Latitude */
+              0x00, 0x00, 0x00, 0x00, 0x00, /* 14-18 Longitude */
+              0x00, 0x00, /* 19-20 Distance */
+              0xF4, 0x01, /* 21-22 Altitude, 500 = 0m */
+              0x78, 0x00, /* 23-24 m_s, 1 = 0.01m/s */ 
+              0x78, /* 25 m_3s, 120 = 0 */
+              0x00, /* 26 Number of satelites */ 
+              0x00, /* 27 GPS fix character */
+              0x00, /* 28 Home direction */
+              0x00, /* 29 angle x-direction */
+              0x00, /* 30 angle y-direction */
+              0x00, /* 31 angle z-direction */
+              0x00, 0x00,  /* 32-33 gyro x */
+              0x00, 0x00, /* 34-35 gyro y */ 
+              0x00, 0x00, /* 36-37 gyro z */
+              0x00, /* 38 Vibrations */
+              0x00, /* 39 ASCII Free Character 4 */
+              0x00, /* 40 ASCII Free Character 5 */
+              0x00, /* 41 ASCII Free Character 6 */
+              0x00, /* 42 Version Number */
+              0x7D, /* 43 End sign */
+              0x00 /* 44 Checksum */
             };
 
 
 
-#if defined(UseGPS)
+#if defined(HOTTV4NAV)
 
   telemetry_data[26] = gpsData.sats;
 
@@ -461,7 +532,9 @@ static void hottV4SendGPSTelemetry() {
       updatePosition(telemetry_data, currentPosition.longitude, 14);
 
       /** GPS Speed in km/h */
-      telemetry_data[7] = getGpsSpeed()*36/1000;
+	  uint8_t gpsSpeed = (int)getGpsSpeed()*36/1000
+      telemetry_data[7] = gpsSpeed;
+	  telemetry_data[8] = (gpsSpeed >> 8) & 0xFF;
 
       /** Distance to home */
 	  if(isHomeBaseInitialized()) {
@@ -519,29 +592,29 @@ static void hottV4SendGPSTelemetry() {
 /**
  * Main method to send Vario telemetry data
  */
-static void hottV4SendVarioTelemetry() {
+static void FillVarioTelemetryPackage() {
   uint8_t telemetry_data[] = { 
-              0x7C,
-              HOTTV4_VARIO_MODULE, 
-              0x00, /* Alarm */
-              HOTTV4_VARIO_SENSOR_ID,
-              0x00, /* Inverse status */
-              0xF4, 0x01, /* Current altitude */ 
-              0xF4, 0x01, /* Max. altitude */ 
-              0xF4, 0x01, /* Min. altitude */
-              0x30, 0x75, /* m/s */
-              0x30, 0x75, /* m/3s  */
-              0x30, 0x75, /* m/10s */
-              0x00, 0x00, 0x00, 0x00, /* ASCII */
-              0x00, 0x00, 0x00, 0x00, /* ASCII */
-              0x00, 0x00, 0x00, 0x00, /* ASCII */
-              0x00, 0x00, 0x00, 0x00, /* ASCII */
-              0x00, 0x00, 0x00, 0x00, /* ASCII */
-              0x00,                   /* ASCII */
-              0x00, 0x00, 0x00, 0x00, /* free */
-              0x00, /* Version Number */
-              0x7D, /* End sign */
-              0x00  /* Checksum */
+              0x7C, /* 0 */
+              HOTTV4_VARIO_MODULE, /* 1 */ 
+              0x00, /* 2 Alarm */
+              HOTTV4_VARIO_SENSOR_ID, /* 3 */
+              0x00, /* 4 Inverse status */
+              0xF4, 0x01, /* 5-6 Current altitude 500 = 0m */ 
+              0xF4, 0x01, /* 7-8 Max. altitude 500 = 0m */ 
+              0xF4, 0x01, /* 9-10 Min. altitude 500 = 0m */
+              0x30, 0x75, /* 11-12 m_s 3000 = 0 */
+              0x30, 0x75, /* 13-14 m_3s  */
+              0x30, 0x75, /* 15-16 m_10s */
+              0x00, 0x00, 0x00, 0x00, /* 17-20 ASCII */
+              0x00, 0x00, 0x00, 0x00, /* 21-24 ASCII */
+              0x00, 0x00, 0x00, 0x00, /* 25-28 ASCII */
+              0x00, 0x00, 0x00, 0x00, /* 29-32 ASCII */
+              0x00, 0x00, 0x00, 0x00, /* 33-36 ASCII */
+              0x00,                   /* 37 ASCII */
+              0x00, 0x00, 0x00, 0x00, /* 38-41 free */
+              0x00, /* 42 Version Number */
+              0x7D, /* 43 End sign */
+              0x00  /* 44 Checksum */
             };
 
 #if defined(HOTTV4ALTITUDE)
@@ -550,7 +623,10 @@ static void hottV4SendVarioTelemetry() {
   telemetry_data[6] = (altitude >> 8) & 0xFF;
 
   telemetry_data[7] = maxAltitude;
+  telemetry_data[8] = (maxAltitude >> 8)  & 0xFF;
+  
   telemetry_data[9] = minAltitude;
+  telemetry_data[10] = (minAltitude >> 8) & 0xFF;
 
   unsigned int varioSound = hottv4UpdateAltVario();
 	
@@ -570,7 +646,8 @@ static void hottV4SendVarioTelemetry() {
   // Buffer for the available 21 ASCII + \0 chars
   char text[VARIO_ASCIIS+1];
   
-  if(flightMode == ATTITUDE_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_ATTITUDE);
+  if (batteryWarning || batteryAlarm) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
+  else if (flightMode == ATTITUDE_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_ATTITUDE);
   else snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_RATE);
 
   uint8_t offset = (VARIO_ASCIIS - strlen(text)) / 2;
@@ -599,19 +676,25 @@ bool hottV4Hook(uint8_t serialData) {
   switch (serialData) {
     case HOTTV4_GPS_MODULE:
     case '1':
-      hottV4SendGPSTelemetry();
+      FillGPSTelemetryPackage();
       return true;
       break;
     
     case HOTTV4_ELECTRICAL_AIR_MODULE:
     case '2':
-      hottV4SendEAMTelemetry();
+      FillEAMTelemetryPackage();
       return true;
       break;
          
     case HOTTV4_VARIO_MODULE:
     case '3':
-      hottV4SendVarioTelemetry();
+      FillVarioTelemetryPackage();
+      return true;
+      break;
+	  
+	case HOTTV4_GENERAL_MODULE:
+    case '4':
+      FillGeneralTelemetryPackage();
       return true;
       break;
   }
