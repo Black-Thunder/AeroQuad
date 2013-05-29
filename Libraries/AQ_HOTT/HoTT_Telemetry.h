@@ -374,8 +374,8 @@ static void hottV4SendEAMTelemetry() {
 	telemetry_data[27] = (altitude >> 8) & 0xFF;
 
 	unsigned int varioSound = hottv4UpdateAltVario();
-    telemetry_data[11] = telemetry_data[13] = varioSound;
-    telemetry_data[12] = telemetry_data[14] = (varioSound >> 8) & 0xFF;
+	telemetry_data[34] = telemetry_data[36] = varioSound;
+    telemetry_data[35] = (varioSound >> 8) & 0xFF;
   #endif
 
   hottv4UpdateFlightTime(telemetry_data);
@@ -495,8 +495,9 @@ static void hottV4SendGPSTelemetry() {
 	telemetry_data[22] = (altitude >> 8) & 0xFF;
 
 	unsigned int varioSound = hottv4UpdateAltVario();
-	telemetry_data[11] = varioSound;
-	telemetry_data[13] = 120;
+	telemetry_data[23]  = varioSound;
+    telemetry_data[24] = (varioSound >> 8) & 0xFF;
+	telemetry_data[25] = 120;
 #endif
 
 
