@@ -168,8 +168,9 @@ void readReceiver() {
 	if (checkFailsafeStatus())	{
 		overrideChannelValuesWithFailsafe();
 	} 
-	else {
+	else
 #endif
+	{
 		// Reduce receiver commands using receiverXmitFactor and center around 1500
 		for (byte channel = XAXIS; channel < THROTTLE; channel++) {
 			receiverCommand[channel] = ((receiverCommandSmooth[channel] - receiverZero[channel]) * receiverXmitFactor) + receiverZero[channel];
