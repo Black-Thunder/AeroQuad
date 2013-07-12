@@ -470,8 +470,8 @@ static void FillEAMTelemetryPackage() {
 static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index] = (value < 0);
   
-  uint8_t deg = value / 10000000; //49
-  uint32_t sec = (value - (deg * 10000000)); //4399388
+  uint8_t deg = value / 10000000;
+  uint32_t sec = (value - (deg * 10000000));
   uint8_t min = (sec * 60) / 10000000;
   sec = (((sec * 60) % 10000000) * 60) / 100000;
   
