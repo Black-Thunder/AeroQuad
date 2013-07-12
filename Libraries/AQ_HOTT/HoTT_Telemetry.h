@@ -468,12 +468,12 @@ static void FillEAMTelemetryPackage() {
  * N Deg MM.SSSS representation and puts it into GPS data frame.
  */
 static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
-  data[index] = (value < 0); 
-
-  uint8_t deg = value / 100000;
-  uint32_t sec = (value - (deg * 100000)) * 6;
-  uint8_t min = sec / 10000;
-  sec = sec % 10000;
+  data[index] = (value < 0);
+  
+  uint8_t deg = value / 10000000; //49
+  uint32_t sec = (value - (deg * 10000000)); //4399388
+  uint8_t min = (sec * 60) / 10000000;
+  sec = (((sec * 60) % 10000000) * 60) / 100000;
   
   uint16_t degMin = (deg * 100) + min;
 
@@ -481,7 +481,7 @@ static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index+2] = degMin >> 8; 
   data[index+3] = sec; 
   data[index+4] = sec >> 8;
-}
+} 
 #endif
 
 /**
@@ -519,8 +519,6 @@ static void FillGPSTelemetryPackage() {
               0x7D, /* 43 End sign */
               0x00 /* 44 Checksum */
             };
-
-
 
 #if defined(HOTTV4NAV)
 
