@@ -168,8 +168,8 @@ void processGpsNavigationStateFromReceiverCommand() {
 
 
 void processZeroThrottleFunctionFromReceiverCommand() {
-	// Disarm motors (left stick lower left corner)
-	if (receiverCommand[ZAXIS] < MINCHECK && motorArmed == ON) {
+	// Disarm motors
+	if (receiverCommand[XAXIS] < MINCHECK && receiverCommand[YAXIS] < MINCHECK && receiverCommand[ZAXIS] < MINCHECK && motorArmed == ON) {
 		commandAllMotors(MINCOMMAND);
 		motorArmed = OFF;
 		inFlight = false;
@@ -203,7 +203,7 @@ void processZeroThrottleFunctionFromReceiverCommand() {
 	}   
 
 	// Arm motors (left stick lower right corner)
-	if (receiverCommand[ZAXIS] > MAXCHECK && motorArmed == OFF && safetyCheck == ON) {
+	if (receiverCommand[YAXIS] < MINCHECK && receiverCommand[XAXIS] > MAXCHECK && receiverCommand[ZAXIS] > MAXCHECK && motorArmed == OFF && safetyCheck == ON) {
 
 #ifdef OSD_SYSTEM_MENU
 		if (menuOwnsSticks) {
