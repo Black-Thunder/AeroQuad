@@ -470,17 +470,14 @@ static void FillEAMTelemetryPackage() {
 static void updatePosition(uint8_t *data, uint32_t value, uint8_t index) {
   data[index] = (value < 0);
   
-  uint8_t deg = value / 10000000;
-  uint32_t sec = (value - (deg * 10000000));
-  uint8_t min = (sec * 60) / 10000000;
-  sec = (((sec * 60) % 10000000) * 60) / 100000;
+  value /= 10;
+  uint16_t first = value / 10000;
+  uint16_t second = value % 10000;
   
-  uint16_t degMin = (deg * 100) + min;
-
-  data[index+1] = degMin;
-  data[index+2] = degMin >> 8; 
-  data[index+3] = sec; 
-  data[index+4] = sec >> 8;
+  data[index+1] = first;
+  data[index+2] = first >> 8; 
+  data[index+3] = second; 
+  data[index+4] = second >> 8;
 } 
 #endif
 
@@ -523,7 +520,7 @@ static void FillGPSTelemetryPackage() {
 #if defined(HOTTV4NAV)
 
   telemetry_data[26] = gpsData.sats;
-
+	  
   if (gpsData.state > GPS_NOFIX)  {
       if(gpsData.state == GPS_FIX2D) telemetry_data[27] = telemetry_data[41] = HoTTGPS2DFix;
 	  else if(gpsData.state == GPS_FIX3D) telemetry_data[27] = telemetry_data[41] = HoTTGPS3DFix;
