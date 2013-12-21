@@ -193,6 +193,11 @@ static unsigned char hottVoiceOutput()
 	static char oldStatus = 0;
 	static int repeat;
 
+#if defined(GraupnerFailsafe)
+	if (isFailsafeActive) {
+		status = HoTTv4NotificationErrorReceiver;
+	}
+#endif
 
 #if defined(HOTTV4BATT)
 	if (speakBatteryWarning) {
@@ -644,7 +649,8 @@ static void FillVarioTelemetryPackage() {
   // Buffer for the available 21 ASCII + \0 chars
   char text[VARIO_ASCIIS+1];
   
-  if (batteryWarning || batteryAlarm) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
+  if (isFailsafeActive) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_FAILSAFE);
+  else if (batteryWarning || batteryAlarm) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
   else if (flightMode == ATTITUDE_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_ATTITUDE);
   else snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_RATE);
 

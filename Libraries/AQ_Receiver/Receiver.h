@@ -43,16 +43,18 @@ float receiverXmitFactor = 0.0;
 int receiverData[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
 int receiverZero[3] = {0,0,0};
 int receiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
-#if defined(GraupnerFailsafe)
-int oldReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
-int lastGoodReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
-#endif
 int receiverCommandSmooth[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0,};
 float receiverSlope[MAX_NB_CHANNEL] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
 float receiverOffset[MAX_NB_CHANNEL] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
 float receiverSmoothFactor[MAX_NB_CHANNEL] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
 int channelCal;
-int failsafeCounter = 0;
+
+#if defined(GraupnerFailsafe)
+	int oldReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
+	int lastGoodReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0,0,0};
+	boolean isFailsafeActive = false;
+	int failsafeCounter = 0;
+#endif
 
 void initializeReceiverParam(int nbChannel = 6) {
 
@@ -125,9 +127,11 @@ boolean checkFailsafeStatus() {
 	}
 	else {
 		failsafeCounter = 0;
+		isFailsafeActive = false;
 	}
 
 	if(failsafeCounter > 40) {
+		isFailsafeActive = true;
 		return true;
 	}
 	return false;
@@ -137,7 +141,7 @@ void overrideChannelValuesWithFailsafe() {
 	receiverCommand[XAXIS] = 1500;
 	receiverCommand[YAXIS] = 1500;
 	receiverCommand[ZAXIS] = 1500;
-	receiverCommand[THROTTLE] = 1520;
+	receiverCommand[THROTTLE] = 1450;
 	receiverCommand[MODE] = 2000;
 	receiverCommand[AUX1] = 2000;
 

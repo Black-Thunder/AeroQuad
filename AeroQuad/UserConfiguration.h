@@ -56,13 +56,13 @@
 // Use only one of the following definitions
 //For more information please refer to http://aeroquad.com/showwiki.php?title=Flight+Configurations
 
-//#define quadXConfig
+#define quadXConfig
 //#define quadPlusConfig
 //#define hexPlusConfig
 //#define hexXConfig      
 //#define triConfig
 //#define quadY4Config
-#define hexY6Config
+//#define hexY6Config
 //#define octoX8Config
 //#define octoPlusConfig		// EXPERIMENTAL: not completely re-tested
 //#define octoXConfig			// EXPERIMENTAL: not completely re-tested
@@ -99,8 +99,8 @@
 // *******************************************************************************************************************************
 // GPS Options
 // *******************************************************************************************************************************
-#define UseGPS		        // Enables GPS (for mega v2.0/v2.1 on Serial1 & AeroQuad32 on Serial2)
-#define UseGPSNavigator   
+//#define UseGPS		        // Enables GPS (for mega v2.0/v2.1 on Serial1 & AeroQuad32 on Serial2)
+//#define UseGPSNavigator   
 
 // Device specific settings
 //#define UseGPSMTKBINARY   // Set MTK devices to binary protocol (only DiyDrones MTK1.6 protocol supported)
@@ -190,16 +190,16 @@
 // On screen display implementation using MAX7456 chip. See MAX7456.h in libraries for more info and configuration.
 // For more information on how to setup OSD please refer to http://aeroquad.com/showwiki.php?title=On-Screen-Display
 // *************************************************************.******************************************************************
-#define OSD
+//#define OSD
 //#define ShowRSSI                  // This REQUIRES a RSSI reader
-#define PAL                       // uncomment this to default to PAL video
+//#define PAL                       // uncomment this to default to PAL video
 //#define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
 //#define CALLSIGN "KF7YRK"         // Show (optional) callsign
-#define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
+//#define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
 //#define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
 //#define OSD_LOADFONT              // Include MAX7456 font into binary, give & on serial to upload
 
-#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
+//#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
 
 //
 // *******************************************************************************************************************************

@@ -60,6 +60,7 @@
 
 /** ###### VARIO Text ###### */
 
+#define HOTTV4_VARIO_FAILSAFE "!! RC LOST !!"
 #define HOTTV4_VARIO_LOWVOLTAGE "!! LOW VOLTAGE !!"
 #define HOTTV4_VARIO_ATTITUDE "AeroQuad (Attitude)"
 #define HOTTV4_VARIO_RATE     "AeroQuad (Rate)"
