@@ -28,7 +28,7 @@ HardwareSerial *hottV4Serial;
 
 static uint8_t minutes = 0;
 static uint16_t milliseconds = 0;
-unsigned int varioSoundNeutral = 30000;
+const unsigned int varioSoundNeutral = 30000;
 static signed int maxAltitude = 500;
 static signed int minAltitude = 500;
 volatile unsigned int CountMilliseconds = 0;
@@ -37,7 +37,6 @@ bool isAHOff, isAHOn, isNavOn, isHoldOn, isGPSOff;
 /* ##################################################################### *
  *                HoTTv4 Common Serial                                   *
  * ##################################################################### */
-
 
 /**
  * Writes out given data to data register.
@@ -69,8 +68,6 @@ int hottV4SerialRead() {
     }
 }
 
-
-
 #define hottV4TelemetryBufferSize 45
 static uint8_t  hottV4TelemetryBuffer[hottV4TelemetryBufferSize];
 static byte  hottV4TelemetryBufferIndex;
@@ -91,7 +88,6 @@ static void hottV4SendBinary(uint8_t *data) {
 
   hottV4TelemetryBufferIndex = 0;
 }
-
 
 /* ##################################################################### *
  *                HoTTv4 Module specific Update functions                *
@@ -114,12 +110,12 @@ static void HoTTInvertDisplay(uint8_t *data) {
 /**
  * Updates battery voltage telemetry data with given value.
  * Resolution is in 0,1V, e.g. 0x7E == 12,6V.
- * If value is below batteryWarning, telemetry alarm is triggered
+ * If value is below speakBatteryWarning, telemetry alarm is triggered
  */
 static short hottv4UpdateBattery(uint8_t *data) {
 	short voltage = batteryData[0].voltage/10;
 
-	if (batteryWarning || batteryAlarm) {
+	if (speakBatteryWarning) {
 		HoTTInvertDisplay(data);
 	}
 
@@ -142,9 +138,6 @@ static long hottv4UpdateCapacity() {
 /**
  * Current relative altitude based on baro or ultrasonic values. 
  * Result is displayed in meter.
- *
- * @param data Pointer to telemetry data frame
- * @param lowByteIndex Index for the low byte that represents the altitude in telemetry data frame
  */
 static int32_t hottv4UpdateAlt() {
   int32_t alt = 0;
@@ -165,12 +158,10 @@ static int32_t hottv4UpdateAlt() {
   return alt;
 }
 
-
 static unsigned int hottv4UpdateAltVario() {
 	unsigned int varioSound = varioSoundNeutral;
 
-	if(altitudeHoldState == ON)
-	{
+	if(altitudeHoldState == ON)	{
 		if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound += 300;
 		else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound -= 300;
 	}
@@ -187,8 +178,7 @@ char CheckDelay(unsigned int t)	{
 	return(((t - CountMilliseconds) & 0x8000) >> 9);
 }
 
-static unsigned char hottVoiceOutput()
-	{
+static unsigned char hottVoiceOutput() {
 	unsigned char status = 0;
 	static char oldStatus = 0;
 	static int repeat;
@@ -313,14 +303,6 @@ static void hottv4UpdateFlightTime(uint8_t *data) {
  */
 void hottv4Init(HardwareSerial *serial) {
   hottV4Serial = serial;
-    
-  #if defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-    /* Enable PullUps on RX3
-     * without signal is to weak to be recognized
-     */
-    DDRJ &= ~(1 << 0);
-    PORTJ |= (1 << 0);
-  #endif
   hottV4Serial->begin(19200);
 }
 
@@ -331,7 +313,6 @@ void hottv4Init(HardwareSerial *serial) {
 /**
  * Main method to send General telemetry data
  */
-
 static void FillGeneralTelemetryPackage() {
 
  uint8_t telemetry_data[] = { 
@@ -392,7 +373,7 @@ static void FillGeneralTelemetryPackage() {
 	telemetry_data[33] = (capacity >> 8) & 0xFF;
   #endif
   
-    // Write out telemetry data as General Module to serial           
+   // Write out telemetry data as General Module to serial           
   hottV4SendBinary(telemetry_data);
 }
 
@@ -650,7 +631,7 @@ static void FillVarioTelemetryPackage() {
   char text[VARIO_ASCIIS+1];
   
   if (isFailsafeActive) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_FAILSAFE);
-  else if (batteryWarning || batteryAlarm) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
+  else if (speakBatteryWarning) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
   else if (flightMode == ATTITUDE_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_ATTITUDE);
   else snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_RATE);
 
@@ -668,10 +649,6 @@ static void FillVarioTelemetryPackage() {
   // Write out telemetry data as Vario Module to serial           
   hottV4SendBinary(telemetry_data);
 }
-
-/* ##################################################################### *
- *                HoTTv4 Text Mode                                       *
- * ##################################################################### */
 
 /**
  * Main entry point for HoTTv4 telemetry
@@ -712,7 +689,6 @@ enum HottStateMachine {
 	eHottSendByte,
 	eHottCleanUp
 } ;
-
 
 HottStateMachine hottState = eHottReadCmd;
 uint32 hottTime;
