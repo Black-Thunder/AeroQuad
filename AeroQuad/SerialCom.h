@@ -1023,7 +1023,7 @@ void reportVehicleState() {
 	  slowTelemetryByte++;
         }
       #else
-        Serial2.write(telemetryBuffer.bytes[slowTelemetryByte]);
+        Serial1.write(telemetryBuffer.bytes[slowTelemetryByte]);
         slowTelemetryByte++;
       #endif
     }
