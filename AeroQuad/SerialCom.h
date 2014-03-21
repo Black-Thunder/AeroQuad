@@ -1008,7 +1008,7 @@ void reportVehicleState() {
 #ifdef SoftModem
     softmodemInit();
 #else
-    Serial2.begin(1200);
+    Serial1.begin(57600);
 #endif
     slowTelemetryByte = 255;
   }
