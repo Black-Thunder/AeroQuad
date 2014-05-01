@@ -1507,14 +1507,16 @@ void process50HzTask() {
 void process10HzTask1() {
   
   #if defined(HeadingMagHold)
-  
     G_Dt = (currentTime - tenHZpreviousTime) / 1000000.0;
     tenHZpreviousTime = currentTime;
      
     measureMagnetometer(kinematicsAngle[XAXIS], kinematicsAngle[YAXIS]);
     
-    calculateHeading();
-    
+    calculateHeading(); 
+  #endif
+  
+  #ifdef SlowTelemetry
+    updateSlowTelemetry10Hz();
   #endif
 }
 
@@ -1551,10 +1553,6 @@ void process10HzTask3() {
     
     #if defined(UseGPS) || defined(BattMonitor)
       processLedStatus();
-    #endif
-    
-    #ifdef SlowTelemetry
-      updateSlowTelemetry10Hz();
     #endif
 }
 
