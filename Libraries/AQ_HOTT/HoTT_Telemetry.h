@@ -161,9 +161,9 @@ static int32_t hottv4UpdateAlt() {
 static unsigned int hottv4UpdateAltVario() {
 	unsigned int varioSound = varioSoundNeutral;
 
-	if(altitudeHoldState == ON)	{
-		if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound += 300;
-		else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound -= 300;
+	if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE)	{
+		if((receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound += 300;
+		else if((receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound -= 300;
 	}
 
 	return varioSound;
@@ -197,7 +197,7 @@ static unsigned char hottVoiceOutput() {
 
 	if(!SpeakHoTT) {
 #if defined(AltitudeHoldBaro) || defined(AltitudeHoldRangeFinder)
-		if(altitudeHoldState == ON)  isAHOn = true;
+		if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE)  isAHOn = true;
 		else if(altitudeHoldState == ALTPANIC || altitudeHoldState == OFF) isAHOff = true;
 
 		 if(isAHOn) {
@@ -207,7 +207,7 @@ static unsigned char hottVoiceOutput() {
 			 }
 		 }
 		 if(isAHOff) {
-			 if(altitudeHoldState == ON) {
+			 if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE) {
 				 isAHOff = false;
 				 SpeakHoTT = HoTTv4NotificationAltitudeOn;
 			 }
@@ -617,19 +617,14 @@ static void FillVarioTelemetryPackage() {
   telemetry_data[11] = telemetry_data[13] = telemetry_data[15] = varioSound;
   telemetry_data[12] = telemetry_data[14] = telemetry_data[16] = (varioSound >> 8) & 0xFF;
 
-  if(altitudeHoldState == ALTITUDE_HOLD_STATE) {
-	  if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) telemetry_data[38] = '+';
-	  else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) telemetry_data[38] = '-';
-	  else telemetry_data[38] = '=';
-	  }
-  else if (altitudeHoldState == VELOCITY_HOLD_STATE) {
-  	  if((receiverCommand[THROTTLE] > (altitudeHoldThrottle + altitudeHoldBump))) telemetry_data[38] = '+';
-	  else if((receiverCommand[THROTTLE] < (altitudeHoldThrottle - altitudeHoldBump))) telemetry_data[38] = '-';
+  if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE) {
+	  if((receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump))) telemetry_data[38] = '+';
+	  else if((receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump))) telemetry_data[38] = '-';
 	  else telemetry_data[38] = '=';
   }
   else if (altitudeHoldState == ALTPANIC) {
 	  telemetry_data[38] = '!';
-	  }
+  }
 #endif
 
   // Buffer for the available 21 ASCII + \0 chars
