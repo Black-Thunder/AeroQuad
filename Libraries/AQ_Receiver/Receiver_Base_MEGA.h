@@ -30,6 +30,12 @@ float receiverMinValue[MAX_NB_CHANNEL] = {1000,1000,1000,1000,1000,1000,1000,100
 float receiverMaxValue[MAX_NB_CHANNEL] = {2000,2000,2000,2000,2000,2000,2000,2000};
 byte receiverChannelMap[MAX_NB_CHANNEL] = {XAXIS,YAXIS,ZAXIS,THROTTLE,MODE,AUX1,AUX2,AUX3};
 
+#if defined(GraupnerFailsafe)
+	int lastGoodReceiverCommand[MAX_NB_CHANNEL] = {0,0,0,0,0,0,0,0};
+	boolean isFailsafeActive = false;
+	int failsafeCounter = 0;
+#endif
+
 void initializeReceiverPPM();
 void initializeReceiverPWM();
 void initializeReceiverSBUS();
@@ -44,13 +50,68 @@ int getRawChannelValueSBUS(byte channel);
 
 intFunctionPtrByte getRawChannelValue[] = {getRawChannelValuePPM,getRawChannelValuePWM,getRawChannelValueSBUS};
 
+#if defined(GraupnerFailsafe)
+boolean areOldAndNewChannelValuesTheSame() {
+	bool areSame = true;
+
+	for (byte channel = XAXIS; channel < LAST_CHANNEL; channel++) {
+		if(lastGoodReceiverCommand[channel] != (map(((*getRawChannelValue[receiverTypeUsed])(channel)),receiverMinValue[channel],receiverMaxValue[channel],1000,2000))) {
+			areSame = false;
+		}
+	}
+
+	return areSame;
+}
+
+boolean checkFailsafeStatus() {
+
+	if (areOldAndNewChannelValuesTheSame())	{
+		failsafeCounter++;
+	}
+	else {
+		failsafeCounter = 0;
+		isFailsafeActive = false;
+	}
+
+	if(failsafeCounter > 40) {
+		isFailsafeActive = true;
+		return true;
+	}
+	return false;
+}
+
+void overrideChannelValuesWithFailsafe() {
+	receiverCommand[receiverChannelMap[XAXIS]] = 1500;
+	receiverCommand[receiverChannelMap[YAXIS]] = 1500;
+	receiverCommand[receiverChannelMap[ZAXIS]] = 1500;
+	receiverCommand[receiverChannelMap[THROTTLE]] = 1400;
+	receiverCommand[receiverChannelMap[MODE]] = 2000;
+	receiverCommand[receiverChannelMap[AUX1]] = 2000;
+
+	if (LAST_CHANNEL == 8) {
+		receiverCommand[receiverChannelMap[AUX2]] = 1000;
+		receiverCommand[receiverChannelMap[AUX3]] = 1000;
+	}
+}
+#endif
 
 void readReceiver()
 {
   for(byte channel = XAXIS; channel < LAST_CHANNEL; channel++) {
-
-    // Apply receiver calibration adjustment
-	receiverCommand[channel] = map(((*getRawChannelValue[receiverTypeUsed])(channel)),receiverMinValue[channel],receiverMaxValue[channel],1000,2000);
+    #if defined(GraupnerFailsafe)
+		if (checkFailsafeStatus())	{
+			overrideChannelValuesWithFailsafe();
+		} 
+		else
+	#endif
+		{
+			// Apply receiver calibration adjustment
+			receiverCommand[channel] = map(((*getRawChannelValue[receiverTypeUsed])(channel)),receiverMinValue[channel],receiverMaxValue[channel],1000,2000);
+		
+			#if defined(GraupnerFailsafe)
+				lastGoodReceiverCommand[channel] = receiverCommand[channel];
+			#endif
+		}
   }
 }
   

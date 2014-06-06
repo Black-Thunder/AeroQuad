@@ -201,11 +201,15 @@
 
 
 void processZeroThrottleFunctionFromReceiverCommand() {
-  // Disarm motors (left stick lower left corner)
-  if (receiverCommand[receiverChannelMap[ZAXIS]] < MINCHECK && motorArmed == ON) {
+  // Disarm motors
+  if (receiverCommand[receiverChannelMap[XAXIS]] < MINCHECK && receiverCommand[receiverChannelMap[YAXIS]] < MINCHECK && receiverCommand[receiverChannelMap[ZAXIS]] < MINCHECK && motorArmed == ON) {
     commandAllMotors(MINCOMMAND);
     motorArmed = OFF;
     inFlight = false;
+
+    #if defined GraupnerHoTTTelemetry
+      SpeakHoTT = HoTTv4NotificationMicrocopterOff;
+    #endif
 
     #ifdef OSD
       notifyOSD(OSD_CENTER|OSD_WARN, "MOTORS UNARMED");
@@ -220,6 +224,10 @@ void processZeroThrottleFunctionFromReceiverCommand() {
 
   // Zero Gyro and Accel sensors (left stick lower left, right stick lower right corner)
   if ((receiverCommand[receiverChannelMap[ZAXIS]] < MINCHECK) && (receiverCommand[receiverChannelMap[XAXIS]] > MAXCHECK) && (receiverCommand[receiverChannelMap[YAXIS]] < MINCHECK)) {
+    #if defined GraupnerHoTTTelemetry
+      SpeakHoTT = HoTTv4NotificationCalibrating;
+    #endif
+
     calibrateGyro();
     computeAccelBias();
     storeSensorsZeroToEEPROM();
@@ -227,8 +235,12 @@ void processZeroThrottleFunctionFromReceiverCommand() {
     pulseMotors(3);
   }   
 
-  // Arm motors (left stick lower right corner)
-  if (receiverCommand[receiverChannelMap[ZAXIS]] > MAXCHECK && motorArmed == OFF && safetyCheck == ON) {
+  // Arm motors
+  if (receiverCommand[receiverChannelMap[YAXIS]] < MINCHECK && receiverCommand[receiverChannelMap[XAXIS]] > MAXCHECK && receiverCommand[receiverChannelMap[ZAXIS]] > MAXCHECK && motorArmed == OFF && safetyCheck == ON) {
+
+    #if defined GraupnerHoTTTelemetry
+      SpeakHoTT = HoTTv4NotificationStarting;
+    #endif
 
     #ifdef OSD_SYSTEM_MENU
       if (menuOwnsSticks) {

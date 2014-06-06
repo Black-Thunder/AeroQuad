@@ -42,11 +42,11 @@
 BUILDTYPE ?= STM32
 #BUILDTYPE ?= XMEGA
 
-#BOARD ?= aeroquad32
+BOARD ?= aeroquad32
 #BOARD ?= aeroquad32f1
 #BOARD ?= aeroquad32mini
 #BOARD	= discovery_f4
-BOARD ?= freeflight
+#BOARD ?= freeflight
 
 V=1
 
@@ -166,7 +166,7 @@ EXTRAINCDIRS += $(LIBDIR)/AQ_Accelerometer $(LIBDIR)/AQ_BarometricSensor $(LIBDI
  $(LIBDIR)/AQ_OSD  $(LIBDIR)/AQ_Platform_APM $(LIBDIR)/AQ_Platform_CHR6DM \
  $(LIBDIR)/AQ_Platform_MPU6000 $(LIBDIR)/AQ_Platform_Wii $(LIBDIR)/AQ_RangeFinder \
  $(LIBDIR)/AQ_Receiver $(LIBDIR)/AQ_SPI $(LIBDIR)/AQ_RSSI $(LIBDIR)/AQ_SoftModem \
- $(LIBDIR)/AQ_RSCode
+ $(LIBDIR)/AQ_RSCode $(LIBDIR)/AQ_HoTT
 
 
 # Processor frequency.

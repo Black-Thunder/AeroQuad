@@ -1,27 +1,27 @@
 objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
- d:/Working/AeroQuad/AeroQuad32/AeroQuadMain.cpp \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/AeroQuadMain.cpp \
  ../AeroQuad/UserConfiguration.h ../AeroQuad32/SerialMapping.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdint.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdint.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdlib.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/ieeefp.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/newlib.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/config.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/features.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stddef.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/reent.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/_types.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_types.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_default_types.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/lock.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/stdlib.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/alloca.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/string.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/string.h \
- d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include-fixed/math.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdint.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdint.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdlib.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/ieeefp.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/newlib.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/config.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/features.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stddef.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/reent.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/_types.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_types.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_default_types.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/lock.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/stdlib.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/alloca.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/string.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/string.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include-fixed/math.h \
  ../Libmaple/libmaple/wirish/wirish.h \
  ../Libmaple/libmaple/libmaple/libmaple.h \
  ../Libmaple/libmaple/libmaple/libmaple_types.h \
@@ -60,8 +60,8 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libmaple/libmaple/wirish/HardwareTimer.h \
  ../Libmaple/libmaple/wirish/usb_serial.h \
  ../Libmaple/libmaple/wirish/Print.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AeroQuad.ino \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/UserConfiguration.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AeroQuad.ino \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/UserConfiguration.h \
  ../AeroQuad32/MapleCompatibility/EEPROM.h \
  ../Libmaple/libmaple/wirish/wirish.h \
  ../AeroQuad32/MapleCompatibility/flash_stm32.h \
@@ -69,15 +69,16 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libraries/AQ_Defines/GlobalDefined.h \
  ../AeroQuad32/MapleCompatibility/Arduino.h \
  ../AeroQuad32/MapleCompatibility/WProgram.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AeroQuad.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AeroQuad.h \
  ../AeroQuad32/MapleCompatibility/pins_arduino.h \
  ../Libraries/AQ_Gps/GpsDataType.h ../Libraries/AQ_Math/AQMath.h \
  ../Libraries/AQ_Receiver/Receiver_Base.h \
  ../Libraries/AQ_Receiver/ReceiverType.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/PID.h \
- ../Libraries/AQ_Math/FourtOrderFilter.h ../Libraries/AQ_Math/vector3.h \
- ../Libraries/AQ_Math/rotations.h ../AeroQuad32/AeroQuad_STM32.h \
- ../Libraries/AQ_Receiver/Receiver_AQ32.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/PID.h \
+ ../Libraries/AQ_Math/FourtOrderFilter.h \
+ ../Libraries/AQ_BatteryMonitor/BatteryMonitorTypes.h \
+ ../Libraries/AQ_Math/vector3.h ../Libraries/AQ_Math/rotations.h \
+ ../AeroQuad32/AeroQuad_STM32.h ../Libraries/AQ_Receiver/Receiver_AQ32.h \
  ../Libraries/AQ_Receiver/Receiver_Base_MEGA.h \
  ../Libraries/AQ_Receiver/Receiver_Base.h \
  ../AeroQuad32/platform_aeroquad32.h ../Libraries/AQ_I2C/Device_I2C.h \
@@ -88,6 +89,7 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libraries/AQ_Gyroscope/Gyroscope.h \
  ../Libraries/AQ_Accelerometer/Accelerometer_MPU6000.h \
  ../Libraries/AQ_Accelerometer/Accelerometer.h \
+ ../Libraries/AQ_Compass/Compass.h \
  ../Libraries/AQ_FlightControlProcessor/FlightConfigMEGA.h \
  ../Libraries/AQ_FlightControlProcessor/FlightConfigType.h \
  ../Libraries/AQ_FlightControlProcessor/FlightControlQuadX.h \
@@ -104,19 +106,31 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
  ../Libraries/AQ_FlightControlProcessor/FlightControlOctoPlus.h \
  ../Libraries/AQ_FlightControlProcessor/FlightControlOctoX.h \
  ../Libraries/AQ_Kinematics/Kinematics.h \
- ../Libraries/AQ_Kinematics/Kinematics_ARG.h \
+ ../Libraries/AQ_Kinematics/Kinematics_MARG.h \
  ../Libraries/AQ_Kinematics/Kinematics.h \
+ ../Libraries/AQ_Kinematics/MagnetometerDeclinationDB.h \
  ../Libraries/AQ_Motors/Motors_STM32.h ../Libraries/AQ_Motors/Motors.h \
+ ../Libraries/AQ_Compass/Magnetometer_HMC5883L.h \
+ ../Libraries/AQ_Compass/Compass.h \
+ ../Libraries/AQ_Compass/Magnetometer_HMC58xx.h \
  ../Libraries/AQ_BarometricSensor/BarometricSensor_MS5611.h \
  ../Libraries/AQ_BarometricSensor/BarometricSensor.h \
  ../Libraries/AQ_Kinematics/VelocityProcessor.h \
  ../Libraries/AQ_Math/FifteenFloatBuffer.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/FlightControlProcessor.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/FlightCommandProcessor.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/DataStorage.h \
- d:/Working/AeroQuad/AeroQuad32/../AeroQuad/SerialCom.h
+ ../Libraries/AQ_BatteryMonitor/BatteryMonitor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/FlightControlProcessor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/FlightCommandProcessor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/DataStorage.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/LedStatusProcessor.h \
+ C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/SerialCom.h \
+ ../Libraries/AQ_HoTT/HoTT_Telemetry.h ../Libraries/AQ_HoTT/HoTT.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdio.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdarg.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/types.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/types.h \
+ c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/stdio.h
 
 ../AeroQuad/UserConfiguration.h:
 
@@ -124,45 +138,45 @@ objSTM32/dummy/../AeroQuad32/AeroQuadMain.o: \
 
 ../AeroQuad32/MapleCompatibility/WProgram.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdint.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdint.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdint.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdint.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdlib.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdlib.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/ieeefp.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/ieeefp.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/newlib.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/newlib.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/config.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/config.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/features.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/features.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stddef.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stddef.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/reent.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/reent.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/_ansi.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/_types.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/_types.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_types.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_types.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_default_types.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/_default_types.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/lock.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/lock.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/stdlib.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/stdlib.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/alloca.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/alloca.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/string.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/string.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/string.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/string.h:
 
-d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include-fixed/math.h:
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include-fixed/math.h:
 
 ../Libmaple/libmaple/wirish/wirish.h:
 
@@ -244,9 +258,9 @@ d:\users\kenny\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/
 
 ../Libmaple/libmaple/wirish/Print.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AeroQuad.ino:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AeroQuad.ino:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/UserConfiguration.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/UserConfiguration.h:
 
 ../AeroQuad32/MapleCompatibility/EEPROM.h:
 
@@ -262,7 +276,7 @@ d:/Working/AeroQuad/AeroQuad32/../AeroQuad/UserConfiguration.h:
 
 ../AeroQuad32/MapleCompatibility/WProgram.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AeroQuad.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AeroQuad.h:
 
 ../AeroQuad32/MapleCompatibility/pins_arduino.h:
 
@@ -274,9 +288,11 @@ d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AeroQuad.h:
 
 ../Libraries/AQ_Receiver/ReceiverType.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/PID.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/PID.h:
 
 ../Libraries/AQ_Math/FourtOrderFilter.h:
+
+../Libraries/AQ_BatteryMonitor/BatteryMonitorTypes.h:
 
 ../Libraries/AQ_Math/vector3.h:
 
@@ -307,6 +323,8 @@ d:/Working/AeroQuad/AeroQuad32/../AeroQuad/PID.h:
 ../Libraries/AQ_Accelerometer/Accelerometer_MPU6000.h:
 
 ../Libraries/AQ_Accelerometer/Accelerometer.h:
+
+../Libraries/AQ_Compass/Compass.h:
 
 ../Libraries/AQ_FlightControlProcessor/FlightConfigMEGA.h:
 
@@ -340,13 +358,21 @@ d:/Working/AeroQuad/AeroQuad32/../AeroQuad/PID.h:
 
 ../Libraries/AQ_Kinematics/Kinematics.h:
 
-../Libraries/AQ_Kinematics/Kinematics_ARG.h:
+../Libraries/AQ_Kinematics/Kinematics_MARG.h:
 
 ../Libraries/AQ_Kinematics/Kinematics.h:
+
+../Libraries/AQ_Kinematics/MagnetometerDeclinationDB.h:
 
 ../Libraries/AQ_Motors/Motors_STM32.h:
 
 ../Libraries/AQ_Motors/Motors.h:
+
+../Libraries/AQ_Compass/Magnetometer_HMC5883L.h:
+
+../Libraries/AQ_Compass/Compass.h:
+
+../Libraries/AQ_Compass/Magnetometer_HMC58xx.h:
 
 ../Libraries/AQ_BarometricSensor/BarometricSensor_MS5611.h:
 
@@ -356,14 +382,32 @@ d:/Working/AeroQuad/AeroQuad32/../AeroQuad/PID.h:
 
 ../Libraries/AQ_Math/FifteenFloatBuffer.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h:
+../Libraries/AQ_BatteryMonitor/BatteryMonitor.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/FlightControlProcessor.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/AltitudeControlProcessor.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/FlightCommandProcessor.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/FlightControlProcessor.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/FlightCommandProcessor.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/DataStorage.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/HeadingHoldProcessor.h:
 
-d:/Working/AeroQuad/AeroQuad32/../AeroQuad/SerialCom.h:
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/DataStorage.h:
+
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/LedStatusProcessor.h:
+
+C:/MinGW/msys/1.0/home/Klaus/AeroQuad32/../AeroQuad/SerialCom.h:
+
+../Libraries/AQ_HoTT/HoTT_Telemetry.h:
+
+../Libraries/AQ_HoTT/HoTT.h:
+
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/stdio.h:
+
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/include/stdarg.h:
+
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/types.h:
+
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/machine/types.h:
+
+c:\program\ files\ (x86)\codesourcery\sourcery_codebench_lite_for_arm_eabi\bin\../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/sys/stdio.h:

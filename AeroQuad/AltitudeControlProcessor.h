@@ -94,4 +94,3 @@ void processAltitudeControl()
 #endif
 
 #endif // _AQ_ALTITUDE_CONTROL_PROCESSOR_H_
-

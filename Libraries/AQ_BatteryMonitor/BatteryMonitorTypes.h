@@ -46,6 +46,7 @@ extern struct BatteryData batteryData[];       // BatteryMonitor config, !! MUST
 extern byte               numberOfBatteries; // number of batteries monitored, defined by BatteryMonitor
 extern boolean            batteryAlarm;      // any battery in alarm state used for e.g. autodescent
 extern boolean            batteryWarning;    // any battery in warning state
+extern boolean			  speakBatteryWarning;
 
 // Helper macros to make battery definitions cleaner
 #ifdef BM_EXTENDED

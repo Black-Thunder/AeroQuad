@@ -49,19 +49,19 @@
 //  #define UseSBUSRSSIReader		
 
   
-  #define UseGPS		        
-  #define UseGPSNavigator
+//  #define UseGPS		        
+//  #define UseGPSNavigator
 
 
-  #define OSD
+//  #define OSD
 //  #define ShowRSSI                  // This REQUIRES a RSSI reader
 //  #define PAL                       // uncomment this to default to PAL video
-  #define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
+//  #define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
 //  #define CALLSIGN "AQ"             // Show (optional) callsign
-  #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
-  #define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
+// #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
+//  #define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
 
-  #define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
+//  #define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
 
 
 #endif
@@ -892,6 +892,10 @@
   #include "SerialCom.h"
 #endif
 
+#ifdef GraupnerHoTTTelemetry
+  #include <HoTT_Telemetry.h>
+#endif
+
 
 
 /*******************************************************************
@@ -980,6 +984,10 @@ void setup() {
 
   #ifdef SlowTelemetry
      initSlowTelemetry();
+  #endif
+
+  #ifdef GraupnerHoTTTelemetry
+	hottv4Init(&Serial3);
   #endif
   
   #if defined (USE_THROTTLE_PID_ADJUSTMENT)
@@ -1197,10 +1205,11 @@ void loop () {
     previousTime = currentTime;
   }
   
+  #if defined (GraupnerHoTTTelemetry)
+	hottHandler();
+  #endif
+
   if (frameCounter >= 100) {
       frameCounter = 0;
   }
 }
-
-
-

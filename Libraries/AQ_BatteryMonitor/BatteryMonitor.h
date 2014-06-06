@@ -28,6 +28,7 @@
 byte    numberOfBatteries = 0; 
 boolean batteryAlarm      = false;
 boolean batteryWarning    = false;
+boolean speakBatteryWarning = false;
 byte    buzzerState       = 0;
 
 unsigned short batteryAlarmCellVoltage   = 333; // 9.9V on 3S
@@ -73,8 +74,11 @@ byte batteryGetCellCount(byte batNo) {
   else if (batteryData[batNo].voltage < 860) {
     return 2;
   }
-  else {
+  else if (batteryData[batNo].voltage < 1300) {
     return 3;
+  }
+  else {
+	return 4;
   }
 }
 
@@ -94,10 +98,21 @@ boolean batteryIsWarning(byte batNo) {
   return false;
 }
 
+#if defined GraupnerHoTTTelemetry
+boolean speakWarning(byte batNo) {
+
+  if (batteryData[batNo].voltage < batteryGetCellCount(batNo) * 350) {
+    return true;
+  }
+  return false;
+}
+#endif
+
 void measureBatteryVoltage(unsigned short deltaTime) {
 
   batteryAlarm = false;  
   batteryWarning = false;
+  speakBatteryWarning = false;
   for (int i = 0; i < numberOfBatteries; i++) {
     batteryData[i].voltage = (long)analogRead(batteryData[i].vPin) * batteryData[i].vScale / (1L<<ADC_NUMBER_OF_BITS) + batteryData[i].vBias;
 #ifdef BM_EXTENDED
@@ -119,6 +134,9 @@ void measureBatteryVoltage(unsigned short deltaTime) {
     if (batteryIsWarning(i)) {
       batteryWarning = true;
     }
+	if(speakWarning(i)) {
+	  speakBatteryWarning = true;
+	}
   }  
 }
 #endif
