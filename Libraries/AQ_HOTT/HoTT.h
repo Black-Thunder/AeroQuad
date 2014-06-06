@@ -62,9 +62,12 @@
 
 #define HOTTV4_VARIO_FAILSAFE "!! RC LOST !!"
 #define HOTTV4_VARIO_LOWVOLTAGE "!! LOW VOLTAGE !!"
-#define HOTTV4_VARIO_ATTITUDE "AeroQuad (Attitude)"
-#define HOTTV4_VARIO_HORIZON "AeroQuad (Horizon)"
-#define HOTTV4_VARIO_RATE "AeroQuad (Rate)"
+#define HOTTV4_VARIO_ATTITUDE "Attitude"
+#define HOTTV4_VARIO_HORIZON "Horizon"
+#define HOTTV4_VARIO_RATE "Rate"
+#define HOTTV4_VARIO_ALTITUDE " / Altitude"
+#define HOTTV4_VARIO_VELOCITY " / Velocity"
+#define HOTTV4_VARIO_OFF " / Off"
 
 /** ###### Common settings ###### */
 

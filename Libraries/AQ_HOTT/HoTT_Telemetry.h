@@ -630,12 +630,18 @@ static void FillVarioTelemetryPackage() {
   // Buffer for the available 21 ASCII + \0 chars
   char text[VARIO_ASCIIS+1];
   
-  if (isFailsafeActive) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_FAILSAFE);
-  else if (speakBatteryWarning) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_LOWVOLTAGE);
-  else if (flightMode == ATTITUDE_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_ATTITUDE);
-  else if (flightMode == HORIZON_FLIGHT_MODE) snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_HORIZON);
-  else snprintf(text, VARIO_ASCIIS+1, HOTTV4_VARIO_RATE);
-
+  if (isFailsafeActive) strcpy(text, HOTTV4_VARIO_FAILSAFE);
+  else if (speakBatteryWarning) strcpy(text, HOTTV4_VARIO_LOWVOLTAGE);
+  else {
+    if (flightMode == ATTITUDE_FLIGHT_MODE) strcpy(text, HOTTV4_VARIO_ATTITUDE);
+    else if (flightMode == HORIZON_FLIGHT_MODE) strcpy(text, HOTTV4_VARIO_HORIZON);
+	else if (flightMode == RATE_FLIGHT_MODE) strcpy(text, HOTTV4_VARIO_RATE);
+	
+    if(altitudeHoldState == VELOCITY_HOLD_STATE) strcat(text, HOTTV4_VARIO_VELOCITY);
+    else if (altitudeHoldState == ALTITUDE_HOLD_STATE) strcat(text, HOTTV4_VARIO_ALTITUDE);
+	else if (altitudeHoldState == OFF) strcat(text, HOTTV4_VARIO_OFF);
+  }
+ 
   uint8_t offset = (VARIO_ASCIIS - strlen(text)) / 2;
 
   for(uint8_t index = 0; (index + offset) < VARIO_ASCIIS; index++) {
