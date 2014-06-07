@@ -58,7 +58,7 @@
 //  #define PAL                       // uncomment this to default to PAL video
 //  #define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
 //  #define CALLSIGN "AQ"             // Show (optional) callsign
-// #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
+//  #define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
 //  #define USUnits                   // Enable for US units (feet,miles,mph), leave uncommented for metric units (meter,kilometer,km/h)
 
 //  #define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD or SERIAL_LCD
