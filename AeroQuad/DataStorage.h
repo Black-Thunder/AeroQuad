@@ -181,7 +181,7 @@ void initializeEEPROM() {
     #if defined AltitudeHoldBaro
       baroSmoothFactor = 0.07;
     #endif
-    altitudeHoldBump = 30;
+    altitudeHoldBump = 40;
     altitudeHoldPanicStickMovement = 300;
   #endif
   

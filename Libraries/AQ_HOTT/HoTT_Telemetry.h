@@ -331,7 +331,7 @@ static void FillGeneralTelemetryPackage() {
 			  0x00, 0x00, /* 19-20 FuelCapacity */
 			  0x00, 0x00, /* 21-22 Rpm */
               0xF4, 0x01, /* 23-24 Altitude Offset -500. 500 == 0 */
-			  0x48, 0x00, /* 25-26 m_s 3000 = 0 */ 
+			  0x48, 0x00, /* 25-26 m_s 30000 = 0 */ 
               0x78, /* 27 m_3s 120 = 0*/
               0x00, 0x00, /* 28-29 Current LSB, MSB 1 = 0.1A */
               0x00, 0x00, /* 30-31 Drive Voltage 66 = 6.6V*/
@@ -586,7 +586,7 @@ static void FillVarioTelemetryPackage() {
               0xF4, 0x01, /* 5-6 Current altitude 500 = 0m */ 
               0xF4, 0x01, /* 7-8 Max. altitude 500 = 0m */ 
               0xF4, 0x01, /* 9-10 Min. altitude 500 = 0m */
-              0x30, 0x75, /* 11-12 m_s 3000 = 0 */
+              0x30, 0x75, /* 11-12 m_s 30000 = 0 */
               0x30, 0x75, /* 13-14 m_3s  */
               0x30, 0x75, /* 15-16 m_10s */
               0x00, 0x00, 0x00, 0x00, /* 17-20 ASCII */
@@ -639,7 +639,7 @@ static void FillVarioTelemetryPackage() {
 	
     if(altitudeHoldState == VELOCITY_HOLD_STATE) strcat(text, HOTTV4_VARIO_VELOCITY);
     else if (altitudeHoldState == ALTITUDE_HOLD_STATE) strcat(text, HOTTV4_VARIO_ALTITUDE);
-	else if (altitudeHoldState == OFF) strcat(text, HOTTV4_VARIO_OFF);
+	else if (altitudeHoldState == OFF || altitudeHoldState == ALTPANIC) strcat(text, HOTTV4_VARIO_OFF);
   }
  
   uint8_t offset = (VARIO_ASCIIS - strlen(text)) / 2;

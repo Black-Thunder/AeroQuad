@@ -63,12 +63,12 @@
     
     if (isVelocityHoldStateEnabledByUser()) {
       if (altitudeHoldState != ALTPANIC ) {  // check for special condition with manditory override of Altitude hold
-        if (!isVelocityHoldInitialisez) {
+        if (!isVelocityHoldInitialized) {
           baroAltitudeToHoldTarget = estimatedAltitude;//getBaroAltitude();
           PID[BARO_ALTITUDE_HOLD_PID_IDX].lastError = baroAltitudeToHoldTarget;
           altitudeHoldThrottle = receiverCommand[receiverChannelMap[THROTTLE]];
           isAltitudeHoldInitialized = false;
-          isVelocityHoldInitialisez = true;
+          isVelocityHoldInitialized = true;
         }
         altitudeHoldState = VELOCITY_HOLD_STATE;
       }
@@ -80,14 +80,14 @@
           PID[BARO_ALTITUDE_HOLD_PID_IDX].lastError = baroAltitudeToHoldTarget;
           altitudeHoldThrottle = receiverCommand[receiverChannelMap[THROTTLE]];
           isAltitudeHoldInitialized = true;
-          isVelocityHoldInitialisez = false;
+          isVelocityHoldInitialized = false;
         }
         altitudeHoldState = ALTITUDE_HOLD_STATE;
       }
     }
     else {
       isAltitudeHoldInitialized = false;
-      isVelocityHoldInitialisez = false;
+      isVelocityHoldInitialized = false;
       altitudeHoldState = OFF;
     }
   }
