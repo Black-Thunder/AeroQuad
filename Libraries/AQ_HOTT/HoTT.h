@@ -23,6 +23,8 @@
 
 #define HOTTV4_UPDATE_INTERVAL 2000
 
+#define HOTTV4_VELOCITY_DEAD_BAND 20
+
 #if defined(BattMonitor)
 #define HOTTV4BATT
 #endif

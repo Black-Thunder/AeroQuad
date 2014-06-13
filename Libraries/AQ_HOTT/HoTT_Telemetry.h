@@ -160,10 +160,16 @@ static int32_t hottv4UpdateAlt() {
 
 static unsigned int hottv4UpdateAltVario() {
 	unsigned int varioSound = varioSoundNeutral;
-
-	if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE)	{
-		if((receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump))) varioSound += 300;
-		else if((receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump))) varioSound -= 300;
+	
+	if(altitudeHoldState == VELOCITY_HOLD_STATE) {
+		if(abs((receiverCommand[receiverChannelMap[THROTTLE]] - altitudeHoldThrottle)) > HOTTV4_VELOCITY_DEAD_BAND)
+			varioSound += ((receiverCommand[receiverChannelMap[THROTTLE]] - altitudeHoldThrottle) / 2);
+		
+		if(varioSound < varioSoundNeutral && varioSound > varioSoundNeutral - 50) varioSound = varioSoundNeutral - 50; //otherwise there will be no sound <0,5m/s
+	}
+	else if(altitudeHoldState == ALTITUDE_HOLD_STATE) {
+		if(receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump)) varioSound += 300;
+		else if(receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump)) varioSound -= 300;
 	}
 
 	return varioSound;
@@ -616,14 +622,25 @@ static void FillVarioTelemetryPackage() {
 	
   telemetry_data[11] = telemetry_data[13] = telemetry_data[15] = varioSound;
   telemetry_data[12] = telemetry_data[14] = telemetry_data[16] = (varioSound >> 8) & 0xFF;
-
-  if(altitudeHoldState == VELOCITY_HOLD_STATE || altitudeHoldState == ALTITUDE_HOLD_STATE) {
-	  if((receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump))) telemetry_data[38] = '+';
-	  else if((receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump))) telemetry_data[38] = '-';
-	  else telemetry_data[38] = '=';
+  
+  if(altitudeHoldState == VELOCITY_HOLD_STATE) {
+	if(abs((receiverCommand[receiverChannelMap[THROTTLE]] - altitudeHoldThrottle)) < HOTTV4_VELOCITY_DEAD_BAND)
+		telemetry_data[38] = '=';
+	else if(receiverCommand[receiverChannelMap[THROTTLE]] > altitudeHoldThrottle)
+		telemetry_data[38] = '+';
+	else
+		telemetry_data[38] = '-';
+  }
+  if(altitudeHoldState == ALTITUDE_HOLD_STATE) {
+	if (receiverCommand[receiverChannelMap[THROTTLE]] > (altitudeHoldThrottle + altitudeHoldBump))
+		telemetry_data[38] = '+';
+	else if (receiverCommand[receiverChannelMap[THROTTLE]] < (altitudeHoldThrottle - altitudeHoldBump))
+		telemetry_data[38] = '-';
+	else
+		telemetry_data[38] = '=';
   }
   else if (altitudeHoldState == ALTPANIC) {
-	  telemetry_data[38] = '!';
+	telemetry_data[38] = '!';
   }
 #endif
 
