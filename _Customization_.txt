@@ -1,0 +1,77 @@
+AQ32 4s (Y6 FPV meiner):
+
+hottv4Init(&Serial3);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 2)
+#define BATT_R_HIGH       9.88   	
+#define BATT_R_LOW        1.48	
+#define BATT_DIODE_LOSS	0.8	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 v2 3S (Quad X mein Mini):
+
+hottv4Init(&Serial2);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
+#define BATT_R_HIGH       10.0 // Standard  	
+#define BATT_R_LOW        1.55	
+#define BATT_DIODE_LOSS	0.0	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 3s (Quad X Papa):
+
+hottv4Init(&Serial3);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
+#define BATT_R_HIGH       10.0 // Standard  	
+#define BATT_R_LOW        1.5	
+#define BATT_DIODE_LOSS	0.0	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+Failsafe Throttle: 1300
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 FPV 3s (Quad X Papa):
+
+hottv4Init(&Serial3);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C',0)	    //Standard
+#define BATT_R_HIGH        5.6                                    //5.6 onboard Widerstand  	
+#define BATT_R_LOW         1.5                                    //1.5 onboard Widerstand	
+#define BATT_DIODE_LOSS	0.0	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+Failsafe Throttle: 1400
+
+-----------------------------------------------------------------------------------------------------
+
+AQ Mini Shield (unbenutzt):
+
+Attitude PIDs: P 40, I 0, D -200
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 Problemboard:
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
+#define BattCustomConfig DEFINE_BATTERY(0, BATT_ANALOG_INPUT, 15.8, 0, BM_NOPIN, 0, 0)
+
+static byte receiverPinPPM = Port2Pin('D', 13);
+
+-----------------------------------------------------------------------------------------------------
+
+Änderungen:
+
+- Vollständige Integration des HoTT Protokolls / Telemetrie
+- Sart/Stopp-Prozedur der Motoren wie bei MK
+- OSD @ 50Hz
+
