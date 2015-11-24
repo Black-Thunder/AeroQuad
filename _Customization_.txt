@@ -11,7 +11,7 @@ static byte receiverPinPPM = Port2Pin('D', 15); //Standard
 
 -----------------------------------------------------------------------------------------------------
 
-AQ32 v1 3s (Quad X Papa):
+AQ32 v1 3s (Quad X Papa) (2):
 
 hottv4Init(&Serial3);
 
