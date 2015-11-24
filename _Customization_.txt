@@ -1,16 +1,3 @@
-AQ32 4s (Y6 FPV meiner):
-
-hottv4Init(&Serial3);
-
-#define BATT_ANALOG_INPUT	Port2Pin('C', 2)
-#define BATT_R_HIGH       9.88   	
-#define BATT_R_LOW        1.48	
-#define BATT_DIODE_LOSS	0.8	
-
-static byte receiverPinPPM = Port2Pin('D', 15); //Standard
-
------------------------------------------------------------------------------------------------------
-
 AQ32 v2 3S (Quad X mein Mini):
 
 hottv4Init(&Serial2);
@@ -24,7 +11,20 @@ static byte receiverPinPPM = Port2Pin('D', 15); //Standard
 
 -----------------------------------------------------------------------------------------------------
 
-AQ32 3s (Quad X Papa):
+AQ32 v1 3s (Quad X Papa):
+
+hottv4Init(&Serial3);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 2)
+#define BATT_R_HIGH       9.88   	
+#define BATT_R_LOW        1.48	
+#define BATT_DIODE_LOSS	0.8	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 v1 3s (Quad X Papa):
 
 hottv4Init(&Serial3);
 
@@ -39,7 +39,7 @@ Failsafe Throttle: 1300
 
 -----------------------------------------------------------------------------------------------------
 
-AQ32 FPV 3s (Quad X Papa):
+AQ32 (unbenutzt):
 
 hottv4Init(&Serial3);
 
