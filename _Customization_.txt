@@ -1,5 +1,16 @@
 AQ32 v2 3S (Quad X mein Mini):
 
+static byte __attribute__((unused)) stm32_motor_mapping[] = {
+  Port2Pin('C',  9),
+  Port2Pin('C',  8),
+  Port2Pin('C',  7),
+  Port2Pin('C',  6),
+  Port2Pin('A', 15),
+  Port2Pin('B',  3),
+  Port2Pin('B',  4),
+  Port2Pin('B',  5)
+}; //Standard
+
 hottv4Init(&Serial2);
 
 #define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
@@ -11,7 +22,31 @@ static byte receiverPinPPM = Port2Pin('D', 15); //Standard
 
 -----------------------------------------------------------------------------------------------------
 
-AQ32 v1 3s Bomber (Quad X Papa):
+AQ32 v1 3s Bomber (Quad X Papa) (Modellspeicher: AQ Bomber):
+
+static byte __attribute__((unused)) stm32_motor_mapping[] = {
+  Port2Pin('C',  9),
+  Port2Pin('C',  8),
+  Port2Pin('C',  7),
+  Port2Pin('C',  6),
+  Port2Pin('A', 15),
+  Port2Pin('B',  3),
+  Port2Pin('B',  4),
+  Port2Pin('B',  5)
+}; //Standard
+
+hottv4Init(&Serial3);
+
+#define BATT_ANALOG_INPUT	Port2Pin('C', 2)
+#define BATT_R_HIGH       10.0   	
+#define BATT_R_LOW        1.471
+#define BATT_DIODE_LOSS	0.0	
+
+static byte receiverPinPPM = Port2Pin('D', 15); //Standard
+
+-----------------------------------------------------------------------------------------------------
+
+AQ32 v1 3s (Quad X Papa) (Modellspeicher: AQ1):
 // Motor-Pins 3 und 4 abgerissen --> verschoben auf 5 und 6
 
 static byte __attribute__((unused)) stm32_motor_mapping[] = {
@@ -28,26 +63,11 @@ static byte __attribute__((unused)) stm32_motor_mapping[] = {
 hottv4Init(&Serial3);
 
 #define BATT_ANALOG_INPUT	Port2Pin('C', 2)
-#define BATT_R_HIGH       10.0   	
+#define BATT_R_HIGH       10.0 // Standard  	
 #define BATT_R_LOW        1.499	
 #define BATT_DIODE_LOSS	0.0	
 
 static byte receiverPinPPM = Port2Pin('D', 15); //Standard
-
------------------------------------------------------------------------------------------------------
-
-AQ32 v1 3s (Quad X Papa):
-
-hottv4Init(&Serial3);
-
-#define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
-#define BATT_R_HIGH       10.0 // Standard  	
-#define BATT_R_LOW        1.5	
-#define BATT_DIODE_LOSS	0.0	
-
-static byte receiverPinPPM = Port2Pin('D', 15); //Standard
-
-Failsafe Throttle: 1300
 
 -----------------------------------------------------------------------------------------------------
 
@@ -62,8 +82,6 @@ hottv4Init(&Serial3);
 
 static byte receiverPinPPM = Port2Pin('D', 15); //Standard
 
-Failsafe Throttle: 1400
-
 -----------------------------------------------------------------------------------------------------
 
 AQ Mini Shield (unbenutzt):
@@ -72,7 +90,7 @@ Attitude PIDs: P 40, I 0, D -200
 
 -----------------------------------------------------------------------------------------------------
 
-AQ32 Problemboard:
+AQ32 Problemboard (unbenutzt):
 
 #define BATT_ANALOG_INPUT	Port2Pin('C', 0) //Standard
 #define BattCustomConfig DEFINE_BATTERY(0, BATT_ANALOG_INPUT, 15.8, 0, BM_NOPIN, 0, 0)
@@ -84,6 +102,7 @@ static byte receiverPinPPM = Port2Pin('D', 13);
 Änderungen:
 
 - Vollständige Integration des HoTT Protokolls / Telemetrie
+- Einfaches Failsafe bei Empfangsausfall (Failsafe Throttle: 1300)
 - Sart/Stopp-Prozedur der Motoren wie bei MK
 - OSD @ 50Hz
 

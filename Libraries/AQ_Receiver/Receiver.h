@@ -141,7 +141,7 @@ void overrideChannelValuesWithFailsafe() {
 	receiverCommand[XAXIS] = 1500;
 	receiverCommand[YAXIS] = 1500;
 	receiverCommand[ZAXIS] = 1500;
-	receiverCommand[THROTTLE] = 1450;
+	receiverCommand[THROTTLE] = 1300;
 	receiverCommand[MODE] = 2000;
 	receiverCommand[AUX1] = 2000;
 
