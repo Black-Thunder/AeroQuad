@@ -28,9 +28,9 @@ static byte __attribute__((unused)) stm32_motor_mapping[] = {
 hottv4Init(&Serial3);
 
 #define BATT_ANALOG_INPUT	Port2Pin('C', 2)
-#define BATT_R_HIGH       9.88   	
-#define BATT_R_LOW        1.48	
-#define BATT_DIODE_LOSS	0.8	
+#define BATT_R_HIGH       10.0   	
+#define BATT_R_LOW        1.499	
+#define BATT_DIODE_LOSS	0.0	
 
 static byte receiverPinPPM = Port2Pin('D', 15); //Standard
 
